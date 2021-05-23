@@ -21,3 +21,5 @@ Math.floor(Math.random()) is the best way for getting a random value (like a cha
 - This homework is HARD! I'm here to help, but I'm going to try being somewhat hands-off. This is to let you experiment and deduce solutions. Approach this problem in small bits - this is homework you will crash and burn on if you try it all at once.
 
 - Most importantly: THERE IS NO ONE WAY TO SOLVE THIS! There is literally hundreds of solutions for this problem. Whatever way you initally try solving this, GO FOR IT! :)
+
+EXAMPLE: https://www.lastpass.com/password-generator

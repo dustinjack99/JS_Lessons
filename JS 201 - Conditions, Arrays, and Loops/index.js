@@ -4,8 +4,10 @@
 //(demo checkboxes)
 
 //CONDITIONAL OPERATORS
+//<, >, ===, !==
 
 //ARRAYS
+//[]
 
 //LOOPS
 //for loop, iteration
