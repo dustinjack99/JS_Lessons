@@ -1,13 +1,9 @@
-//CONDITIONAL LOGIC
-//booleans
-//if / else
-//(demo checkboxes)
+//DOM LECTURE
+//NODES, CHILDREN, PARENTS
 
-//CONDITIONAL OPERATORS
+//APPENDING NODES
 
-//ARRAYS
+//DOM NODE PROPERTIES
+//Changing textContent and CSS properties
 
-//LOOPS
-//for loop, iteration
-
-//Show off the Math.floor(Math.random()) function
+//SetTimeout() demo
