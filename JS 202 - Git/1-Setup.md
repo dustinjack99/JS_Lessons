@@ -14,4 +14,9 @@ Before we get into the lesson, let's get the setup done.
 
 3. After you install git, open VS Code and press CTRL + `to open your terminal. Then type this to see if you installed correctly: `git --version`
 
+4. Tie your github accounts to your git installations with these commands:
+
+`$ git config --global user.name "GitHub username here"`
+`$ git config --global user.email "githubEmail@example.com"`
+
 Once all of our git installations are up and running, let's talk about the theory of what we're about to use. Move over to 2-Lesson.md, and sit back while I vomit words at you.
