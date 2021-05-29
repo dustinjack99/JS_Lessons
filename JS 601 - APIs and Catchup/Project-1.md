@@ -20,3 +20,5 @@ Hints: If you want to peek at the JavaScript we used, go into src/script.ts
 
 Live Demo: http://www.scrabble-dabble.com/index.html
 Repo: https://github.com/dustinjack99/ScrabbleDabble
+
+//test test one two
