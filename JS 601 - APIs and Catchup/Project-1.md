@@ -10,4 +10,13 @@ You will have two whole weeks to plan, build, and deploy your first project toge
 
 4. This app must be fully styled with CSS. Make it sparkle!
 
-5. On the GitHub repo, you must make a Readme.md file that describes the purpose of your app and how to use it.
+5. The functionality must only use vanilla JS (this is a guideline for Ben).
+
+6. On the GitHub repo, you must make a Readme.md file that describes the purpose of your app and how to use it.
+
+Finally, because I'm nice, here's a working example of my first project, a speed-spelling game called Scrabble Dabble:
+
+Hints: If you want to peek at the JavaScript we used, go into src/script.ts
+
+Live Demo: http://www.scrabble-dabble.com/index.html
+Repo: https://github.com/dustinjack99/ScrabbleDabble
