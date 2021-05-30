@@ -1,6 +1,6 @@
 Hello, coders!
 
-Today we're setting up your GitHub accounts and installing 'git', allowing you to collaborate with each other (and more easily grab code from our lessons).
+Today we're setting up your GitHub accounts and installing 'git', allowing you to collaborate with each other (and more easily grab code from our lessons). Let's talk about what git and GitHub are!
 
 GitHub is the place where lots of individual coders and companies host their code. This is the place where we'll have our collaborative projects and where you can host your portfolios.
 
@@ -12,7 +12,7 @@ Before we get into the lesson, let's get the setup done.
 
 2. Install git: https://git-scm.com/downloads
 
-3. After you install git, open VS Code and press CTRL + `to open your terminal. Then type this to see if you installed correctly: `git --version`
+3. After you install git, open VS Code and press CTRL + ~ to open your terminal. Then type this to see if you installed correctly: `git --version`
 
 4. Tie your github accounts to your git installations with these commands:
 

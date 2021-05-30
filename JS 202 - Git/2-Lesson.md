@@ -38,7 +38,9 @@ It breaks down like this:
 
 ------------------------------------------ Master Branch
 \ / <--- (attempt to merge)
----------
+
+---
+
 Friend Branch
 
 Now let's get our hands dirty! Jump over to Practice.md, and let's see this theory in action.
