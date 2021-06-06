@@ -29,7 +29,7 @@ THAT'S NOT ALL! You, yourselves, will be able to make changes and push them to t
 
    `git add . ` (include the period)
    `git commit -m "type a comment here"` (put a comment between the quotes)
-   `git push origin <your-branch-name>` (type the name of your branch)
+   `git push origin master` (type the name of your branch)
 
 git add . -- This "stages" all the changes you've made to the git history.
 
