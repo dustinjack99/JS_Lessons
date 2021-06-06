@@ -16,5 +16,7 @@ Again, this must all happen in your JavaScript file. No HTML or CSS!
 Hints:
 I would recommend storing your questions and answers in their own arrays. That's all the hint you get!
 
+Make sure to reference the setInterval example! Good luck!
+
 Also, here's a working example, brought to you by our good friend, Ben!
 https://val-code-1.github.io/Nen-Quiz/
