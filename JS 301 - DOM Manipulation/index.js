@@ -1,5 +1,16 @@
 //DOM LECTURE
 //NODES, CHILDREN, PARENTS
+/*
+
+        []
+        /\
+       /  \
+      /    \ 
+     []    []
+    /  \     \
+   []  []    [] 
+
+ */
 
 //APPENDING NODES
 
