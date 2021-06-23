@@ -1,7 +1,9 @@
 const body = document.getElementById("body");
+document.title = "A Really Useful Quiz";
+
 //header
 const header = document.createElement("h1");
-header.textContent = "Neal's Cool-Ass Quiz About Something!";
+header.textContent = "Neal's Really Useful Quiz";
 body.appendChild(header);
 //header
 
@@ -29,79 +31,79 @@ const quiz = [
   },
   {
     question:
-      "Which Engine was the first character created for the Railway Series?",
+      "Which Engine was the first character created for the Railway Series, and in-universe, the oldest engine on the Sodor Railway?",
     answers: ["Thomas", "Gordon", "Henry", "Edward"],
     answer: "Edward",
   },
   {
-    question: "Where is the Island of Sodor?",
+    question: "The Great Western Engine Duck got his nickname because of his characteristic 'waddle.' What is his given name?",
     answers: [
-      "The Caspian Sea",
-      "The Irish Sea",
-      "The Black Sea",
-      "The Aegean Sea",
+      "Rheneas",
+      "Ainsleigh",
+      "Montague",
+      "Carlisle",
     ],
-    answer: "The Irish Sea",
+    answer: "Montague",
   },
   {
-    question: "Where is the Island of Sodor?",
+    question: "Gordon the Big Blue Engine is known for doing this job.",
     answers: [
-      "The Caspian Sea",
-      "The Irish Sea",
-      "The Black Sea",
-      "The Aegean Sea",
+      "Shunting Trucks in the Yard",
+      "Pulling the Mail Train",
+      "Rescuing Derailed Engines",
+      "Pulling the Express Train",
     ],
-    answer: "The Irish Sea",
+    answer: "Pulling the Express Train",
   },
   {
-    question: "Where is the Island of Sodor?",
+    question: "James is known for being vain and boastful - but if you ask him, he's a 'Very ____ Engine!",
     answers: [
-      "The Caspian Sea",
-      "The Irish Sea",
-      "The Black Sea",
-      "The Aegean Sea",
+      "Handsome",
+      "Splendid",
+      "Grand",
+      "Spiffing",
     ],
-    answer: "The Irish Sea",
+    answer: "Splendid",
   },
   {
-    question: "Where is the Island of Sodor?",
+    question: "What is the proper name for someone from the Island of Sodor?",
     answers: [
-      "The Caspian Sea",
-      "The Irish Sea",
-      "The Black Sea",
-      "The Aegean Sea",
+      "Sodoran",
+      "Sodran",
+      "Sodorian",
+      "Sudrian",
     ],
-    answer: "The Irish Sea",
+    answer: "Sudrian",
   },
   {
-    question: "Where is the Island of Sodor?",
+    question: "The port of Brendam began as a humble fishing town, but experienced a mining and industrial boom when this was discovered there.",
     answers: [
-      "The Caspian Sea",
-      "The Irish Sea",
-      "The Black Sea",
-      "The Aegean Sea",
+      "Clay",
+      "Coal",
+      "Zinc",
+      "Granite",
     ],
-    answer: "The Irish Sea",
+    answer: "Clay",
   },
   {
-    question: "Where is the Island of Sodor?",
+    question: "This fish is one of Sodor's main exports, well known on breakfast tables around the world, and even has a train named for it - The Flying ____.",
     answers: [
-      "The Caspian Sea",
-      "The Irish Sea",
-      "The Black Sea",
-      "The Aegean Sea",
+      "Cod",
+      "Haddock",
+      "Kipper",
+      "Saury",
     ],
-    answer: "The Irish Sea",
+    answer: "Kipper",
   },
   {
-    question: "Where is the Island of Sodor?",
+    question: "The author of the Railway Series is Rev. W. Awdry. What does the 'W' stand for?",
     answers: [
-      "The Caspian Sea",
-      "The Irish Sea",
-      "The Black Sea",
-      "The Aegean Sea",
+      "Wilbert",
+      "Warwick",
+      "Wulfric",
+      "Westlin",
     ],
-    answer: "The Irish Sea",
+    answer: "Wilbert",
   },
 ];
 //quiz questions
@@ -114,7 +116,7 @@ const intro = document.createElement("p");
 intro.className = "intro";
 iDiv.appendChild(intro);
 intro.textContent =
-  "I don't have a theme for this quiz yet, so have the same question a few times while I work out what the hell this quiz is about! On a timer! Fun!";
+  "The Island of Sodor is surrounded on all sides by blue seas. It has trees of green and sandy yellow beaches. It also has lots and lots of railway lines. See how well you know this fictional island in this little quiz. But be careful - you'll be on a strict schedule, and it won't do to be late.";
 const begin = document.createElement("button");
 begin.className = "begin";
 iDiv.appendChild(begin);
@@ -130,7 +132,7 @@ restart.addEventListener("click", () => {
   location.reload();
 });
 
-let timer = 100; //<<<Set Timer Length
+let timer = 60; //<<<Set Timer Length
 begin.addEventListener("click", () => {
   //timer
   const pDiv = document.createElement("div");
@@ -173,6 +175,14 @@ begin.addEventListener("click", () => {
   a2.id = "a2";
   a3.id = "a3";
   a4.id = "a4";
+  a1.style.color = "#150070";
+  a2.style.color = "#150070";
+  a3.style.color = "#150070";
+  a4.style.color = "#150070";
+  a1.style.padding = 10;
+  a2.style.padding = 10;
+  a3.style.padding = 10;
+  a4.style.padding = 10;
   //question format construction
   body.replaceChild(qDiv, iDiv);
 
@@ -200,10 +210,10 @@ begin.addEventListener("click", () => {
         a2.textContent = quiz[n].answers[1];
         a3.textContent = quiz[n].answers[2];
         a4.textContent = quiz[n].answers[3];
-        a1.style.color = "#dcf0f1";
-        a2.style.color = "#dcf0f1";
-        a3.style.color = "#dcf0f1";
-        a4.style.color = "#dcf0f1";
+        a1.style.color = "#150070";
+        a2.style.color = "#150070";
+        a3.style.color = "#150070";
+        a4.style.color = "#150070";
         console.log("Toot Toot!");
         //Else-If for victory
       } else if (c.target.innerText == quiz[n].answer) {
