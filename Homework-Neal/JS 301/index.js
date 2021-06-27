@@ -4,6 +4,7 @@ document.title = "A Really Useful Quiz";
 //header
 const header = document.createElement("h1");
 header.textContent = "Neal's Really Useful Quiz";
+header.style = "background-color:blue;color:yellow;text-align:center";
 body.appendChild(header);
 //header
 
@@ -56,7 +57,7 @@ const quiz = [
     answer: "Pulling the Express Train",
   },
   {
-    question: "James is known for being vain and boastful - but if you ask him, he's a 'Very ____ Engine!",
+    question: "James is known for being vain and boastful - but if you ask him, he's a 'Very ____ Engine!'",
     answers: [
       "Handsome",
       "Splendid",
@@ -114,17 +115,22 @@ iDiv.className = "iDiv";
 body.appendChild(iDiv);
 const intro = document.createElement("p");
 intro.className = "intro";
+intro.style = "font-size:20px;text-align:center"
 iDiv.appendChild(intro);
 intro.textContent =
-  "The Island of Sodor is surrounded on all sides by blue seas. It has trees of green and sandy yellow beaches. It also has lots and lots of railway lines. See how well you know this fictional island in this little quiz. But be careful - you'll be on a strict schedule, and it won't do to be late.";
-const begin = document.createElement("button");
-begin.className = "begin";
-iDiv.appendChild(begin);
-begin.textContent = "Begin!";
+  "The Island of Sodor is surrounded on all sides by blue seas. It has trees of green and sandy yellow beaches. It also has lots and lots of railway lines. See how well you know this fictional island in this little quiz. But do be careful - you'll be on a strict schedule, and it won't do to be late.";
 const question01 = document.createElement("img");
 question01.classname = "question01";
+question01.style = "height:100px;justify-content:center";
 iDiv.appendChild(question01);
-question01.src = "./assets/question01.jpg";
+question01.src = "./assets/latest.webp";
+//a picture of the fat controller
+const begin = document.createElement("button");
+begin.className = "begin";
+iDiv.appendChild(begin); //<<<Start Button
+begin.textContent = "Begin!";
+begin.style = "align-self:center"
+
 const restart = document.createElement("button");
 restart.className = "restart";
 restart.textContent = "Try again?";
@@ -179,10 +185,6 @@ begin.addEventListener("click", () => {
   a2.style.color = "#150070";
   a3.style.color = "#150070";
   a4.style.color = "#150070";
-  a1.style.padding = 10;
-  a2.style.padding = 10;
-  a3.style.padding = 10;
-  a4.style.padding = 10;
   //question format construction
   body.replaceChild(qDiv, iDiv);
 
