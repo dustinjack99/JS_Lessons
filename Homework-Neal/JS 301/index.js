@@ -125,6 +125,7 @@ question01.style = "height:100px;justify-content:center";
 iDiv.appendChild(question01);
 question01.src = "./assets/latest.webp";
 //a picture of the fat controller
+
 const begin = document.createElement("button");
 begin.className = "begin";
 iDiv.appendChild(begin); //<<<Start Button
