@@ -37,13 +37,9 @@ const quiz = [
     answer: "Edward",
   },
   {
-    question: "The Great Western Engine Duck got his nickname because of his characteristic 'waddle.' What is his given name?",
-    answers: [
-      "Rheneas",
-      "Ainsleigh",
-      "Montague",
-      "Carlisle",
-    ],
+    question:
+      "The Great Western Engine Duck got his nickname because of his characteristic 'waddle.' What is his given name?",
+    answers: ["Rheneas", "Ainsleigh", "Montague", "Carlisle"],
     answer: "Montague",
   },
   {
@@ -57,53 +53,32 @@ const quiz = [
     answer: "Pulling the Express Train",
   },
   {
-    question: "James is known for being vain and boastful - but if you ask him, he's a 'Very ____ Engine!'",
-    answers: [
-      "Handsome",
-      "Splendid",
-      "Grand",
-      "Spiffing",
-    ],
+    question:
+      "James is known for being vain and boastful - but if you ask him, he's a 'Very ____ Engine!'",
+    answers: ["Handsome", "Splendid", "Grand", "Spiffing"],
     answer: "Splendid",
   },
   {
     question: "What is the proper name for someone from the Island of Sodor?",
-    answers: [
-      "Sodoran",
-      "Sodran",
-      "Sodorian",
-      "Sudrian",
-    ],
+    answers: ["Sodoran", "Sodran", "Sodorian", "Sudrian"],
     answer: "Sudrian",
   },
   {
-    question: "The port of Brendam began as a humble fishing town, but experienced a mining and industrial boom when this was discovered there.",
-    answers: [
-      "Clay",
-      "Coal",
-      "Zinc",
-      "Granite",
-    ],
+    question:
+      "The port of Brendam began as a humble fishing town, but experienced a mining and industrial boom when this was discovered there.",
+    answers: ["Clay", "Coal", "Zinc", "Granite"],
     answer: "Clay",
   },
   {
-    question: "This fish is one of Sodor's main exports, well known on breakfast tables around the world, and even has a train named for it - The Flying ____.",
-    answers: [
-      "Cod",
-      "Haddock",
-      "Kipper",
-      "Saury",
-    ],
+    question:
+      "This fish is one of Sodor's main exports, well known on breakfast tables around the world, and even has a train named for it - The Flying ____.",
+    answers: ["Cod", "Haddock", "Kipper", "Saury"],
     answer: "Kipper",
   },
   {
-    question: "The author of the Railway Series is Rev. W. Awdry. What does the 'W' stand for?",
-    answers: [
-      "Wilbert",
-      "Warwick",
-      "Wulfric",
-      "Westlin",
-    ],
+    question:
+      "The author of the Railway Series is Rev. W. Awdry. What does the 'W' stand for?",
+    answers: ["Wilbert", "Warwick", "Wulfric", "Westlin"],
     answer: "Wilbert",
   },
 ];
@@ -115,7 +90,7 @@ iDiv.className = "iDiv";
 body.appendChild(iDiv);
 const intro = document.createElement("p");
 intro.className = "intro";
-intro.style = "font-size:20px;text-align:center"
+intro.style = "font-size:20px;text-align:center";
 iDiv.appendChild(intro);
 intro.textContent =
   "The Island of Sodor is surrounded on all sides by blue seas. It has trees of green and sandy yellow beaches. It also has lots and lots of railway lines. See how well you know this fictional island in this little quiz. But do be careful - you'll be on a strict schedule, and it won't do to be late.";
@@ -130,7 +105,7 @@ const begin = document.createElement("button");
 begin.className = "begin";
 iDiv.appendChild(begin); //<<<Start Button
 begin.textContent = "Begin!";
-begin.style = "align-self:center"
+begin.style = "align-self:center";
 
 const restart = document.createElement("button");
 restart.className = "restart";
@@ -234,7 +209,7 @@ begin.addEventListener("click", () => {
         wImage.src = "./assets/Win.jpg"; //<<<Win Image
         body.replaceChild(wDiv, qDiv);
       } else {
-        console.log("toot toot!");
+        console.log("Wheeeeeesh!");
         c.target.style.color = "red"; //turn button red
         timer = timer - 7;
       }
