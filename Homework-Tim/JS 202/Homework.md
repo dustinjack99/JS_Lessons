@@ -12,6 +12,7 @@ commits point to parent commits and to trees
 
 git "file name" -t = print the type of file -p prints the contets
 
+
 Three areas where code lives: 1. Working area 2. staging area 3. repository
 
 Moving files in & out of staging area:
