@@ -55,11 +55,11 @@ const Dexter_Morgan = new Hero("Dexter Morgan");
 const Batman = new Hero("Batman");
 
 //uncomment to see Batman punching Dexter
-// console.log(Dexter_Morgan);
-// console.log(Batman);
-// Batman.punch(Dexter_Morgan);
-// console.log(Dexter_Morgan);
-// console.log(Batman);
+console.log(Dexter_Morgan);
+console.log(Batman);
+Batman.punch(Dexter_Morgan);
+console.log(Dexter_Morgan);
+console.log(Batman);
 
 //Inheritance
 // making a class, which inherits properties from a parent "super" class
