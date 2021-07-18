@@ -6,22 +6,28 @@ class Hunter {
     this.baseDefense = outsideValue; //Base Defense
     this.attackPool = outsideValue; //number of possible attacks per turn
     this.name = outsideName;
+    this.isTired = false;
+    this.isAlive = true;
+
+    checkTired(); {if (this.isTired = true){
+        console.log(`${this.name} is tired!`)}};
+    checkAlive(); {if (this.hitPoints=0){
+        this.isAlive=false}
+        if (this.isAlive = false){
+            console.log(`${this.name} is down!`)}};
+}};
 //find attack power
-function findAttack(
+findAttack(
     attackPower = this.baseAttack * this.attackPool)
 //Basic Attack/Defense
 attack(target); {
     findAttack();
-target.hitPoints = (target.hitPoints - this.attackPower);
-console.log(`${this.name} attacks ${target.name}!`);
-}
+target.hitPoints = (target.hitPoints - (this.attackPower-target.baseDefense));
+console.log(`${this.name} attacks ${target.name}!`)};
 
-defend(target); {
-target.attackPower = (target.attackPower - this.baseDefense);
-console.log(`${this.name} puts up their guard against ${target.name}!`);
-}
-  }
-}
+defend(); {
+    this.baseDefense++;
+    console.log(`${this.name} puts up their guard!`)};
 
 class Devil {
   constructor(outsideName) {
@@ -30,22 +36,22 @@ class Devil {
     this.baseDefense = outsideValue;
     this.attackPool = outsideValue; //number of possible attacks per turn
     this.name = outsideName;
+    checkTired();
+    checkAlive();
+
 //find attack power
 function findAttack(
-    attackPower = this.baseAttack * this.attackPool)
+    attackPower = this.baseAttack * this.attackPool);
 //Basic Attack/Defense
 attack(target); {
     findAttack();
 target.hitPoints = target.hitPoints - (this.attackPower-target.baseDefense);
-console.log(`${this.name} attacks ${target.name}!`);
-}
+console.log(`${this.name} attacks ${target.name}!`)}
 
-defend(target); {
-target.attackPower = (target.attackPower - this.baseDefense);
-console.log(`${this.name} puts up their guard against ${target.name}!`);
-}
-  }
-}
+defend(); {
+this.baseDefense++;
+console.log(`${this.name} puts up their guard!`)}
+  }};
 
 //Hunter Classes
 //findAttack should add up to 30 tops
@@ -54,8 +60,20 @@ class Brawler extends Hunter { //Brawler - low attack, decent attack pool and de
     constructor() {
       super();
       this.baseAttack = 5
-      this.attackPool = 4
+      this.attackPool = 6
       this.baseDefense = 20
+
+      dempseyRoll(target); {
+          if (this.isTired=true) {
+              console.log(`${this.name} says, "Can't do that yet, can I! Need a break!"`)
+              } else {
+          findAttack();
+          target.hitPoints=target.hitPoints-((this.attackPower*2)-target.baseDefense);
+          this.attackPool--;
+          this.isTired=true;
+          console.log(`${this.name} lays into ${target.name} with a hail of punches!`);
+        }
+      }
     }
 }
 
@@ -65,11 +83,7 @@ class Tank extends Hunter { //Tank - high attack, high defense, low attack pool
         this.baseAttack = 30
         this.attackPool = 1
         this.baseDefense = 30
-        this.isTired = false
 
-        if (this.isTired = true){
-            console.log(`${this.name} is tired!`)
-        }
     bisect(target) //cuts enemy HP in half but lose ability to attack gain until "restUp" is used
     if (this.isTired=false){
         target.hitPoints=(target.hitPoints/2)-target.baseDefense,
@@ -117,21 +131,21 @@ class Gunner extends Hunter {
         this.attackPool = 12
         this.baseDefense = 5
         function getRandom() {
-                return Math.random() * (6 - 1) + 1;}
+             let random = Math.random() * (6 - 1) + 1;}
 
     fanHammer(target);
     getRandom();
     console.log(getRandom)
-        target.hitPoints=(target.hitPoints-(this.attackPower+this.baseAttack*Math.random)-target.baseDefense),
+        target.hitPoints=(target.hitPoints-(this.attackPower+this.baseAttack*random)-target.baseDefense),
         console.log(`${this.name} fans the hammer and sends a hail of bullets at ${target.name}!`);
     russianRoulette(target);
     getRandom();
     console.log(`${this.name} loads a single round, and spins the cylinder!`)
     console.log(`${this.name} lines up a shot and pulls the trigger!`)
     console.log(getRandom)
-    if getRandom.return=6 {
+    if (random=6) {
         target.hitPoints=0;
-        console.log(`${this.name}'s shot lands dead in the center of `${target.name}'s weak spot. Bullseye.'.)
+        console.log(`${this.name}'s shot lands dead in the center of ${target.name}'s weak spot. Bullseye.`)
 
     } else {
         console.log(`Click.`)
@@ -155,7 +169,7 @@ class Toad extends Devil {
     console.log(`${this.name} whips its barbed tongue at ${target.name}`)
         }
 
-    swellUp(){
+    swellUp();{
         if (this.isSwollen=false) {
             this.baseDefense= this.baseDefense*2;
             console.log(`${this.name}'s entire body swells as it fills with noxious bile!`)
@@ -164,7 +178,7 @@ class Toad extends Devil {
             }
         }
 
-    vomit(target)
+    vomit(target); 
         if (this.isSwollen=true){ 
         target.hitPoints = target.hitPoints-(this.attackPower*2-target.baseDefense);
         this.isSwollen=false;
@@ -178,18 +192,23 @@ class Toad extends Devil {
 class Manticore extends Devil {
     constructor() {
         super();
-        this.baseAttack = 5
+        this.baseAttack = 2
         this.attackPool = 10
-        this.baseDefense = 5
+        this.baseDefense = 2
     
     bristleUp(); {
-        console.log(`${this.name} bristles with long spines pushing through its flesh!`);
+        console.log(`${this.name}'s hide bristles as long spines push through its flesh!`);
         this.baseAttack++;
+        this.baseDefense++;
     }
-    maul(); {
-        console.log(`${this.name} throws itself upon ${target.name}, biting and clawing!`)
-        target.hitPoints = target.hitPoints-()
+    spineShot(); {
+        findAttack();
+        console.log(`${this.name} fires a volley of spines at ${target.name}!`)
+        target.hitPoints = target.hitPoints-(this.attackPower*2)
+        this.baseAttack--;
+        this.baseDefense--;
     }
+
     }
 }
 
@@ -199,29 +218,41 @@ class Beelzebub extends Devil {
         this.baseAttack = 2
         this.attackPool = 15
         this.baseDefense = 1
+        
+        spit(target); {
+            findAttack();
+            console.log(`${this.name} spits a noxious stream of venom at ${target.name}!`),
+            target.hitPoints=target.hitPoints-(this.attackPower*this.baseAttack);
+            this.baseAttack--;
+            }
+        
     }
 }
+
+
+
+
 
 //Hunters
 const Osheen = new Brawler("Osheen Ferguson");
 this.name = Osheen
-console.log(Osheen)
+console.log(Osheen);
 
 const Savannah = new Gunner("Savannah Smythe")
 this.name = Savannah
-console.log(Savannah)
+console.log(Savannah);
 
 const Christopher = new Blaster("Christopher Laszaro");
 this.name = Christopher
-console.log(Christopher)
+console.log(Christopher);
 
 const Columbina = new Tank("Columbina Laszaro");
 this.name = Columbina
-console.log(Columbina)
+console.log(Columbina);
 
 //Devils
-const Toad = new Toad("Toad Demon")
+const Toad = new Toad("Toad Demon");
 
-const Manticore = new Manticore("Manticore Demon")
+const Manticore = new Manticore("Manticore Demon");
 
-const Beelzebub = new Beelzebub("Bloatfly Demon")
+const Beelzebub = new Beelzebub("Bloatfly Demon");
