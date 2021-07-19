@@ -125,10 +125,10 @@ class Tank extends Hunter {
         (this.isTired = true);
     } else
       console.log(
-        `${this.name} says "Give me a second, will you?! I can't go that hard all the time!`
+        `${this.name} says "Give me a second, will you?! I can't go that hard all the time!"`
       );
     restUp()(
-      //toggles .isTired back to "false" and enables attacking
+      //toggles .isTired back to "false" and enables attacking - meant to slow down use of heavy damage attacks
       (this.isTired = false)
     ),
       console.log(`${this.name} gathers herself for another attack!`);
