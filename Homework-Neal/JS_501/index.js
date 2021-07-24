@@ -60,6 +60,7 @@ const zeroHumid = document.getElementById("zeroHumid");
 const zeroWind = document.getElementById("zeroWind");
 const oWM = "https://openweathermap.org/img/w/";
 function tempConv(K) {
+  //converting FROM units, declare K first
   // let C = 0; //convert temps in Kelvin to Celsius
   // C = K - 273.15;
   // return C.toFixed(1) + "° C";
