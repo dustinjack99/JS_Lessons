@@ -21,4 +21,10 @@ Hints: If you want to peek at the JavaScript we used, go into src/script.ts
 Live Demo: http://www.scrabble-dabble.com/index.html
 Repo: https://github.com/dustinjack99/ScrabbleDabble
 
-//test test one two
+Final Considerations:
+This project is a collaboration between all three of you. Respect each other's time and effort, always communicate. Set aside a few times each week where you can all get together and hammer out some of the project.
+
+Commit your changes early, and often. Talk with your teammates whenever a git conflict happens.
+
+// TEACHER NOTE: //
+Pitch the idea of tailoring each project for someone's portfolio.
