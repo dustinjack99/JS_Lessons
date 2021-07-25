@@ -121,6 +121,15 @@ function degConv(deg) {
   }
   if (deg > 191.25 && deg <= 213.75) {
     wDir = "SSW";
+  }
+  if (deg > 236.25 && deg <= 258.75) {
+    wDir = "WSW";
+  }
+  if (deg > 281.25 && deg <= 303.75) {
+    wDir = "WNW";
+  }
+  if (deg > 326.25 && deg <= 348.75) {
+    var dir = "NNW";
   } else
     console.log(
       "Error: This value is outside of 8-point compass; refine wDir parameters."
