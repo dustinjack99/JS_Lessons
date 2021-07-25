@@ -9,7 +9,7 @@
 // .then(), async / await
 
 const key = "e5e28d699069f90b230ad4d66e6a33b1";
-const city = "portland";
+const city = "sydney";
 
 fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${key}`)
   //JSON = JavaScript Object Notation
