@@ -1,0 +1,43 @@
+#body {
+  background: skyblue;
+}
+#todaySkyPic {
+  border: slategray 1px;
+}
+#cityName {
+  font-size: 4em;
+  text-align: center;
+  color: gainsboro;
+  width: 30%;
+  margin: auto;
+  border: darkslateblue solid 0.3em;
+  background: dodgerblue;
+}
+#cityPop {
+  font-style: oblique;
+  font-size: 1.2em;
+  text-align: center;
+}
+#fiveD {
+  font-size: 2em;
+  text-align: center;
+}
+#zero {
+  text-align: center;
+  width: 30%;
+  margin: auto;
+  border: darkslateblue solid 0.3em;
+  color: gainsboro;
+}
+.weatherReading {
+  font-size: 1.1em;
+  background: #806bb1;
+  text-align: center;
+  border: #553573 solid 0.3em;
+  color: gainsboro;
+}
+.rows {
+  display: flex;
+  margin: 1em;
+  justify-content: center;
+}
