@@ -14,7 +14,8 @@
   background: dodgerblue;
 }
 #cityPop {
-  font-size: 1.6em;
+  font-style: oblique;
+  font-size: 1.2em;
   text-align: center;
 }
 #fiveD {
@@ -26,14 +27,14 @@
   width: 30%;
   margin: auto;
   border: darkslateblue solid 0.3em;
-  color: white;
+  color: gainsboro;
 }
 .weatherReading {
   font-size: 1.2em;
   background: #806bb1;
   text-align: center;
   border: #553573 solid 0.3em;
-  color: white;
+  color: gainsboro;
 }
 .rows {
   display: flex;
