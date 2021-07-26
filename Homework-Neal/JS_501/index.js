@@ -73,11 +73,11 @@ function tempConv(K) {
 
 function degConv(deg) {
   // return weatherAPI.wind.deg, need to refine to 8-point compass instead of 16 (no NNE/WSW, etc.)
-  console.log(deg);
+  // console.log(deg);
   var wDir = "";
   if (deg < 0 || deg > 360) {
     console.log(
-      "Error with degConv function - returned value is outside of parameters and we're all going to die probably."
+      "Error with degConv function - either returned value for 'deg' is outside of parameters, or we're all going to die."
     );
   }
   if (deg >= 0 && deg <= 11.25) {
@@ -129,11 +129,13 @@ function degConv(deg) {
     wDir = "WNW";
   }
   if (deg > 326.25 && deg <= 348.75) {
-    var dir = "NNW";
-  } else
-    console.log(
-      "Error: This value is outside of 8-point compass; refine wDir parameters."
-    );
+    wDir = "NNW";
+  }
+  // else console.log(deg);
+  // console.log(wDir);
+  // console.log(
+  //   "Error: This value is outside of 8-point compass; refine wDir parameters."
+  // );
 
   return wDir;
 }
