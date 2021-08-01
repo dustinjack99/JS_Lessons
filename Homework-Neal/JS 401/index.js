@@ -1,42 +1,44 @@
-// Base Classes
+// // Base Classes
 class Hunter {
   constructor(outsideName) {
     this.hitPoints = 100;
-    this.baseAttack = outsideValue; //Base attack power - damage per attack.
-    this.baseDefense = outsideValue; //Base Defense
-    this.attackPool = outsideValue; //number of possible attacks per turn
+    this.baseAttack = 1; //Base attack power - damage per attack.
+    this.baseDefense = 1; //Base Defense
+    this.attackPool = 1; //number of possible attacks per turn
     this.name = outsideName;
     this.isTired = false;
     this.isAlive = true;
-  }
-  checkTired() {
-    if ((this.isTired = true)) {
-      console.log(`${this.name} is tired!`);
+    function checkAlive() {
+      if ((this.hitPoints = 0)) {
+        this.isAlive = false;
+        console.log(`${this.name} is down!`);
+      }
     }
-  }
-  checkAlive() {
-    if ((this.hitPoints = 0)) {
-      this.isAlive = false;
+    function checkTired() {
+      if ((this.isTired = true)) {
+        console.log(`${this.name} is tired!`);
+      }
     }
-    if ((this.isAlive = false)) {
-      console.log(`${this.name} is down!`);
+    function restUp() {
+      //toggles .isTired back to "false" and enables attacking - meant to slow down use of heavy damage attacks
+      (this.isTired = false),
+        console.log(`${this.name} is ready for another attack!`);
     }
-  }
-  //find attack power
-  findAttack() {
-    attackPower = this.baseAttack * this.attackPool;
-  }
-  //Basic Attack/Defense
-  attack(target) {
-    findAttack();
-    target.hitPoints =
-      target.hitPoints - (this.attackPower - target.baseDefense);
-    console.log(`${this.name} attacks ${target.name}!`);
-  }
 
-  defend() {
-    this.baseDefense++;
-    console.log(`${this.name} puts up their guard!`);
+    //Basic Attack/Defense
+    attack(target);
+    {
+      findAttack(this);
+      target.hitPoints =
+        target.hitPoints - (this.attackPower - target.baseDefense);
+      console.log(`${this.name} attacks ${target.name}!`);
+    }
+
+    defend();
+    {
+      this.baseDefense++;
+      console.log(`${this.name} puts up their guard!`);
+    }
   }
 }
 
@@ -47,8 +49,7 @@ class Devil {
     this.baseDefense = outsideValue;
     this.attackPool = outsideValue; //number of possible attacks per turn
     this.name = outsideName;
-    checkTired();
-    checkAlive();
+    this.isAlive = true;
   }
 
   findAttack() {
@@ -73,8 +74,8 @@ class Devil {
 //Hunter Classes
 //findAttack should add up to 30 tops
 
+//Brawler - low attack, decent attack pool and defense
 class Brawler extends Hunter {
-  //Brawler - low attack, decent attack pool and defense
   constructor() {
     super();
     this.baseAttack = 5;
@@ -100,9 +101,8 @@ class Brawler extends Hunter {
     }
   }
 }
-
+//Tank - high attack, high defense, low attack pool
 class Tank extends Hunter {
-  //Tank - high attack, high defense, low attack pool
   constructor() {
     super();
     this.baseAttack = 30;
@@ -127,16 +127,10 @@ class Tank extends Hunter {
       console.log(
         `${this.name} says "Give me a second, will you?! I can't go that hard all the time!"`
       );
-    restUp()(
-      //toggles .isTired back to "false" and enables attacking - meant to slow down use of heavy damage attacks
-      (this.isTired = false)
-    ),
-      console.log(`${this.name} gathers herself for another attack!`);
   }
 }
-
+//Blaster - high attack, low defense
 class Blaster extends Hunter {
-  //Blaster - high attack, low defense
   constructor() {
     super();
     this.baseAttack = 10;
@@ -148,7 +142,7 @@ class Blaster extends Hunter {
       target.hitPoints - (this.attackPower * 2 - target.baseDefense);
     this.attackPool--;
     console.log(
-      `${this.name} converts the oxygen in the air around ${target.name} to Hydrogen, and ignites it. Kaboom!`
+      `${this.name} converts the oxygen in the air around ${target.name} to hydrogen, and ignites it. Kaboom!`
     );
 
     chargeUp();
