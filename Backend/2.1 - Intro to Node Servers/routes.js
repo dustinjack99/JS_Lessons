@@ -9,6 +9,8 @@ const handleRequest = (req, res) => {
   console.log(path);
 
   // Imagine this as Controller
+
+  // Q: Now what does this look like? Where have we seen all these slashes before?
   switch (path) {
     case "/":
       return displayHome(res);
