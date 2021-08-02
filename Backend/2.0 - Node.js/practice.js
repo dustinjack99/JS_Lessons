@@ -22,7 +22,7 @@
 // const fs = require("fs");
 
 //read file with (filename, charset, callback(err, data))
-//does this look familiar?
+// Q: does this look familiar?
 
 //activity!!
 //write to writeme.txt file, using (filename, data, callback(err))

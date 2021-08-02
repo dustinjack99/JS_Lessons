@@ -1,5 +1,5 @@
 ** Useful Links **
-Intro to Node.js - UW Bootcamp:
+Intro to Node Servers - UW Bootcamp:
 `https://bootcampspot.com/sessions/606270/videos/73408`
 
 Node.js Crash Course - Traversy Media:

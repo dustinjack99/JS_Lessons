@@ -8,7 +8,7 @@
 
 //Node.js!
 
-//Where does Node live?
+// Q: Where does Node live?
 // Frontend or Backend??
 
 //What is Node?
