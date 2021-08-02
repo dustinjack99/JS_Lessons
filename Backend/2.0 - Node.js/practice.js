@@ -24,11 +24,13 @@
 //read file with (filename, charset, callback(err, data))
 //does this look familiar?
 
+//activity!!
 //write to writeme.txt file, using (filename, data, callback(err))
 //write a new file
 //write new file with process.argv[2]
 
-//activity!! how might we 'append' to a file?
+//activity!!
+//how might we 'append' to a file?
 
 // import js file from local path;
 //** ^^^ must be local path, Node looks for modules / built in libraries first
@@ -37,3 +39,20 @@
 //*** JUMP TO LESSON Pt. 2 */
 // -------------------
 //*** PRACTICE PT. 2 */
+
+/*
+inquirer.prompt(
+    [
+        {
+            // input / password
+            type: '',
+            //message for the user
+            message: '',
+            //name = stored as
+            name: ''
+        }
+    ]
+)
+This is async!! .then()
+JSON.stringify() will need to be used
+*/

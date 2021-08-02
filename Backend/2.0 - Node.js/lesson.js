@@ -29,4 +29,8 @@
 // inquirer
 // pay attention to downloads, documentation, links to github
 
-//
+// npm init
+// package.json - instructions on how to run project
+// most importantly, will list dependencies
+
+// npm i inquirer
