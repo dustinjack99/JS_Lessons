@@ -16,21 +16,7 @@ I want you to write an app with it's own backend API with Express.
 
 4. The site only needs to be one HTML page - all it needs it to POST data to your API.
 
-5. Deploy to Heroku using this guide!
-    - Install Heroku by entering this into the terminal:
-        + `npm i -g heroku`
-        + check installation with: `heroku -v`
-    - Initial your project as a git repo:
-        + type `git init` into your vscode terminal, then add and commit your changes. (You do not need to push)
-        + add a `.gitignore` file to your project root, and add `node_modules` to your file. 
-    - Make sure your package.json has this line in the "scripts" section:
-        + `"start": "node server.js"`
-    - Make a Heroku account online and login through the command line:
-        + `heroku login`
-    - Create the app:
-        + `heroku create`
-    - Ensure your server.js file has a dynamic port number. 
-        + `const port = process.env.PORT || 3000`
+
 
 ** Useful Links **
 Express Yourself - UW Bootcamp:

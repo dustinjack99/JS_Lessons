@@ -32,7 +32,9 @@
                 "age": e.target[2].value,
                 "forcePoints": e.target[3].value
             };
-            fetch('http://localhost:3000/api/characters', 
+            // fetch('http://localhost:3000/api/characters', 
+            //using the live url is important
+            fetch('https://ancient-scrubland-38603.herokuapp.com/api/characters', 
             {
                 //type of request
                 method: 'post', 
