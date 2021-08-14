@@ -1,3 +1,5 @@
+const db = require('./db.json')
+
 // Are you scared of learning more stuff??
 // Good news, what you learn today makes what we learned earlier 10X easier
 
@@ -14,7 +16,7 @@ const port = 3000;
 
 //can start using and defining routes out of the box
 app.get("/", (req, res) => {
-  res.send("Look at me!");
+  res.send("I'm Mr. Meeseeks - Look at me!");
 });
 
 app.listen(port, () => {
@@ -27,14 +29,22 @@ app.listen(port, () => {
 //make star wars app
 //                          this is EXPRESS req / res
 // app.get('/baby-yoda', (req, res) => {
-//     res.json(babyYoda);
+//     res.json(db.babyYoda);
 // });
 //do same for maul, han
 
 //make a case where the endpoint doesn't exist
 
+//is there a problem with the code above?
+
 //dynamic routing
 //can create variables in our routes
-/* app.get('/:character', (req, res) => {
-    console.log(req.params.character);
-}) */
+// app.get('/api/:character', (req, res) => {
+//     console.log(req.params.character);
+//     if(!db[req.params.character]) {
+//       res.send("The Force is not with you.");
+//     } else {
+
+//       res.send(db[req.params.character]);
+//     }
+// }) 
