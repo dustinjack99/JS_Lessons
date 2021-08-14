@@ -16,7 +16,7 @@ I want you to write an app with it's own backend API with Express.
 
 4. The site only needs to be one HTML page - all it needs it to POST data to your API.
 
-
+5. Above all else, DO NOT COPY / PASTE from lesson.js, it is ordered in a way that will fail. This is to encourage you to look up the documentation and problem-solve yourselves ;) 
 
 ** Useful Links **
 Express Yourself - UW Bootcamp:
