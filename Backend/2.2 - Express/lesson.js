@@ -10,13 +10,23 @@ const db = require('./db.json')
 // must install express!
 // Q: Can you remember what we do to init and install an NPM project?
 const express = require("express");
+const fs = require("fs");
+const { json } = require('express');
 
 const app = express();
 const port = 3000;
 
+//Use middleware ***COME BACK TO LATER***
+// user => (req) => server => (req) => controller 
+//                    ^^^ middleware, in order to change / work with data before server passes it off.
+// app.use(express.urlencoded({extended: true}));
+// app.use(express.json())
+//install NodeMon
+//npm i -g nodemon
+
 //can start using and defining routes out of the box
 app.get("/", (req, res) => {
-  res.send("I'm Mr. Meeseeks - Look at me!");
+  res.sendFile(__dirname + "/view.html");
 });
 
 app.listen(port, () => {
@@ -29,7 +39,7 @@ app.listen(port, () => {
 //make star wars app
 //                          this is EXPRESS req / res
 // app.get('/baby-yoda', (req, res) => {
-//     res.json(db.babyYoda);
+//     res.json(db["baby-yoda"]);
 // });
 //do same for maul, han
 
@@ -39,12 +49,34 @@ app.listen(port, () => {
 
 //dynamic routing
 //can create variables in our routes
-// app.get('/api/:character', (req, res) => {
-//     console.log(req.params.character);
-//     if(!db[req.params.character]) {
-//       res.send("The Force is not with you.");
-//     } else {
+app.get('/api/characters/:character', (req, res) => {
+    console.log(req.params.character);
+    if(!db[req.params.character]) {
+      res.send("The Force is not with you.");
+    } else {
 
-//       res.send(db[req.params.character]);
-//     }
-// }) 
+      res.send(db[req.params.character]);
+    }
+}) 
+
+app.get('/api/characters', (req, res) => {
+  res.send(db);
+})
+
+//POST
+//FAILS WITHOUT MIDDLEWARE! Go to middleware lesson :) :) :)
+app.post('/api/characters', (req, res) => {
+  const newChar = req.body;
+  
+  console.log(newChar)
+  //async
+  fs.readFile(__dirname + '/db.json', (err, data) => {
+    const db = JSON.parse(data);
+    console.log(db, "db")
+    db[`${newChar.name}`] = newChar;
+
+    //async
+    fs.writeFile(__dirname + '/db.json', JSON.stringify(db), (err, data) => {if (err) console.log(err);console.log(data)})
+  })
+});
+  

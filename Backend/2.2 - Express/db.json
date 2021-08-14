@@ -1,14 +1,1 @@
-{
-    "babyYoda": {
-        "name": "Baby Yoda",
-        "role": "adorable",
-        "age": 50,
-        "forcePoints": 5000
-    },
-    "babyDarthMaul": {
-        "name": "Baby Darth Maul",
-        "role": "Sith Master",
-        "age": 200,
-        "forcePoints": 4000
-    }
-}
+{"baby-yoda":{"name":"Baby Yoda","role":"adorable","age":50,"forcePoints":5000},"baby-darth-maul":{"name":"Baby Darth Maul","role":"Sith Master","age":200,"forcePoints":4000},"han-solo":{"name":"han solo","role":"smuggler","age":"28","forcePoints":"0"},"leia":{"name":"leia","role":"princess","age":"25","forcePoints":"500"},"luke":{"name":"luke","role":"knight","age":"25","forcePoints":"4500"}}

@@ -7,6 +7,41 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="lesson"></script>
+    <h1>I'M MR. MEESEEKS - LOOK AT ME!</h1>
+    <form id="form">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="name"/>
+        <label for="role">Role</label>
+        <input type="text" id="role" placeholder="Padawan"/>
+        <label for="age">Age</label>
+        <input type="text" id="age" placeholder="0"/>
+        <label for="force-points">Force Points</label>
+        <input type="text" id="force-points" placeholder="0"/>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+    <script>
+        const form = document.getElementById("form");
+        const button = document.getElementById("submit");
+        let formData = {};
+        form.addEventListener('submit', (e) => {
+            //prevents data from refreshing
+            e.preventDefault(); 
+            formData = {
+                "name": e.target[0].value,
+                "role": e.target[1].value,
+                "age": e.target[2].value,
+                "forcePoints": e.target[3].value
+            };
+            fetch('http://localhost:3000/api/characters', 
+            {
+                //type of request
+                method: 'post', 
+                //type of content being sent
+                headers: {"Content-Type": "application/json"},  
+                //data sent in request, must be stringified
+                body: JSON.stringify(formData)
+            });
+        })
+    </script>
 </body>
 </html>
