@@ -1,3 +1,8 @@
+//Client / Server model REMINDER!
+// Client's send a request from the front end.
+// Server sends a response from the back end.
+// Those response objects you've been working with has been from servers.
+
 // Servers and Routing are two of the
 // MOST IMPORTANT CONCEPTS
 
