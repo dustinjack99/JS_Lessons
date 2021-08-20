@@ -1,3 +1,5 @@
+//Go over new homework structure
+
 // step 1: install node.js
 // https://nodejs.org/en/
 
@@ -5,6 +7,7 @@
 // Client's send a request from the front end.
 // Server sends a response from the back end.
 // Those response objects you've been working with has been from servers.
+// DRAW TIME!
 
 //Node.js!
 
@@ -25,6 +28,9 @@
 // NPM! The best thing ever!
 // Node Package Manager - like all the lego sets for free
 // https://www.npmjs.com/
+
+//Activity!!
+// look around for some fun packages - animations / functionality / ui sets / REACT.... dun dun dun
 
 // inquirer
 // pay attention to downloads, documentation, links to github
