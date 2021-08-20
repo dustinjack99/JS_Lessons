@@ -1,5 +1,3 @@
-//Go over new homework structure
-
 // step 1: install node.js
 // https://nodejs.org/en/
 
@@ -7,7 +5,6 @@
 // Client's send a request from the front end.
 // Server sends a response from the back end.
 // Those response objects you've been working with has been from servers.
-// DRAW TIME!
 
 //Node.js!
 
