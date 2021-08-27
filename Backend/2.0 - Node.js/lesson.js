@@ -29,11 +29,31 @@
 //Activity!!
 // look around for some fun packages - animations / functionality / ui sets / REACT.... dun dun dun
 
-// inquirer
-// pay attention to downloads, documentation, links to github
-
 // npm init
 // package.json - instructions on how to run project
 // most importantly, will list dependencies
 
 // npm i inquirer
+const inquirer = require("inquirer")
+
+console.log(inquirer)
+// inquirer
+// pay attention to downloads, documentation, links to github
+inquirer.prompt([
+    {
+        name: "Question 1",
+        message: "What is your favorite color?",
+        type: "input"
+    },
+    {
+        name: "Question 2",
+        message: "What is your quest?",
+        type: "input"
+    },
+    {
+        name: "Question 3",
+        message: "What your SS number?",
+        type: "number"
+    },
+]).then(data => console.log(data));
+//*** jump over to practice Pt. 2

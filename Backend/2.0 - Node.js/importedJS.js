@@ -1,8 +1,3 @@
-const pie = "apple";
+const badmath = require("badmath");
 
-const predictable = () => 1;
-
-module.exports = {
-  pie,
-  predictable,
-};
+console.log(badmath.predictable())

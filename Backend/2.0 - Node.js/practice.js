@@ -21,27 +21,27 @@
 //breakdown of command line args, node and file
 
 //filesystem, built into node.js
-const fs = require("fs");
+// const fs = require("fs");
 
-fs.readFile(__dirname + '/writeme.txt', 'UTF8', (err, data) => {
-    if (err) {
-        console.log(err);
-        return;
-    }
-    console.log(data, "data!")
-})
+// fs.readFile(__dirname + '/writeme.txt', 'UTF8', (err, data) => {
+//     if (err) {
+//         console.log(err);
+//         return;
+//     }
+//     console.log(data, "data!")
+// })
 
 //read file with (filename, charset, callback(err, data))
 // Q: does this look familiar?
 
 //activity!!
-fs.writeFile(__dirname + '/writeme.txt', process.argv[2], (err, data) => {
-    if (err) {
-        console.log(err);
-        return;
-    }
-    console.log(data, "data!")
-})
+// fs.writeFile(__dirname + '/writeme.txt', process.argv[2], (err, data) => {
+//     if (err) {
+//         console.log(err);
+//         return;
+//     }
+//     console.log(data, "data!")
+// })
 // write to writeme.txt file, using (filename, data, callback(err))
 //write a new file
 //write new file with process.argv[2]
@@ -49,13 +49,13 @@ fs.writeFile(__dirname + '/writeme.txt', process.argv[2], (err, data) => {
 //activity!!
 //how might we 'append' to a file?
 // console.log(process.argv)
-fs.appendFile(__dirname + '/writeme.txt', '\n' + process.argv[2], (err) => {
-    if (err) {
-        console.log(err);
-        return;
-    }
-    console.log(data, "data!")
-})
+// fs.appendFile(__dirname + '/writeme.txt', '\n' + process.argv[2], (err) => {
+//     if (err) {
+//         console.log(err);
+//         return;
+//     }
+//     console.log(data, "data!")
+// })
 
 // import js file from local path;
 //** ^^^ must be local path, Node looks for modules / built in libraries first
