@@ -65,9 +65,7 @@ inquirer
     if (playerAnswers.delicious.toLowerCase() == "candy") {
       console.log("Correct. Candy is Delicious."), playerScore++;
     } else if ((playerAnswers.delicious = String)) {
-      console.log("Yum!"), playerScore++;
-    } else {
-      console.log("Not right.");
+      console.log("Well, taste is subjective, I suppose."), playerScore++;
     }
     if (playerAnswers.lute == "11-13") {
       console.log("That's right! Nerd."), playerScore++;
