@@ -1,0 +1,15 @@
+{
+  "name": "babys-first-node-project",
+  "version": "1.0.0",
+  "description": "Oh how cute, you're making a node project",
+  "main": "htmleditor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Neal Fisher",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  }
+}
