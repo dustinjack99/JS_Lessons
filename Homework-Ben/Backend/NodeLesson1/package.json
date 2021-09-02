@@ -1,0 +1,16 @@
+{
+  "name": "first-node-project",
+  "version": "1.0.0",
+  "description": "Don't need one",
+  "main": "practice.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ben",
+  "license": "ISC",
+  "dependencies": {
+    "badmath": "^1.0.1",
+    "inquirer": "^8.1.2"
+  }
+}
