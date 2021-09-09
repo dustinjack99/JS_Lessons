@@ -1,0 +1,44 @@
+body {
+  background-color: rgb(43, 65, 65);
+  font-size: large;
+  color: rgb(160, 207, 253);
+  text-align: center;
+  justify-content: center;
+}
+p {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  justify-self: center;
+}
+.Header {
+  display: flex;
+  flex-flow: column wrap;
+  justify-self: center;
+  justify-content: center;
+}
+
+.List {
+  display: flex;
+  flex-flow: row wrap;
+  justify-self: center;
+  justify-content: center;
+}
+.Main {
+  display: flex;
+  font-size: large;
+  justify-self: center;
+  justify-content: center;
+}
+a:link {
+  font-size: medium;
+  color: rgb(179, 255, 204);
+}
+a:visited {
+  font-size: medium;
+  color: rgb(209, 12, 176);
+}
+a:hover {
+  font-size: medium;
+  color: rgb(74, 249, 255);
+}
