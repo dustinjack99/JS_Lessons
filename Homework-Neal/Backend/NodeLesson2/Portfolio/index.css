@@ -16,6 +16,7 @@ p {
   flex-flow: column wrap;
   justify-self: center;
   justify-content: center;
+  border: thick rgb(160, 207, 253);
 }
 
 .List {
@@ -23,12 +24,26 @@ p {
   flex-flow: row wrap;
   justify-self: center;
   justify-content: center;
+  color: rgb(250, 166, 157);
 }
 .Main {
   display: flex;
   font-size: large;
   justify-self: center;
   justify-content: center;
+  border: thick rgb(160, 207, 253);
+}
+.Nav {
+  display: flex;
+  flex-flow: column;
+  justify-self: center;
+  justify-content: center;
+}
+
+#navList {
+  display: inline-flex;
+  justify-self: center;
+  justify-content: space-evenly;
 }
 a:link {
   font-size: medium;
