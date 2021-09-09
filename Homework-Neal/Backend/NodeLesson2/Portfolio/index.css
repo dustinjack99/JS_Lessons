@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(43, 65, 65);
+  background-color: rgb(19, 54, 54);
   font-size: large;
   color: rgb(160, 207, 253);
   text-align: center;
@@ -7,7 +7,7 @@ body {
 }
 p {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row;
   justify-content: center;
   justify-self: center;
 }
@@ -24,14 +24,15 @@ p {
   flex-flow: row wrap;
   justify-self: center;
   justify-content: center;
-  color: rgb(250, 166, 157);
+  color: rgb(80, 168, 255);
+  font-size: larger;
 }
 .Main {
   display: flex;
+  flex-direction: column;
   font-size: large;
   justify-self: center;
   justify-content: center;
-  border: thick rgb(160, 207, 253);
 }
 .Nav {
   display: flex;
@@ -42,18 +43,16 @@ p {
 
 #navList {
   display: inline-flex;
+  flex-direction: column;
   justify-self: center;
   justify-content: space-evenly;
 }
 a:link {
-  font-size: medium;
   color: rgb(179, 255, 204);
 }
 a:visited {
-  font-size: medium;
-  color: rgb(209, 12, 176);
+  color: rgb(173, 0, 14);
 }
 a:hover {
-  font-size: medium;
   color: rgb(74, 249, 255);
 }
