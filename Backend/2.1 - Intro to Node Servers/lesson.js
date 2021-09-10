@@ -11,6 +11,7 @@
 // you can do ANYTHING.
 
 // Q: What is a server?
+// Go to paint again, wee!!
 // req / res
 
 // Ex: server-side verbs / functions
@@ -25,8 +26,13 @@
 
 // During development, our PC's can be both client AND server!
 
+// MOVE TO MAKING A SERVER, reference in SERVER.JS
+
 //MVC
+// USE PAINT WOOO
 // Model / View / Controller
 // Model - Handles business logic
 // View - Thing the user sees, what the server sends back
 // Controller - Orchestrates what happens, handles routes
+
+// MOVE TO MAKING A ROUTER, reference in ROUTES.JS

@@ -1,10 +1,21 @@
-const fs = require("fs");
+// const action = () => {
+//   console.log();
+// };
 
-fs.readFile(__dirname + "/writeme.txt", "UTF8", (data, err) => {
-  if (err) {
-    console.log(err);
-    return;
+// module.exports = action;
+const fs = require("fs");
+console.log(process.argv);
+
+//dsa
+
+fs.appendFile(
+  __dirname + "../../../Frontend/JS 301/index.html",
+  "\n" + process.argv[2],
+  (err, data) => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    console.log(data, "data!");
   }
-  console.log(data, "data!");
-  console.log(__dirname);
-});
+);

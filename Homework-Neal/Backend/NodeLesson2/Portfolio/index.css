@@ -1,0 +1,58 @@
+body {
+  background-color: rgb(19, 54, 54);
+  font-size: large;
+  color: rgb(160, 207, 253);
+  text-align: center;
+  justify-content: center;
+}
+p {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  justify-self: center;
+}
+.Header {
+  display: flex;
+  flex-flow: column wrap;
+  justify-self: center;
+  justify-content: center;
+  border: thick rgb(160, 207, 253);
+}
+
+.List {
+  display: flex;
+  flex-flow: row wrap;
+  justify-self: center;
+  justify-content: center;
+  color: rgb(80, 168, 255);
+  font-size: larger;
+}
+.Main {
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  justify-self: center;
+  justify-content: center;
+}
+.Nav {
+  display: flex;
+  flex-flow: column;
+  justify-self: center;
+  justify-content: center;
+}
+
+#navList {
+  display: inline-flex;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: space-evenly;
+}
+a:link {
+  color: rgb(179, 255, 204);
+}
+a:visited {
+  color: rgb(173, 0, 14);
+}
+a:hover {
+  color: rgb(74, 249, 255);
+}
