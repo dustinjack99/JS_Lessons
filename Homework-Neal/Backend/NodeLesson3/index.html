@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boilerplate Express HTML</title>
+</head>
+<body>
+    <h1>Boilerplate Express Forms!</h1>
+    <form id="form">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="name"/>
+        <label for="role">Role</label>
+        <input type="text" id="role" placeholder="Padawan"/>
+        <label for="age">Age</label>
+        <input type="text" id="age" placeholder="0"/>
+        <label for="force-points">Force Points</label>
+        <input type="text" id="force-points" placeholder="0"/>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+    <script>
+        //grab your html elements first
+
+        form.addEventListener('submit', (e) => {
+            //remenber to prevents the page from refreshing
+
+            //fetch from your api
+            fetch('http://your/url/here', 
+            {
+                //these are the fetch OPTIONS, which need three things:
+                //type of request
+                //type of content being sent
+                //data sent in request, must be stringified
+            });
+        })
+    </script>
+</body>
+</body>
+</html>

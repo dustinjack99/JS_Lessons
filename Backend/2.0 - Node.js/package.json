@@ -1,0 +1,15 @@
+{
+  "name": "first-node-project",
+  "version": "1.0.0",
+  "description": "Don't need one",
+  "main": "importedJS.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dustin",
+  "license": "ISC",
+  "dependencies": {
+    "badmath": "^1.0.1",
+    "inquirer": "^8.1.2"
+  }
+}

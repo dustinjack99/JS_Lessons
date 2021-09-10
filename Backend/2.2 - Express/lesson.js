@@ -79,4 +79,5 @@ app.post('/api/characters', (req, res) => {
     fs.writeFile(path.join(__dirname + '/db.json'), JSON.stringify(db), (err, data) => {if (err) console.log(err);console.log(data)})
   })
 });
-  
+
+//PUSH UP A SCRAMBLED VERSION
