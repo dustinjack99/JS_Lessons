@@ -1,19 +1,19 @@
 //built in HTTP package
-// const http = require("http");
+const http = require("http");
+const path = require("path")
+//ports are a way to look into your computer
+const port = 8080;
 
-// //ports are a way to look into your computer
-// const port = 8080;
+const handleRequest = (req, res) => {
+  // request sent, res.end() breaks connection
+  //pull out req.body for routes
+};
 
-// const handleRequest = (req, res) => {
-//   // request sent, res.end() breaks connection
-//   res.end("this thing worked");
-// };
+const server = http.createServer(handleRequest);
 
-// const server = http.createServer(handleRequest);
-
-// server.listen(port, () => {
-//   console.log(`Server running on port: ${port}`);
-// });
+server.listen(port, () => {
+  console.log(`Server running on port: ${port}`);
+});
 //show off localhost!
 
 //activity, two servers
