@@ -2,7 +2,7 @@ We've taken our first steps into Node, which will be our bridge across the front
 
 You learned how to use Node, NPM, and JavaScript outside of the browser.
 
-Armed with your newfound knowledge of Node, write me a command-line app that does the following:
+Armed with your new found knowledge of Node, write me a command-line app that does the following:
 
 1. You should be able to run the app with 'node <filename>'.
 
