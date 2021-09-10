@@ -1,0 +1,15 @@
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: rgba(238, 238, 238, 0.794);
+  background-image: url(https://pbs.twimg.com/profile_banners/302237290/1583863610/1080x360);
+  background-size: flex;
+  background-repeat: repeat;
+  background-position: center;
+}
+h1 {
+  margin-bottom: 30px;
+  margin-bottom: 10px;
+  color: aliceblue;
+  font-size: xx-large;
+  display: flex;
+}
