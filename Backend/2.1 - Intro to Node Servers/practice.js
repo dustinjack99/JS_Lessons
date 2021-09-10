@@ -11,6 +11,7 @@ const displayHome = (res) => {
             console.log(err)
         } else {
             res.end(data)
+            console.log(data)
         }
     })
     console.log(__dirname);
