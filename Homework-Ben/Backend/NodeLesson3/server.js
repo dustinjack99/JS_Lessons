@@ -29,9 +29,11 @@ app.get("/api/characters/:character", (req, res) => {
   const dynamicCharacter = req.params.character;
   console.log(dynamicCharacter);
   if (db[dynamicCharacter]) {
-    res.send(db[dynamicCharacter]);
+    res.send(
+      `Now entering the ring... the ${db[dynamicCharacter].race} ${db[dynamicCharacter].name} with a power level of ${db[dynamicCharacter].powerLevel}!`
+    );
   } else {
-    res.send("The Force is not with you.");
+    res.send("In another dimension");
   }
 });
 
