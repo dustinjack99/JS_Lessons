@@ -21,17 +21,28 @@
     </form>
     <script>
         //grab your html elements first
-
+        const form = document.getElementById("form");
+        const button = document.getElementById("submit");
+        let formData = {};
         form.addEventListener('submit', (e) => {
             //remenber to prevents the page from refreshing
-
+e.preventDefault()
+formData = {
+    "name": e.target[0].value,
+    "role": e.target[1].value,
+    "age": e.target[2].value,
+    "forcePoints": e.target[3].value,
+} 
             //fetch from your api
-            fetch('http://your/url/here', 
-            {
+            fetch('http://localhost:3000/api/characters',
+             {
                 //these are the fetch OPTIONS, which need three things:
                 //type of request
+                method: 'post',
                 //type of content being sent
+                headers: {"Conten-Type": "application/json"},
                 //data sent in request, must be stringified
+                body: JSON.stringify(formData)
             });
         })
     </script>
