@@ -7,28 +7,17 @@
     <title>Dragon Ball Z</title>
     <link rel="stylesheet" href="./styles/style.css" type="text/css">
 </head>
-<body>
-    <h1 id="header"
-    style="
-    display: flex;
-    justify-content: center;
-    color: red;
-    "
-    >DBZ character entry</h1>
-    <form id="form"
-    style="
-    display: flex;
-    justify-content: center;
-    font-size: 40px;
-    margin-top: 80px;">
-        <label id="nameLabel" for="name">Name</label>
-        <input type="text" id="name" placeholder="name"/>
-        <label for="alignment">Alignment</label>
-        <input type="text" id="alignment" placeholder="Hero"/>
-        <label for="race">Race</label>
-        <input type="text" id="race" placeholder="Earthling"/>
-        <label for="powerLevel">Power Level</label>
-        <input type="text" id="powerLevel" placeholder="0"/>
+<body id="body">
+    <h1 id="header">DBZ character entry</h1>
+    <form id="form">
+        <label id="nameLabel" for="name">Name:</label>
+        <input class="input" type="text" id="name" placeholder="name"/>
+        <label for="alignment">Alignment:</label>
+        <input class="input" type="text" id="alignment" placeholder="Hero"/>
+        <label for="race">Race:</label>
+        <input class="input" type="text" id="race" placeholder="Earthling"/>
+        <label for="powerLevel">Power Level:</label>
+        <input class="input" type="text" id="powerLevel" placeholder="0"/>
         <button type="submit" id="submit">Submit</button>
     </form>
     <script>
