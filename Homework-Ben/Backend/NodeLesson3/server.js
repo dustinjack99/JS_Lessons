@@ -10,6 +10,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("public"));
 
 app.listen(port, () => {
   console.log(`App is listening on port: ${port}`);
@@ -17,7 +18,7 @@ app.listen(port, () => {
 
 //end boilerplate
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/index.html"));
+  res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
 app.get("/api/characters", (req, res) => {
@@ -29,9 +30,11 @@ app.get("/api/characters/:character", (req, res) => {
   const dynamicCharacter = req.params.character;
   console.log(dynamicCharacter);
   if (db[dynamicCharacter]) {
-    res.send(db[dynamicCharacter]);
+    res.send(
+      `Now entering the ring... the ${db[dynamicCharacter].race} ${db[dynamicCharacter].name} with a power level of ${db[dynamicCharacter].powerLevel}!`
+    );
   } else {
-    res.send("The Force is not with you.");
+    res.send("In another dimension");
   }
 });
 

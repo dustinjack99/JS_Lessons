@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boilerplate Express HTML</title>
+    <title>Dragon Ball Z</title>
+    <link rel="stylesheet" href="./styles/style.css" type="text/css">
 </head>
-<body>
-    <h1>Boilerplate Express Forms!</h1>
+<body id="body">
+    <h1 id="header">DBZ character entry</h1>
     <form id="form">
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="name"/>
-        <label for="role">Role</label>
-        <input type="text" id="role" placeholder="Padawan"/>
-        <label for="age">Age</label>
-        <input type="text" id="age" placeholder="0"/>
-        <label for="force-points">Force Points</label>
-        <input type="text" id="force-points" placeholder="0"/>
+        <label id="nameLabel" for="name">Name:</label>
+        <input class="input" type="text" id="name" placeholder="name"/>
+        <label for="alignment">Alignment:</label>
+        <input class="input" type="text" id="alignment" placeholder="Hero"/>
+        <label for="race">Race:</label>
+        <input class="input" type="text" id="race" placeholder="Earthling"/>
+        <label for="powerLevel">Power Level:</label>
+        <input class="input" type="text" id="powerLevel" placeholder="0"/>
         <button type="submit" id="submit">Submit</button>
     </form>
     <script>
@@ -29,9 +30,9 @@
             //prevents the page from refreshing
             formData = {
                 "name": e.target[0].value,
-                "role": e.target[1].value,
-                "age": e.target[2].value,
-                "forcePoints": e.target[3].value,
+                "alignment": e.target[1].value,
+                "race": e.target[2].value,
+                "powerLevel": e.target[3].value,
             }
 
             //fetch from your api
