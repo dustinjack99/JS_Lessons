@@ -31,8 +31,46 @@ app.get("/api/characters/:character", (req, res) => {
   console.log(dynamicCharacter);
   if (db[dynamicCharacter]) {
     res.send(
-      `Now entering the ring... the ${db[dynamicCharacter].race} ${db[dynamicCharacter].name} with a power level of ${db[dynamicCharacter].powerLevel}!`
+      `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${dynamicCharacter}'s Scouter Reading</title>
+</head>
+<body id="body">
+    <h1 id="characterName" style="
+    display: flex;
+    justify-content: center;
+    ">${dynamicCharacter}</h1>
+    <div id="fullScouter">
+    <img src="https://japeal.com/wordpress/wp-content/themes/total/DBFG/scouter/scouter_img.png"
+    style="
+    display: flex;
+    justify-content: center;
+    margin: 0% 25%;
+    z-index: -1;
+    position: absolute;
+    "
+    />
+    <h2 id="powerReading" style="
+    display: flex;
+    z-index: 4;
+    margin: 15% 50%;
+    color: #daad0b;
+    position: absolute;
+    ">${db[dynamicCharacter].powerLevel}</h2>
+    </div>
+</body>
+</html>`
     );
+    // res.sendFile(path.join(__dirname, "/public/character.html"));
+    // let characterEntry = document.getElementById("characterEntry");
+    // console.log(characterEntry);
+    // res.send(
+    //   `Now entering the ring... the ${db[dynamicCharacter].race} ${db[dynamicCharacter].name} with a power level of ${db[dynamicCharacter].powerLevel}!`
+    // );
   } else {
     res.send("In another dimension");
   }
