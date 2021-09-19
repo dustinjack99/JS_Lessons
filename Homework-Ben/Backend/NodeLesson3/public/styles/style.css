@@ -34,3 +34,8 @@
   font-size: 15px;
   margin: 10px;
 }
+
+#characterName {
+  display: flex;
+  justify-content: center;
+}
