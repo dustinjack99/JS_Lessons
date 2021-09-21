@@ -41,23 +41,26 @@ app.get("/api/characters/:character", (req, res) => {
 </head>
 <body id="body">
     <h1 id="characterName" style="
-    display: flex;
-    justify-content: center;
+      margin-left: 20%;
     ">${dynamicCharacter}</h1>
     <div id="fullScouter">
     <img src="https://japeal.com/wordpress/wp-content/themes/total/DBFG/scouter/scouter_img.png"
     style="
     display: flex;
     justify-content: center;
-    margin: 0% 25%;
     z-index: -1;
     position: absolute;
     "
     />
     <h2 id="powerReading" style="
     display: flex;
+    justify-content: center;
     z-index: 4;
-    margin: 5% 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    font-size: 60px;
+    width: 860px;
     color: #daad0b;
     position: absolute;
     ">${db[dynamicCharacter].powerLevel}</h2>
