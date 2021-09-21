@@ -57,7 +57,7 @@ app.get("/api/characters/:character", (req, res) => {
     <h2 id="powerReading" style="
     display: flex;
     z-index: 4;
-    margin: 15% 50%;
+    margin: 5% 50%;
     color: #daad0b;
     position: absolute;
     ">${db[dynamicCharacter].powerLevel}</h2>
