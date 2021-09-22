@@ -58,12 +58,36 @@ app.get("/api/characters/:character", (req, res) => {
     z-index: 4;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 150px;
+    margin-top: 90px;
     font-size: 60px;
     width: 860px;
     color: #daad0b;
     position: absolute;
     ">${db[dynamicCharacter].powerLevel}</h2>
+    <h2 id="race" style="
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    font-size: 60px;
+    width: 860px;
+    color: #daad0b;
+    position: absolute;
+    ">${db[dynamicCharacter].race}</h2>
+    <h2 id="alignment" style="
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 220px;
+    font-size: 60px;
+    width: 860px;
+    color: #daad0b;
+    position: absolute;
+    ">${db[dynamicCharacter].alignment}</h2>
     </div>
 </body>
 </html>`
