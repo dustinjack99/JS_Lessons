@@ -1,0 +1,16 @@
+{
+  "name": "2.4---more-sql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lesson.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.1.5",
+    "pg": "^8.7.1"
+  }
+}
