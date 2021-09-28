@@ -4,7 +4,9 @@ For your homework, I want you to use the inquirer.js package to create another c
 
 Accomplish these tasks in your homework:
 
-1. Referencing (not copying) the lesson file I've created, finish the skeleton command-line app I've created.
+1. Referencing (not copying) the lesson file I've created, finish the skeleton command-line app I've made in your homework folders.
+
+   - This is all contained within your `server.js` file.
 
 2. Create three more options that a user can select from, all logging different kinds of data to the console.
 
