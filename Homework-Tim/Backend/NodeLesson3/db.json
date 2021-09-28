@@ -1,1 +1,20 @@
-{"han-solo":{"name":"han solo","role":"smuggler","age":"28","forcePoints":"0"},"leia":{"name":"leia","role":"princess","age":"25","forcePoints":"500"},"luke":{"name":"luke","role":"knight","age":"25","forcePoints":"4500"}}
+{
+  "mushroom-burger": {
+    "name": "Mushroom burger",
+    "type": "Sandwich",
+    "side": "Fries",
+    "cost": "11.5"
+  },
+  "fried-chicken": {
+    "name": "Fried chicken",
+    "type": "Platter",
+    "side": "Mashed potatoes",
+    "cost": "14.5"
+  },
+  "bean-burrito": {
+    "name": "Bean burrito",
+    "type": "Wrap",
+    "side": "Chips and salsa",
+    "cost": "12.5"
+  }
+}
