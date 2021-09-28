@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "Raptor99!",
+    "database": "gigs",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "Raptor99!",
+    "database": "gigs",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "Raptor99!",
+    "database": "gigs",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
