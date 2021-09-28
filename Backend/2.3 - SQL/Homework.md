@@ -12,25 +12,33 @@ Your homework:
 
 3. Each page must have its own route. Ex. - Your About page should be www.mywebsite.com/about.
 
-4. Finally, we're going to be deploying your websites to Heroku, a free web-hosting service that lets you mount and deploy your live projects / apps. It's a wonderful resource for hosting a small portfolio on the interent, and it's the tech we're going to use to accomplish this.
+4. Finally, we're going to be deploying your websites to Heroku, a free web-hosting service that lets you mount and deploy your live apps. It's a wonderful resource for hosting a small portfolio on the interent, and it's the tech we'll use to accomplish this for you.
 
 To deploy your website to Heroku, follow these steps!
 
 - Install Heroku by entering this into the terminal:
   - `npm i -g heroku`
   - check installation with: `heroku -v`
-- Initial your project as a git repo:
+- Initialize your project as a git repo:
   - type `git init` into your vscode terminal, then add and commit your changes. (You do not need to push)
   - add a `.gitignore` file to your project root, and add `node_modules` to your file.
+
+**_ These next steps are important _**
+
 - Make sure your package.json has this line in the "scripts" section:
   - `"start": "node server.js"`
-- Make a Heroku account online and login through the command line:
+- Ensure your server.js file has a dynamic port number.
+  - `const port = process.env.PORT || 3000`
+- Your server file has to use path.join() to point to the html being served.
+
+**_ Finally, deploy your project! _**
+
+- Make a Heroku account online:
+  - `https://www.heroku.com/`
+- Login through the command line:
   - `heroku login`
 - Create the app:
   - `heroku create`
-- Ensure your server.js file has a dynamic port number.
-  - `const port = process.env.PORT || 3000`
-- Your files use path.join() to point to the html being served.
 
 TIPS - You can have a github repo and a Heroku repo in the same directory. Don't worry about these conflicting - just remember to push them up seperately if you're using two repos.
 
