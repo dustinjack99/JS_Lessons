@@ -12,7 +12,6 @@ app.use(express.json());
 app.listen(port, () => {
   console.log(`App is listening on port: ${port}`);
 });
-
 //GET Method
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "/index.html"));
