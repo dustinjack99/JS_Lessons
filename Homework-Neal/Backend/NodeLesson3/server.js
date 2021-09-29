@@ -112,3 +112,4 @@ app.post("/api/characters", (req, res) => {
     );
   });
 });
+// ROUTING REQUESTS FOR CUSTOM URLS

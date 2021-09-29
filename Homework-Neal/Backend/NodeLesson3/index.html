@@ -7,7 +7,7 @@
     <title>Boilerplate Express HTML</title>
 </head>
 <body>
-    <h1>Boilerplate Express Forms!</h1>
+    <h1>Star Wars Character Archive</h1>
     <form id="form">
         <label for="name">Name</label>
         <input type="text" id="name" placeholder="Name"/>
@@ -21,6 +21,11 @@
         <input type="text" id="force-points" placeholder="0"/>
         <button type="submit" id="submit">Submit</button>
     </form>
+    <!-- <form id="search">
+        <label for="search"></label>
+        <input id="searchContent" type="text" placeholder="Search"/>
+        <button type="submit">Search</button>
+    </form> -->
     <script>
         //grab your html elements first
         const form = document.getElementById("form");
@@ -48,6 +53,13 @@
                 body: JSON.stringify(formData)
             });
         })
+        // const search = document.getElementById("search");
+        // search.addEventListener('submit', (e) => {
+        //     e.preventDefault()
+        //    console.log(e.target.value)
+        // })
+//ADD EVENT LISTENER TO SEARCH BAR, GRAB SEARCHED VALUE, REDIRECT TO NEW URL
+
     </script>
 </body>
 </body>
