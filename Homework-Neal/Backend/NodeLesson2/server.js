@@ -1,11 +1,11 @@
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
+// var url = require("url");
+
 // const { restart } = require("nodemon");
 const port = process.env.PORT || 8080;
 const displayError = (res) => {
-  console.log(req.url);
-  console.log(err);
   res.end(`
 <html>
 <body>
@@ -14,8 +14,6 @@ const displayError = (res) => {
 </html>`);
 };
 const display404 = (res) => {
-  console.log(req.url);
-  console.log(data);
   res.end(`
   <html>
   <body>
