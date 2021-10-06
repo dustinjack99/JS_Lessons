@@ -1,5 +1,5 @@
 {
-  "name": "2.4---more-sql",
+  "name": "2.4_moresql",
   "version": "1.0.0",
   "description": "",
   "main": "lesson.js",
@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^8.1.5",
+    "inquirer": "^8.2.0",
     "pg": "^8.7.1"
   }
 }
