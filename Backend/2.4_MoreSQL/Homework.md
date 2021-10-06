@@ -20,3 +20,11 @@ My Massive SQL - UW Bootcamp:
 
 SQL Fundamentals - Frontend Masters:
 `https://frontendmasters.com/courses/sql-fundamentals/`
+
+Documentation!
+Inquirier: `https://www.npmjs.com/package/inquirer`
+PG NPM library: `https://www.npmjs.com/package/pg`
+Postgres Docs: `https://www.postgresql.org/docs/13/index.html`
+
+Random Tidbits:
+look into LIKE clauses, and ILIKE
