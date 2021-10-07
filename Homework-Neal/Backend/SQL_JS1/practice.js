@@ -19,15 +19,16 @@ client.connect((err, res) => {
 
   // all database functionality goes here, after the connection is established.
   //   selectAllArtists();
+  runSearch();
 });
 
-const selectAllArtists = async () => {
-  client.query("SELECT artist FROM top_5000;", (err, res) => {
-    if (err) throw err;
-    console.log(res.rows);
-    client.end();
-  });
-};
+// const selectAllArtists = async () => {
+//   client.query("SELECT artist FROM top_5000;", (err, res) => {
+//     if (err) throw err;
+//     console.log(res.rows);
+//     client.end();
+//   });
+// };
 
 const inquirer = require("inquirer");
 
@@ -52,13 +53,13 @@ const runSearch = () => {
           artistSearch();
           break;
         case "Find all Artists with more than one Top Song":
-          artistSearch();
+          multiSearch();
           break;
         case "Find all songs within a range":
-          artistSearch();
+          rangeSearch();
           break;
         case "Find a specific song":
-          artistSearch();
+          songSearch();
           break;
         default:
           client.end();
@@ -66,6 +67,82 @@ const runSearch = () => {
     });
 };
 
+const artistSearch = () => {
+  inquirer
+    .prompt({
+      name: "artist",
+      type: "input",
+      message: "What's the artist's name?",
+    })
+    .then((answer) => {
+      client.query(
+        "SELECT * FROM top_5000 WHERE artist = $1",
+        [answer.artist],
+        (err, res) => {
+          if (err) throw err;
+          console.log(res.rows);
+          client.end();
+        }
+      );
+    });
+};
+const multiSearch = () => {
+  inquirer
+    .prompt({
+      name: "multi",
+      type: "input",
+      message: "Name an Artist other than Bing Crosby.",
+    })
+    .then((answer) => {
+      client.query(
+        "SELECT song, year FROM top_5000 WHERE artist = $1", // SQL COMMAND
+        [answer.multi],
+        (err, res) => {
+          if (err) throw err;
+          console.log(res.rows);
+          client.end();
+        }
+      );
+    });
+};
+const rangeSearch = () => {
+  inquirer
+    .prompt({
+      name: "multi",
+      type: "input", //multiple choice?
+      message: "Designate a range to search.", //figure out what "ranges" can be referred to here - artist name? Year? artists who are not Bing Crosby?
+    })
+    .then((answer) => {
+      client.query(
+        "SELECT * FROM top_5000 WHERE year = $1", // SQL COMMAND
+        [answer.multi],
+        (err, res) => {
+          if (err) throw err;
+          console.log(res.rows);
+          client.end();
+        }
+      );
+    });
+};
+const songSearch = () => {
+  inquirer
+    .prompt({
+      name: "multi",
+      type: "input", //multiple choice?
+      message: "Name a Song other than 'White Christmas'.", //figure out what "ranges" can be referred to here - artist name? Year? artists who are not Bing Crosby?
+    })
+    .then((answer) => {
+      client.query(
+        "SELECT * FROM top_5000 WHERE song = $1", // SQL COMMAND
+        [answer.multi],
+        (err, res) => {
+          if (err) throw err;
+          console.log(res.rows);
+          client.end();
+        }
+      );
+    });
+};
 //make a seed file!
 //work together to make a seed file for the .csv file you all have.
 //raw_total, raw_usa, raw_uk, raw_eu, raw_row
