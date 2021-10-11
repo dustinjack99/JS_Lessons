@@ -47,6 +47,7 @@ const runSearch = () => {
         "Find all artists who have more than one top song",
         "Find all songs within a range",
         "Find a specific song",
+        "Find all songs from year",
         "Exit",
       ],
     })
@@ -63,6 +64,9 @@ const runSearch = () => {
           break;
         case "Find a specific song":
           findSong();
+          break;
+        case "Find all songs from year":
+          byYear();
           break;
         case "Exit":
           client.end();
@@ -82,7 +86,9 @@ const artistSearch = () => {
     })
     .then((answer) => {
       client.query(
-        "SELECT * FROM top_5000 WHERE artist = $1",
+        // "SELECT * FROM top_5000 WHERE artist = $1",
+        `SELECT * FROM top_5000 t WHERE t.artist ILIKE ('%' || $1 || '%')`,
+        // WILDCARDS CONCATENATION
         [answer.artist],
         (err, res) => {
           if (err) throw err;
@@ -97,12 +103,12 @@ const findMultipleSongs = () => {
   inquirer
     .prompt({
       name: "multiple",
-      type: "input",
+      type: "number",
       message: "Minimum number of songs in top 5000?",
     })
     .then((answer) => {
       client.query(
-        "SELECT * FROM top_5000 WHERE ", // Write function that says select the top 5000 then take the number from multiple against the array of top 5000 and return the results,
+        "SELECT artist, COUNT(*) FROM top_5000 t GROUP BY t.artist HAVING COUNT(*) > $1",
         [answer.multiple],
         (err, res) => {
           if (err) throw err;
@@ -147,6 +153,25 @@ const findSong = () => {
       client.query(
         "SELECT * FROM top_5000 WHERE song = $1",
         [answer.title],
+        (err, res) => {
+          if (err) throw err;
+          console.log(res.rows);
+          client.end();
+        }
+      );
+    });
+};
+const byYear = () => {
+  inquirer
+    .prompt({
+      name: "year",
+      type: "number",
+      message: "Which year?",
+    })
+    .then((answer) => {
+      client.query(
+        "SELECT * FROM top_5000 WHERE year = $1",
+        [answer.year],
         (err, res) => {
           if (err) throw err;
           console.log(res.rows);
