@@ -111,10 +111,11 @@ const multiSearch = () => {
 const rangeSearch = () => {
   inquirer
     .prompt([
+      // rangeMin must be lower than rangeMax or else function fails.
       {
         name: "rangeMin",
-        type: "number", //multiple choice?
-        message: "Select starting year between 1911-2014.", //figure out what "ranges" can be referred to here - artist name? Year? artists who are not Bing Crosby?
+        type: "number",
+        message: "Select starting year between 1911-2014.", //BETWEEN function - THAT'S what D meant by "range."
       },
       {
         name: "rangeMax",
@@ -143,7 +144,7 @@ const songSearch = () => {
     .prompt({
       name: "song",
       type: "input", //multiple choice?
-      message: "Name a Song other than 'White Christmas'.", //figure out what "ranges" can be referred to here - artist name? Year? artists who are not Bing Crosby?
+      message: "Name a Song other than 'White Christmas'.",
     })
     .then((answer) => {
       client.query(
