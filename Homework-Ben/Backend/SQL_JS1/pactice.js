@@ -48,6 +48,7 @@ const runSearch = () => {
         "Find all songs within a range",
         "Find a specific song",
         "Find all songs from year",
+        "Find songs by decade",
         "Exit",
       ],
     })
@@ -67,6 +68,9 @@ const runSearch = () => {
           break;
         case "Find all songs from year":
           byYear();
+          break;
+        case "Find songs by decade":
+          byDecade();
           break;
         case "Exit":
           client.end();
@@ -172,6 +176,39 @@ const byYear = () => {
       client.query(
         "SELECT * FROM top_5000 WHERE year = $1",
         [answer.year],
+        (err, res) => {
+          if (err) throw err;
+          console.log(res.rows);
+          client.end();
+        }
+      );
+    });
+};
+const byDecade = () => {
+  inquirer
+    .prompt({
+      name: "decade",
+      type: "rawlist",
+      message: "Which decade?",
+      choices: [
+        "1910",
+        "1920",
+        "1930",
+        "1940",
+        "1950",
+        "1960",
+        "1970",
+        "1980",
+        "1990",
+        "2000",
+        "2010",
+        "2020",
+      ],
+    })
+    .then((answer) => {
+      client.query(
+        `SELECT position, artist, song, year FROM top_5000 t WHERE t.year >= $1 AND t.year < $1 + 10`,
+        [answer.decade],
         (err, res) => {
           if (err) throw err;
           console.log(res.rows);
