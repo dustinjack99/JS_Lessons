@@ -72,11 +72,11 @@ const artistSearch = () => {
     .prompt({
       name: "artist",
       type: "input",
-      message: "What's the artist's name?",
+      message: "What's the artist's name, as long as it isn't Bing Crosby?",
     })
     .then((answer) => {
       client.query(
-        "SELECT * FROM top_5000 WHERE artist = $1",
+        "SELECT * FROM top_5000 WHERE artist = $1 ORDER BY year",
         [answer.artist],
         (err, res) => {
           if (err) throw err;
@@ -91,11 +91,12 @@ const multiSearch = () => {
     .prompt({
       name: "multi",
       type: "input",
-      message: "Name an Artist other than Bing Crosby.",
+      message:
+        "Name an Artist other than Bing Crosby and see if they have more than one hit.",
     })
     .then((answer) => {
       client.query(
-        "SELECT song, year FROM top_5000 WHERE artist = $1", // SQL COMMAND
+        "SELECT song, year FROM top_5000 WHERE artist = $1 ORDER BY year", // SQL COMMAND
         [answer.multi],
         (err, res) => {
           if (err) throw err;
@@ -107,15 +108,23 @@ const multiSearch = () => {
 };
 const rangeSearch = () => {
   inquirer
-    .prompt({
-      name: "multi",
-      type: "input", //multiple choice?
-      message: "Designate a range to search.", //figure out what "ranges" can be referred to here - artist name? Year? artists who are not Bing Crosby?
-    })
+    .prompt([
+      {
+        name: "rangeMin",
+        type: "number", //multiple choice?
+        message: "Select starting year between 1911-2014.", //figure out what "ranges" can be referred to here - artist name? Year? artists who are not Bing Crosby?
+      },
+      {
+        name: "rangeMax",
+        type: "number",
+        message: "Select ending year between 1911-2014",
+      },
+    ])
     .then((answer) => {
+      console.log(answer.rangeMin, answer.rangeMax);
       client.query(
-        "SELECT * FROM top_5000 WHERE year = $1", // SQL COMMAND
-        [answer.multi],
+        "SELECT artist, song, year FROM top_5000 WHERE year BETWEEN $1 AND $2 ORDER BY artist", // SQL COMMAND
+        [answer.rangeMin, answer.rangeMax],
         (err, res) => {
           if (err) throw err;
           console.log(res.rows);
@@ -127,14 +136,14 @@ const rangeSearch = () => {
 const songSearch = () => {
   inquirer
     .prompt({
-      name: "multi",
+      name: "song",
       type: "input", //multiple choice?
       message: "Name a Song other than 'White Christmas'.", //figure out what "ranges" can be referred to here - artist name? Year? artists who are not Bing Crosby?
     })
     .then((answer) => {
       client.query(
         "SELECT * FROM top_5000 WHERE song = $1", // SQL COMMAND
-        [answer.multi],
+        [answer.song],
         (err, res) => {
           if (err) throw err;
           console.log(res.rows);
