@@ -4,16 +4,21 @@ const Op = db.Sequelize.Op;
 
 // Create and Save a new Gig
 exports.create = (req, res) => {
+  console.log(req.body, "body");
+  const { title, technologies, budget, description, contact_email } = req.body;
   if (!req.body.title) {
     res.status(400).send({
       message: "Content can not be empty!",
     });
     return;
   }
-
   // Create a Gig
   const gig = {
-    //write your gig object so it can be created :)
+    title,
+    technologies,
+    budget,
+    description,
+    contact_email,
   };
 
   // Save Gig in the database
