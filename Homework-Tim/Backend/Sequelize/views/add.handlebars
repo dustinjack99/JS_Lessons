@@ -3,7 +3,7 @@
     <h1>Add A Gig</h1>
     <p>Your contact email will be shared with registered users to apply to your
       gig</p>
-    <form>
+    <form id="add-gig-form">
       <div class="input-group">
         <label for="title">Gig Title</label>
         <input
@@ -59,7 +59,26 @@
           required
         />
       </div>
-      <input type="submit" value="Add Gig" class="btn btn-reverse" />
+      <input
+        id="form-submit"
+        type="submit"
+        value="Add Gig"
+        class="btn btn-reverse"
+      />
     </form>
+    <script>
+      const form = document.querySelector("#add-gig-form"); const submit =
+      document.querySelector("#form-submit"); submit.addEventListener("click",
+      (e) => { e.preventDefault(); console.log(form.nodeValue,
+      form.childNodes[1].childNodes[3].value,); const formData = { title:
+      form.childNodes[1].childNodes[3].value, technologies:
+      form.childNodes[3].childNodes[3].value, budget:
+      form.childNodes[5].childNodes[3].value, description:
+      form.childNodes[7].childNodes[3].value, contact_email:
+      form.childNodes[9].childNodes[3].value, }; console.log(formData);
+      fetch("http://localhost:3000/gigs/add", { method:'post', headers:
+      {"Content-Type": "application/json"}, body: JSON.stringify(formData), })
+      });
+    </script>
   </div>
 </section>

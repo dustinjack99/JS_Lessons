@@ -1,8 +1,10 @@
 // npm init
-// npm i sequelize sequelize-cli pg pg-hstore express
+// npm i sequelize sequelize-cli pg pg-hstore express express-handlebars handlebars
 // npx sequelize init
 
 // configure config/config.json
+
+//
 
 const express = require("express");
 const exphbs = require("express-handlebars");

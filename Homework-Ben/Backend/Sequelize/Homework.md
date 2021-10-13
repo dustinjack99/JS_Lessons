@@ -4,14 +4,16 @@ All of the HTML and CSS is here for you to play with, including most of the rout
 
 What needs to be taken care of is wiring up a backend! I want these things acccomplished:
 
-1. First off, build and run the project with `npm init`.
+1. First off, build and run the project with `npm i` and `npm run start`.
    - Read for package.json to see what libraries we're using, and to see what commands to run to get the project started.
    - Take a look at the layout of the running app, and get familiar with it, then continue to the requirements.
 2. I want all CRUD verbs in place, working with your SQL database.
    - This includes GET, POST, PUT, and DELETE functionality.
+   - POST was demonstrated for you, feel free to reference my lesson folder to guess how to perform the other operations.
 3. I want the search functionality up and running on the homepage.
 4. Your HTML is located in the views folder - these are labeled as handlebars files, but we can work with them just like HTML.
    - Use this HTML to fire off requests to your backend, we have gone over how to do this in previous homeworks.
+   - Handlebars is an HTML templating engine. To find out how to use it, reference the handlebars documentation.
 
 TIPS: This homework is meant to challenge you. You are touching a codebase that was written by someone else, but you have all the tools to decipher what is going on, and to look up gaps in your understanding. Look up documentation for sequelize, express, and handlebars. This homework is going to require independant research on your parts.
 
