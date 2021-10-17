@@ -1,0 +1,11 @@
+Design patters!
+
+MVC - Model / View / Controller
+
+This is going to be the first full stack design patter we work with!
+
+Model: The shape of the backend data.
+
+View: Everything on the front end / everything the end-user sees.
+
+Controller: All the routing and their tasks.

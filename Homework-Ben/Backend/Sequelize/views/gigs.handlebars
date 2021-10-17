@@ -12,6 +12,21 @@
       <div class="tech">
         <small>Technologies Needed: <span>{{technologies}}</span></small>
       </div>
+      {{!-- Correct the script for Read --}}
+          <script>
+      const form = document.querySelector("#add-gig-form"); const submit =
+      document.querySelector("#form-submit"); submit.addEventListener("click",
+      (e) => { e.preventDefault(); console.log(form.nodeValue,
+      form.childNodes[1].childNodes[3].value,); const formData = { title:
+      form.childNodes[1].childNodes[3].value, technologies:
+      form.childNodes[3].childNodes[3].value, budget:
+      form.childNodes[5].childNodes[3].value, description:
+      form.childNodes[7].childNodes[3].value, contact_email:
+      form.childNodes[9].childNodes[3].value, }; console.log(formData);
+      fetch("http://localhost:3000/gigs/add", { method:'post', headers:
+      {"Content-Type": "application/json"}, body: JSON.stringify(formData), })
+      });
+    </script>
     </div>
   {{else}}
     <p>No gigs available.</p>
