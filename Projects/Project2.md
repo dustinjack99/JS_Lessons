@@ -1,3 +1,5 @@
+**_ PROJECT 2 _**
+
 For Project 2, it's your job to build out a full stack app! Here are the requirements:
 
 - A fully-styled, responsive user interface.
@@ -10,6 +12,12 @@ For Project 2, it's your job to build out a full stack app! Here are the require
   - These libraries can be used for anything - for making your CSS better, animations, adding types to your JS code, other database libraries aside from Sequelize, etc... (these are all good hints, but by all means shop around when discussing).
 - Your app must be hosted, deployed, and running on Heroku.com.
 - The GitHub repository must belong to someone on the team who didn't host your first project.
+- I forgot to add this last time, but.... a presentation! For demo day, I'd like a 10 minute presentation showcasing your app. I want the presentation to cover:
+  - A User Story: Why users need your app, and what it solves for them.
+  - Division of Labor: Who worked on what parts of the project.
+  - Tech Stack: The technologies you've used to build the app.
+  - A live demo of the app running.
+  - There will be a Q&A section after your 10 minute presentation.
 
 The sky is the limit! Really take time during catch-up week to discuss what kind of app you want to build, and what libraries you could use to accomplish your needs / goals.
 
