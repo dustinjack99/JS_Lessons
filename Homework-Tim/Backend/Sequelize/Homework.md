@@ -4,7 +4,7 @@ All of the HTML and CSS is here for you to play with, including most of the rout
 
 What needs to be taken care of is wiring up a backend! I want these things acccomplished:
 
-1. First off, build and run the project with `npm i` and `npm run start`.
+1. First off, build and run the project with `node server` and `npm run start`.
    - Read for package.json to see what libraries we're using, and to see what commands to run to get the project started.
    - Take a look at the layout of the running app, and get familiar with it, then continue to the requirements.
 2. I want all CRUD verbs in place, working with your SQL database.
