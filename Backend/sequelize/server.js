@@ -1,13 +1,7 @@
-// npm init
-// npm i sequelize sequelize-cli pg pg-hstore express express-handlebars handlebars
-// npx sequelize init
-
-// configure config/config.json
-
 const express = require("express");
 const exphbs = require("express-handlebars");
 const path = require("path");
-//pulling in out db from models
+
 const db = require("./models");
 const app = express();
 const port = process.env.PORT || 3000;
@@ -19,14 +13,14 @@ app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-//static directory
+// static directory
 app.use(express.static(path.join(__dirname, "/public")));
 
-//routes
-require("./routes/api-routes.js")(app);
+// import our routes!
+require("./routes/api-routes")(app);
 
-//syncing, then starting the app
-db.sequelize.sync({ force: true }).then(() => {
+// remember! use {force: true} for dropping tables at server run
+db.sequelize.sync().then(() => {
   app.listen(port, () => {
     console.log(`App is listening on port: ${port}`);
   });

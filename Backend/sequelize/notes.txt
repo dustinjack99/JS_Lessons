@@ -1,0 +1,13 @@
+System Design patterns!
+This is nice for another concept: seperation of concerns!
+
+MVC - Model / View / Controller
+
+This is going to be the first full stack design pattern we work with! Yay!
+
+Model: The shape of the backend data.
+
+View: Everything on the front end / everything the end-user sees.
+
+Controller: All the routing and their tasks. 
+ - routes / controllers
