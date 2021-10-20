@@ -1,7 +1,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const path = require("path");
-
+const bodyParser = require("body-parser");
 const db = require("./models");
 const app = express();
 const port = process.env.PORT || 3000; // make sure the port number is 3000, that's important to hook into the db
@@ -21,6 +21,9 @@ app.engine(
   })
 ); //first argument is engine, second is rendering method
 app.set("view engine", "handlebars");
+
+// Body Parser
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // static directory
 app.use(express.static(path.join(__dirname, "/public")));
