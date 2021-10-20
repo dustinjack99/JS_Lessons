@@ -66,7 +66,10 @@ exports.updateGigs = (req, res) => {
 };
 //DELETE for gigs
 exports.deleteGigs = (req, res) => {
-  Gig.delete()
+  Gig.delete({
+    where: {},
+    truncate: false,
+  })
     .then((data) => {
       res.send(data);
     })

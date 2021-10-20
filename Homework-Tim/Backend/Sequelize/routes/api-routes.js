@@ -22,8 +22,6 @@ module.exports = (app) => {
   // READ method
   router.get("/published", gigController.findPublishedGigs);
   router.get("/:id", gigController.findOnePublisedGig);
-
-  // UPDATE method
   router.get("/search", (req, res) => {
     const { term } = req.query;
 
@@ -34,7 +32,8 @@ module.exports = (app) => {
   });
 
   // UPDATE method
-
+  router.put("/:id", gigController.updateGigs);
   //DELETE method
+  router.delete("/:id", gigController.deleteGigs);
   app.use("/", router);
 };
