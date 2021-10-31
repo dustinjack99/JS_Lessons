@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const IncDecFunc = () => {
   const [counter, setCounter] = useState(0);
-
-  useEffect(() => {}, [counter]);
 
   return (
     <div>

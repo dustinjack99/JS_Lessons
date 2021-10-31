@@ -4,8 +4,8 @@ import IncDecFunc from "./components/IncDecFunc";
 function App() {
   return (
     <div>
-      {/* <IncDecFunc /> */}
-      <IncDecClass />
+      <IncDecFunc />
+      {/* <IncDecClass /> */}
     </div>
   );
 }
