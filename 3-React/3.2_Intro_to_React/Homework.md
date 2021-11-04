@@ -10,22 +10,22 @@ We have dipped our toes in React, and just to summarize what we covered today:
 
 For your homework, I want you to:
 
-1. Make your own create-react-app inside this folder (which you've done already if you've been coding along).
+1. Make a rock, paper, scissors app using React!
 
-2. Install axios - run `npm i axios`, then make yourself a custom component React file, call it `Users.js`.
+- By all means, use create-react-app to get yourself up and running.
 
-3. In this React file, import axios. Then use these lines of code INSIDE your component, but BEFORE returning your JSX:
-   `const users = await axios.get("https://jsonplaceholder.typicode.com/users");`
-   `console.log(users);`
+2. I want a reusable React component that renders a Scissors button, Paper button, and Rock button.
 
-4. This will give you a list of 10 users in a JSON object. It is your job to use this data and build out the JSX to display it.
+- Use 'props', the last thing we covered in today's lesson, to accomplish this.
 
-5. This custom component must also have two child components that you've written yourselves.
+3. I want you to be playing against an AI that randomly chooses 'rock', 'paper' or 'scissors', which is checked against what a user clicks as their 'throw'.
 
-6. I want styling! I haven't made this a requirement for some time, but I want to see some CSS chops. Feel free to shop around and use external libraries.
+4. I want styling! I haven't made this a requirement for some time, but I want to see some CSS chops. Feel free to shop around and use external libraries.
 
-**HINTS**
-Remember that your components can consume data, called 'props'. This is how you'll be able to pass down data from parents components to their children.
+**_ Extra Credit _**
+If you get this far in a short amount of time, I want you to track the user's score and CPU's score using the useState() hook, which you can google and read about in the React docs. The secondary resource will also cover this functionality in much greater depth.
+
+We will be going over using 'state' in the next lesson, but this is a great way to get a head start.
 
 **_Useful Links_**
 Into to React - UW Bootcamp
