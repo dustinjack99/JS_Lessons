@@ -1,4 +1,4 @@
-Webpack is going to be a key tool in your arsenal going forward. If you're curious about knowing more, check out the resources below to learn all that webpack can do for you.
+Although we will be using tech that does Webpack for us going forward, it will be a key tool in your arsenal in the wild. If you're curious about knowing more, check out the resources below to learn what webpack does for us.
 
 This week is another catchup and / or rest week. Take the time to either finish up work that hasn't been completed, or kick back and decompress from the work you've done over Project 2.
 
