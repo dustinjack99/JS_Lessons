@@ -1,4 +1,5 @@
 // npm i - g create-react-app
+// npm i axios (will need this for examples)
 // npx create-react-app first-react-app
 // all config setup for us, even uses a dev server
 // lots and lots of 'bloat' is installed. when you make your own apps after bootcamp, do manual configurations
