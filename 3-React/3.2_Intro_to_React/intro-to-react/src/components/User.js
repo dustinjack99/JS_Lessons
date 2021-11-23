@@ -3,17 +3,19 @@ const User = ({ userData }) => {
   return (
     <>
       <h2>I wonder if he means old Ben Kenobi?</h2>
-      {userData.map((singleUserData, i) => {
-        return (
-          <p key={i}>
-            {singleUserData.name +
-              " " +
-              singleUserData.username +
-              " " +
-              singleUserData.website}
-          </p>
-        );
-      })}
+      {userData
+        ? userData.map((singleUserData, i) => {
+            return (
+              <>
+                <p>{singleUserData.name}</p>
+                <a href={singleUserData.website}>{singleUserData.website}</a>
+                <div>
+                  <a href={singleUserData.email}>Email Me!</a>
+                </div>
+              </>
+            );
+          })
+        : null}
     </>
   );
 };
