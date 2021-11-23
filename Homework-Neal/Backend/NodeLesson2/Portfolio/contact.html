@@ -11,13 +11,37 @@
     <div class="Header">
       <h1>Contact Me</h1>
     </div>
-    <div class="Main">
-      <h3>Email</h3>
-      <a href="mailto: neal.c.fisher@gmail.com">neal.c.fisher@gmail.com</a>
-      <h3>Github</h3>
-      <a href="https://github.com/JustCallMeNed">JustCallMeNed</a>
-      <h3>Discord</h3>
-      <p>JustCallMeNed</p>
+    <div class="accordion Main" id="accordionContact">
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="headingOne">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            Email
+          </button>
+        </h3>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse show"
+          aria-labelledby="headingOne"
+          data-bs-parent="#accordionContact"
+        >
+          <div class="accordion-body">
+            <a href="mailto: neal.c.fisher@gmail.com"
+              >neal.c.fisher@gmail.com</a
+            >
+          </div>
+        </div>
+        <h3>Github</h3>
+        <a href="https://github.com/JustCallMeNed">JustCallMeNed</a>
+        <h3>Discord</h3>
+        <p>JustCallMeNed</p>
+      </div>
     </div>
     <div class="Nav">
       <h3>Navigation</h3>
