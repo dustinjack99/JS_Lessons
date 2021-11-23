@@ -6,7 +6,7 @@ module.exports = {
     // relative path, making a dist folder
     path: __dirname + "/dist",
     // name the file that will be output in the dist folder
-    filename: "bundles.js",
+    filename: "bundle.js",
   },
   // you can specify which mode webpack will run in - dev vs. prod
   mode: "development",
