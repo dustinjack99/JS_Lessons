@@ -50,8 +50,8 @@ exports.findPublishedGigs = (req, res) => {
 
 //UPDATE for gigs
 exports.editGig = (req, res, next) => {
-  Gig.update({ title: "A very crass joke goes here." }, { where: {} })
-    .then(console.log(req, "Hello there!"))
+  Gig.update({ title: "WE ARE LEGION. WE ARE MANY." }, { where: {} })
+    .then(console.log(req.body, "Hello there!"))
     .catch(console.log(next, "GENERAL KENOBI!"));
 };
 //DELETE for gigs
