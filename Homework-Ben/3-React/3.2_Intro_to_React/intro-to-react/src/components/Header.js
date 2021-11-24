@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-// import User from "./User";
+import User from "./User";
+import "./Header.css";
 import TrueFalse from "./TrueFalse";
 
 const Header = () => {
@@ -9,17 +10,16 @@ const Header = () => {
   useEffect(() => {
     const userData = async () => {
       const jsonData = await axios.get("https://jsonplaceholder.typicode.com/users");
-      setUsers(jsonData);
+      setUsers(jsonData.data);
     };
     userData();
   }, []);
 
-  console.log(users);
-
-  //   return <User userData={users} data={"name"} />;
   return (
     <>
-      <TrueFalse />
+      <div className="allUsers">
+        <User userData={users} />
+      </div>
     </>
   );
 };

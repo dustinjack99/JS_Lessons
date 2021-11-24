@@ -1,0 +1,18 @@
+#bannerDiv {
+  background-color: #01102f;
+  margin: 0%;
+  padding: 0%;
+  color: #983052;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3vh;
+}
+#banner {
+  width: auto;
+  height: auto;
+  margin: 0%;
+  padding: 0%;
+  display: block;
+  border: 0;
+}
