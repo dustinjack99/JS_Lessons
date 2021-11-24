@@ -1,16 +1,21 @@
-import { useState } from "react";
-const User = ({ data, userData }) => {
+import "./User.css";
+const User = ({ userData }) => {
   console.log(userData);
   return (
     <>
-      <h2>This is where the fun begins</h2>
-      <p>
-        {userData.map((singleUserData) => {
-          console.log(singleUserData);
-          return null;
-        })}
-      </p>
-      {/* <p>{userData ? userData.toString() : ""}</p> */}
+      {userData
+        ? userData.map((singleUserData, i) => {
+            return (
+              <div className="user">
+                <p>{singleUserData.name}</p>
+                <a href={singleUserData.website}>{singleUserData.website}</a>
+                <div>
+                  <a href={singleUserData.email}>Email Me!</a>
+                </div>
+              </div>
+            );
+          })
+        : null}
     </>
   );
 };

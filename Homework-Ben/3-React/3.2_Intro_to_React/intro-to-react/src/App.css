@@ -1,0 +1,8 @@
+.page {
+  margin: 2%;
+}
+#meet {
+  font-family: fangsong;
+  display: flex;
+  justify-content: center;
+}
