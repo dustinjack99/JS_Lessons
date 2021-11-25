@@ -1,4 +1,5 @@
 .allUsers {
   display: grid;
   grid: repeat(2, 160px) / auto-flow 20%;
+  background-color: rgb(233, 233, 233);
 }

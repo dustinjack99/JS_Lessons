@@ -6,7 +6,7 @@ import BannerText from "./BannerText/BannerText";
 const Banner = () => {
   return (
     <div id="bannerDiv">
-      <img id="banner" alt="banner" src={bannerImg}></img>
+      <img id="banner" alt="banner" src={bannerImg} />
       <BannerText />
     </div>
   );
