@@ -1,0 +1,23 @@
+#display {
+  height: 40px;
+  width: 20%;
+  background-color: rgb(197, 225, 238);
+}
+#inputKeys {
+}
+.nButton {
+  display: flex;
+  justify-content: flex-start;
+}
+.fButton {
+  display: flex;
+  justify-content: flex-end;
+}
+.numbers {
+  display: flex;
+  justify-content: flex-start;
+}
+.functions {
+  display: flex;
+  justify-content: flex-start;
+}
