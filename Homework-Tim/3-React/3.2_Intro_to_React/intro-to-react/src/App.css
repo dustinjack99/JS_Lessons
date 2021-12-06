@@ -1,0 +1,12 @@
+div {
+  font-family: "WillyWonka", sans-serif;
+  text-align: center;
+  margin: 40px;
+  padding: 8px;
+  font-size: 70px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(78, 19, 4);
+  color: rgb(247, 238, 238);
+}
