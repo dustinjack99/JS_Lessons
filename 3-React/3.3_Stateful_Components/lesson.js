@@ -17,3 +17,7 @@
 
 // Build a calculator app!
 // pair programming, Neal is going to share his screen
+
+// tune in Monday night for a real-life take home tech interview
+
+// tailwind dan rant
