@@ -1,10 +1,28 @@
-import { useState } from "react";
+import Model from "./Model";
+import "./User.css";
 
-const User = ({ data, userData }) => {
+const User = ({ userData }) => {
+  console.log(userData);
+
   return (
     <>
-      <h2>Yuuu</h2>
-      <p>{userData ? userData.toString() : ""}</p>
+      {userData
+        ? userData.map((singleUserData) => {
+            return (
+              <div>
+                <div className="user">
+                  <div className="info">
+                    <p>{singleUserData.name}</p>
+                    <p>{singleUserData.address.city}</p>
+                    <a href={singleUserData.website}>
+                      {singleUserData.website}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          })
+        : null}
     </>
   );
 };
