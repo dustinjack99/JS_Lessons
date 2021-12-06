@@ -4,7 +4,7 @@ const User = ({ userData }) => {
     <>
       <h2>I wonder if he means old Ben Kenobi?</h2>
       {userData
-        ? userData.map((singleUserData, i) => {
+        ? userData.map((singleUserData) => {
             return (
               <>
                 <p>{singleUserData.name}</p>
