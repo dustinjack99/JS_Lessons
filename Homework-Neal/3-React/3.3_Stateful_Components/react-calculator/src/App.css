@@ -1,0 +1,32 @@
+#root {
+  background-color: cadetblue;
+}
+
+#App {
+  justify-self: center;
+  justify-content: center;
+  align-content: center;
+}
+
+#display {
+  border: solid rgb(36, 36, 36) 4px;
+  padding: 1em;
+  background-color: rgb(148, 137, 137);
+  height: 50px;
+  width: 30%;
+  justify-content: center;
+  align-content: center;
+}
+
+#Functions {
+  justify-self: flex-end;
+  font-size: xx-large;
+}
+#Functions2 {
+  justify-self: flex-end;
+  font-size: xx-large;
+}
+
+button {
+  font-size: x-large;
+}
