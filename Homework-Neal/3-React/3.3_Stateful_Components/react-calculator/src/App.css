@@ -1,5 +1,6 @@
 #root {
   background-color: cadetblue;
+  justify-content: center;
 }
 
 #App {
@@ -12,21 +13,36 @@
   border: solid rgb(36, 36, 36) 4px;
   padding: 1em;
   background-color: rgb(148, 137, 137);
-  height: 50px;
-  width: 30%;
+  height: auto;
+  width: auto;
+  min-height: 50px;
+  min-width: 30%;
   justify-content: center;
   align-content: center;
 }
+#Input {
+  justify-content: auto;
+  align-content: auto;
+  justify-self: auto;
+}
 
+#Numbers {
+  justify-content: flex-start;
+  /* font-size: xx-large; */
+}
 #Functions {
-  justify-self: flex-end;
-  font-size: xx-large;
+  justify-content: center;
+  /* font-size: xx-large; */
 }
 #Functions2 {
-  justify-self: flex-end;
-  font-size: xx-large;
+  justify-content: center;
+  /* font-size: xx-large; */
 }
 
 button {
-  font-size: x-large;
+  font-style: inherit;
+  font-size: xx-large;
+  padding: 5px;
+  border-width: 3px;
+  border-color: lightgrey;
 }
