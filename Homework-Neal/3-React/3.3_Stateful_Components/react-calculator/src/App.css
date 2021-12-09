@@ -3,38 +3,47 @@
   justify-content: center;
 }
 
-#App {
+.App {
+  display: flex;
+  flex-flow: column wrap;
   justify-self: center;
   justify-content: center;
   align-content: center;
+  padding: 5%;
+  border: solid rgb(123, 201, 204) 5px;
 }
 
 #display {
   border: solid rgb(36, 36, 36) 4px;
-  padding: 1em;
+  padding: 0.5em;
   background-color: rgb(148, 137, 137);
   height: auto;
   width: auto;
-  min-height: 50px;
+  min-height: 3em;
   min-width: 30%;
   justify-content: center;
   align-content: center;
+  font-family: "Courier New", Courier, monospace;
 }
-#Input {
+.Input {
+  display: grid;
+  justify-self: auto;
   justify-content: auto;
   align-content: auto;
-  justify-self: auto;
 }
 
-#Numbers {
-  justify-content: flex-start;
+.Numbers {
+  display: grid;
+  /* repeat(); */
+  /* justify-content: flex-start; */
   /* font-size: xx-large; */
 }
-#Functions {
+.Functions {
+  display: flex;
   justify-content: center;
   /* font-size: xx-large; */
 }
-#Functions2 {
+.Functions2 {
   justify-content: center;
   /* font-size: xx-large; */
 }
