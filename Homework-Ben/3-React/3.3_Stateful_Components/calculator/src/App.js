@@ -9,37 +9,42 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Calculator App</h1>
+      <h1 id="title">The Sexyulator</h1>
+      <br />
       <div id="display">
         <h1>{display}</h1>
       </div>
       <div id="inputKeys">
         <div className="numbers">
           {numButtons.map((nButton) => (
-            <button class="nButton" onClick={() => setDisplay(display + nButton)}>
+            <button class="nButton buttons" onClick={() => setDisplay(display + nButton)}>
               {nButton}
             </button>
           ))}
         </div>
         <div className="functions">
           {funButtons.map((fButton) => (
-            <button class="fButton" onClick={() => setDisplay(display + fButton)}>
+            <button class="fButton buttons" onClick={() => setDisplay(display + fButton)}>
               {fButton}
             </button>
           ))}
         </div>
         <div id="functionButtons">
           <button
+            className="buttons specialButtons"
             onClick={() =>
               window
-                .open("https://www.youtube.com/watch?v=cWmHcEyyKs8?t=30", "_blank")
+                .open("https://www.youtube.com/watch?v=cWmHcEyyKs8&t=0m30s", "_blank")
                 .focus()
             }
           >
             Sexy
           </button>
-          <button onClick={() => setDisplay("")}>Clear</button>
+          <button className="buttons specialButtons" onClick={() => setDisplay("")}>
+            Clear
+          </button>
           <button
+            className="buttons specialButtons"
             onClick={
               // eslint-disable-next-line no-eval
               () => setDisplay(eval(display))
