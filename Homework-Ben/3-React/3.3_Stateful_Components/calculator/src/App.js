@@ -17,7 +17,10 @@ function App() {
       <div id="inputKeys">
         <div className="numbers">
           {numButtons.map((nButton) => (
-            <button class="nButton buttons" onClick={() => setDisplay(display + nButton)}>
+            <button
+              class="nButton buttons"
+              onClick={() => setDisplay(display.toString() + nButton)}
+            >
               {nButton}
             </button>
           ))}
@@ -44,10 +47,32 @@ function App() {
             Clear
           </button>
           <button
+            id="equalButton"
             className="buttons specialButtons"
             onClick={
-              // eslint-disable-next-line no-eval
-              () => setDisplay(eval(display))
+              () => {
+                // Equal still goes off and crashes if +-*/ isn't present
+                if (
+                  !isNaN(display.split("").pop()) &&
+                  (display.split("").includes("+") ||
+                    display.split("").includes("-") ||
+                    display.split("").includes("*") ||
+                    display.split("").includes("/"))
+                ) {
+                  console.log("hello there");
+                  console.log(display.split("").pop());
+                  console.log(display.split(""));
+                  console.log(display.split("").includes("+" || "-" || "*" || "/"));
+                  // eslint-disable-next-line no-eval
+                  setDisplay(eval(display).toString());
+                } else {
+                  console.log(display.split("").pop());
+                  console.log(display.split(""));
+                  console.log(display.split("").includes("+" || "-" || "*" || "/"));
+                  console.log("failed");
+                }
+              }
+              // () => setDisplay(eval(display))
             }
           >
             =
