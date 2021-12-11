@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
-const numerals = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const numerals = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 const functions = ["+", "-", "*", "/"];
 
 function App() {
@@ -33,59 +33,68 @@ function App() {
   // }
   return (
     <div className="App">
-      <h1>Calculator App</h1>
+      <h1>A Quite Simple Calculator App</h1>
 
       <div id="display">
         <h1>{display}</h1>
       </div>
       <hr />
+      <div id="container">
+        <div className="Input">
+          <div className="Numbers">
+            {numerals.map((button) => (
+              <button id="numKey" onClick={() => setDisplay(display + button)}>
+                {button}
+              </button>
+            ))}
+          </div>
 
-      <div className="Input">
-        <div className="Numbers">
-          {numerals.map((button) => (
-            <button onClick={() => setDisplay(display + button)}>
-              {button}
-            </button>
-          ))}
-        </div>
+          <div className="Functions">
+            {functions.map((button) => (
+              <button id="funKey" onClick={() => setDisplay(display + button)}>
+                {button}
+              </button>
+            ))}
+          </div>
 
-        <div className="Functions">
-          {functions.map((button) => (
-            <button onClick={() => setDisplay(display + button)}>
-              {button}
-            </button>
-          ))}
-        </div>
-
-        <div className="Functions2">
-          <button
-            onClick={() =>
-              setDisplay(
-                "OwO What's this? (notices ur " + eval(display.toString()) + ")"
-              )
-            }
-          >
-            Sexy
-          </button>
-          <button onClick={() => setDisplay("")}>Clear</button>
-          <button
-            disabled={!active}
-            onClick={() => {
-              console.log(display);
-              let result = eval(display);
-              if (result === undefined) {
-                setDisplay("");
-              } else {
-                setDisplay(result.toString());
+          <div className="Functions2">
+            <button
+              id="sexyKey"
+              onClick={() =>
+                setDisplay(
+                  "OwO What's this? (notices ur " +
+                    eval(display.toString()) +
+                    ")"
+                )
               }
+            >
+              Sexy
+            </button>
+            <button id="clearKey" onClick={() => setDisplay("")}>
+              Clear
+            </button>
+            <button
+              id="enterKey"
+              disabled={!active}
+              onClick={() => {
+                console.log(display);
+                let result = eval(display);
+                if (result === undefined) {
+                  setDisplay("");
+                } else if (display === "80085" || display === "58008") {
+                  setDisplay("Oh, grow up.");
+                } else {
+                  setDisplay(result.toString());
+                }
 
-              // has to run calculations on the display
-              // 1. switch case
-              // 2. eval()
-            }}
-          >
-            =
-          </button>
+                // has to run calculations on the display
+                // 1. switch case
+                // 2. eval()
+              }}
+            >
+              =
+            </button>
+          </div>
         </div>
       </div>
     </div>
