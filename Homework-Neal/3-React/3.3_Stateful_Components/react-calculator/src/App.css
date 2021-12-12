@@ -1,121 +1,151 @@
 #root {
   display: flex;
-  background-color: cadetblue;
-  justify-content: center;
+  text-align: center;
 }
 
 .App {
   display: flex;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
   flex-flow: column wrap;
   justify-self: center;
   justify-content: center;
   align-content: center;
-  /* padding: 5%; */
   border: solid rgb(123, 201, 204) 5px;
+  background-image: linear-gradient(rgb(212, 240, 241), rgb(53, 99, 99));
+  border-radius: 1rem;
+  width: inherit;
 }
 
 #container {
-  display: grid;
+  display: flex;
   border: solid rgb(31, 54, 54) 5px;
-  /* padding: 0.5em; */
-  background-color: rgb(85, 141, 143);
-  grid-template-areas:
-    "One Two Three"
-    "One Two Three";
+  border-radius: 1rem;
+  padding: 0.5em;
+  background-image: linear-gradient (rgb(138, 179, 180), rgb(85, 141, 143));
+}
+
+#banner {
+  color: #666;
+  color: rgba(198, 231, 233, 0.479);
+  border: solid rgba(198, 231, 233, 0.479);
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3),
+    -1px -1px 0px rgba(0, 0, 0, 0.8);
+  /* 50% black coming from the bottom */
+  font-family: "OCR A Std", monospace;
+  font-size: 25px;
 }
 
 #display {
+  position: relative;
   border: solid rgb(36, 36, 36) 4px;
-  padding: 0.5em;
-  background-color: rgb(148, 137, 137);
+  background-image: linear-gradient(
+    to right,
+    rgb(142, 148, 137),
+    rgb(176, 182, 169)
+  );
   height: auto;
   width: auto;
-  min-height: 3em;
-  min-width: 30%;
+  min-height: 4em;
+  text-align: center;
   justify-content: center;
   align-content: center;
   font-family: "OCR A Std", monospace;
 }
+
 .Input {
   display: flex;
   justify-self: center;
-  justify-items: space-evenly;
+  justify-items: center;
   flex: 1;
 }
 
 .Numbers {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr min-content;
-  flex-grow: 1;
-  font-size: xx-large;
+  gap: 0.1em;
 }
 .Functions {
-  display: flex;
-  grid-template-rows: 2fr;
-  width: 5em;
-  /* padding: 1em; */
+  display: grid;
+  grid-template-rows: repeat(4, 2fr);
+  gap: 0.1em;
+  padding: 0.2em;
   order: -1;
   flex-flow: column-reverse;
   justify-content: flex-end;
 }
 .Functions2 {
-  display: flex;
-  flex-flow: column;
-  /* padding-left: 0.5em; */
-  /* padding-right: 0.5em; */
-  align-self: flex-start;
-  /* padding: 1em; */
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0.7em;
+  padding-left: 0.3em;
+}
+
+.numKey {
+  display: inherit;
+  font-size: 26pt;
+  color: rgba(0, 0, 0, 0.548);
+  padding: 1em;
+}
+
+#num0 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.funKey {
+  display: grid;
+  font-size: 28pt;
+  color: rgb(36, 48, 88);
+  background-color: rgb(187, 187, 187);
 }
 
 button {
   font-style: inherit;
   font-size: xx-large;
-  padding: inherit;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   border-width: 3px;
+  border-radius: 0.5em;
   border-color: lightgrey;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3),
+    -1px -1px 0px rgba(87, 87, 87, 0.767);
 }
 
 #enterKey {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-row-start: 3;
+  grid-row-end: 5;
   background-color: rgb(96, 185, 115);
   font-size: 36pt;
-  height: 5em;
 }
 
 #sexyKey {
+  display: inherit;
+  grid-row-start: 2;
+  grid-row-end: 3;
   font-family: "Verdana Hand";
   font-style: italic;
   background-color: pink;
   color: rgb(112, 0, 0);
-  padding: 0.69em;
+  /* padding: 0.69em; */
   /* haha, that's the sex number */
+}
+
+#sexyKey:hover {
+  background-color: transparent;
+  background-image: radial-gradient(pink, rgb(250, 142, 227));
 }
 
 #clearKey {
   background-color: rgb(236, 58, 58);
-  order: -1;
-  padding: 1em;
-  /* padding-top: 0.3em;
-  padding-bottom: 0.3em;
-  padding-left: 1em;
-  padding-right: 1em; */
+  padding: 0.4em;
 }
-#numKey {
-  font-size: 26pt;
-  /* padding-top: 0.3em;
-  padding-bottom: 0.3em;
-  padding-left: 1em;
-  padding-right: 1em; */
-  padding: 1em;
-}
-#funKey {
-  display: flex;
-  font-size: 26pt;
-  justify-content: center;
-  align-content: center;
-  background-color: rgb(187, 187, 187);
-  padding: 1em;
+
+#clearKey:hover {
+  background-color: transparent;
+  background-image: radial-gradient(rgb(236, 58, 58), rgb(161, 37, 37));
 }

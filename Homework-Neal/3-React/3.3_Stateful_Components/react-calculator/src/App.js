@@ -33,7 +33,7 @@ function App() {
   // }
   return (
     <div className="App">
-      <h1>A Quite Simple Calculator App</h1>
+      <h1 id="banner">A Quite Simple Calculator App</h1>
 
       <div id="display">
         <h1>{display}</h1>
@@ -43,7 +43,11 @@ function App() {
         <div className="Input">
           <div className="Numbers">
             {numerals.map((button) => (
-              <button id="numKey" onClick={() => setDisplay(display + button)}>
+              <button
+                class="numKey"
+                id={"num" + button}
+                onClick={() => setDisplay(display + button)}
+              >
                 {button}
               </button>
             ))}
@@ -51,7 +55,11 @@ function App() {
 
           <div className="Functions">
             {functions.map((button) => (
-              <button id="funKey" onClick={() => setDisplay(display + button)}>
+              <button
+                class="funKey"
+                id={button}
+                onClick={() => setDisplay(display + button)}
+              >
                 {button}
               </button>
             ))}
