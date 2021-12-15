@@ -9,7 +9,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1 id="title">The Sexyulator</h1>
+      <div id="header">
+        <h1 id="title">The Sexyulator</h1>
+        {/* <p>Img here</p> */}
+      </div>
       <br />
       <div id="display">
         <h1>{display}</h1>

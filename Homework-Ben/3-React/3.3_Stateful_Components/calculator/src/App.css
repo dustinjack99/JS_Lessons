@@ -13,6 +13,10 @@
   padding: 10px 0px 100px 50px;
   border: #895600 10px solid;
 }
+#header {
+  display: flex;
+  justify-content: space-between;
+}
 #title {
   font-family: "Ma Sexy";
 }
@@ -55,6 +59,8 @@
 .fButton {
   display: flex;
   justify-content: flex-end;
+  color: white;
+  background: black;
 }
 .numbers {
   display: flex;
@@ -66,4 +72,8 @@
 }
 #functionButtons {
   display: flex;
+}
+.specialButtons {
+  background: rgb(202, 6, 6);
+  color: white;
 }
