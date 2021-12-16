@@ -14,7 +14,7 @@
   justify-content: center;
   align-content: center;
   border: solid rgb(123, 201, 204) 5px;
-  background-image: linear-gradient(rgb(212, 240, 241), rgb(53, 99, 99));
+  background-image: radial-gradient(rgb(212, 240, 241), rgb(53, 99, 99));
   border-radius: 1rem;
   max-width: inherit;
 }
@@ -56,7 +56,8 @@
   text-align: center;
   justify-content: center;
   align-content: center;
-  font-family: "OCR A Std", monospace;
+  font-family: "digitalseven", monospace;
+  /* font-family: "OCR A Std", monospace; */
 }
 /* Width of display pushes out sides of container */
 
@@ -146,11 +147,15 @@ button {
 }
 
 #clearKey {
-  background-color: rgb(236, 58, 58);
+  background-color: rgb(211, 25, 25);
   padding: 0.4em;
 }
 
 #clearKey:hover {
   background-color: transparent;
-  background-image: radial-gradient(rgb(236, 58, 58), rgb(161, 37, 37));
+  background-image: radial-gradient(
+    rgb(236, 58, 58),
+    rgb(255, 160, 160),
+    rgb(255, 215, 215)
+  );
 }
