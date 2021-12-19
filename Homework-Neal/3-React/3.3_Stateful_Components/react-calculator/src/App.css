@@ -1,17 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600");
+
 #root {
   display: flex;
   text-align: center;
   /* ======custom RGB values/elements======== */
   --displayBG: linear-gradient(
-    to right,
-    rgb(142, 148, 137),
-    rgb(176, 182, 169)
+    45deg,
+    rgb(90, 94, 86),
+    rgb(176, 182, 169),
+    rgb(224, 233, 214)
   );
   --gradientBG: radial-gradient(rgb(212, 240, 241), rgb(53, 99, 99));
-  --digitalseven: @font-face {
-    font-family: digitalseven;
-    src: url(./assets/fonts/digital-7.regular.ttf);
-  }
+  --bannerFont: font-family "Chakra Petch", sans-serif;
+  --displayFont: font-family "Orbitron", sans-serif;
+  /* font variables stopped working after I added gradient animations to func buttions - still not sure why */
 }
 
 .App {
@@ -28,7 +31,7 @@
   background-image: var(--gradientBG);
   /* background-image: radial-gradient(rgb(212, 240, 241), rgb(53, 99, 99)); */
   border-radius: 1rem;
-  max-width: 80%;
+  min-width: inherit;
 }
 
 #container {
@@ -49,13 +52,14 @@
   text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3),
     -1px -1px 0px rgba(0, 0, 0, 0.8);
   /* 50% black coming from the bottom */
-  font-family: "OCR A Std", monospace;
-  font-size: 1.9em;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 2em;
+  padding: 0.2em;
 }
 
 #display {
   position: relative;
-  border: solid rgb(36, 36, 36) 4px;
+  border: solid rgb(36, 36, 36) 0.2em;
   background-image: var(--displayBG);
   /* height: auto; */
   /* width: auto; */
@@ -64,7 +68,8 @@
   text-align: center;
   justify-content: center;
   align-content: center;
-  font-family: var(--digitalseven);
+  font-family: "Orbitron", sans-serif;
+  /* box-shadow: 0.01em 0.01em 0.01em 0.2em rgb(123, 201, 204), inset; */
 }
 /* Width of display pushes out sides of container */
 
@@ -78,22 +83,24 @@
 .Numbers {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.2em;
+  gap: 0.5em;
 }
 .Functions {
   display: grid;
-  grid-template-rows: repeat(4, 2fr);
-  gap: 0.2em;
-  /* padding: 0.1em; */
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1em;
+  padding-right: 0.5em;
   order: -1;
   flex-flow: column-reverse;
-  justify-content: flex-end;
+  /* justify-content: flex-start; */
+  transition: color 0.2s, background-color 0.5s;
 }
 .Functions2 {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   gap: 0.7em;
-  padding-left: 0.3em;
+  padding-left: 0.5em;
+  transition: color 0.2s, background-color 0.5s;
 }
 
 .numKey {
@@ -101,22 +108,36 @@
   font-size: 26pt;
   color: rgba(0, 0, 0, 0.548);
   padding: 1em;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: color 0.3s, background-color 0.3s;
 }
 
 #num0 {
-  grid-column-start: 1;
+  background-color: rgb(78, 78, 78);
+  grid-column-start: 2;
   grid-column-end: 4;
+}
+
+#num0:hover {
+  background-color: rgba(78, 78, 78, 0.5);
 }
 
 .funKey {
   display: grid;
   font-size: 50pt;
   color: rgb(36, 48, 88);
-  background-color: rgb(187, 187, 187);
+  background-color: rgba(187, 187, 187, 0.5);
   padding: 0.1em;
+  /* transition: color 0.2s, background-color 0.2s; */
+}
+
+.funkey :hover {
+  color: lightskyblue;
+  background-color: rgb(221, 221, 221);
 }
 
 button {
+  cursor: pointer;
   font-style: inherit;
   font-size: xx-large;
   justify-content: center;
@@ -125,8 +146,23 @@ button {
   border-width: 3px;
   border-radius: 0.5em;
   border-color: lightgrey;
-  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3),
-    -1px -1px 0px rgba(87, 87, 87, 0.767);
+  text-shadow: 1px 1px 0px rgba(133, 133, 133, 0.3),
+    -1px -1px 0px rgba(49, 49, 49, 0.767);
+  box-shadow: 0.01em 0.01em 0.01em 0.05em rgb(48, 53, 44);
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.11),
+    rgba(255, 255, 255, 0.616)
+  );
+  background-size: 300%;
+  background-position-x: -150%;
+  transition: background-size 0.5s, background-position-x 0.5s;
+}
+
+button:hover {
+  color: white;
+  background-color: transparent;
+  background-size: 200%;
+  background-position-x: -150%;
 }
 
 #enterKey {
@@ -135,6 +171,15 @@ button {
   grid-row-end: 5;
   background-color: rgb(96, 185, 115);
   font-size: 40pt;
+  background-image: radial-gradient(rgb(190, 255, 209), rgb(96, 185, 115));
+  background-size: 300%;
+  background-position-x: -150%;
+}
+
+#enterKey:hover {
+  color: rgb(97, 236, 92);
+  background-size: 200%;
+  background-position-x: -120%;
 }
 
 #sexyKey {
@@ -142,30 +187,42 @@ button {
   grid-row-start: 2;
   grid-row-end: 3;
   font-family: "Verdana Hand";
+  font-size: 2.5em;
   font-style: italic;
-  background-color: pink;
-  color: rgb(112, 0, 0);
+  background-color: rgba(255, 74, 104, 0.69);
+  background-image: radial-gradient(rgb(255, 190, 201), rgb(250, 65, 210));
+  color: rgb(165, 0, 0);
+  /* background-size: 300%;
+  background-position-x: -150%;
+  transition: background-size 0.5s, background-position-x 0.5s; */
   /* padding: 0.69em; */
   /* haha, that's the sex number */
 }
 
 #sexyKey:hover {
-  background-color: transparent;
-  background-image: radial-gradient(pink, rgb(250, 142, 227));
+  color: rgb(255, 146, 182);
+  background-color: rgb(255, 74, 104);
+  /* background-size: 200%;
+  background-position-x: -120%; */
 }
 
 #clearKey {
-  background-color: rgb(211, 25, 25);
+  color: rgb(145, 1, 1);
+  background-color: rgba(211, 25, 25, 0.5);
   padding: 0.4em;
-}
-
-#clearKey:hover {
-  background-color: transparent;
   background-image: radial-gradient(
     rgb(255, 215, 215),
     rgb(255, 160, 160),
     rgb(236, 58, 58)
   );
-  background-size: 200%;
-  background-position-x: -120%;
+  /* background-size: 300%;
+  background-position-x: -150%;
+  transition: background-size 0.5s, background-position-x 0.5s; */
+}
+
+#clearKey:hover {
+  color: lightcoral;
+  background-color: rgb(211, 25, 25);
+  /* background-size: 200%;
+  background-position-x: -120%; */
 }

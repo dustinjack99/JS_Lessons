@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
-const numerals = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+const numerals = ["1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "0"];
 const functions = ["+", "-", "*", "/"];
 
 function App() {
