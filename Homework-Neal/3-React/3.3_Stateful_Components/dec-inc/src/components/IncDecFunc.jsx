@@ -12,6 +12,7 @@ const IncDecFunc = () => {
       setTruth(false);
     }
   }, [counter]);
+
   useEffect(() => {
     if (counter < 60) {
       setWeak(true);
