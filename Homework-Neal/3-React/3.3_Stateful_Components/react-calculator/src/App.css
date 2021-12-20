@@ -55,6 +55,16 @@
   font-family: "Chakra Petch", sans-serif;
   font-size: 2em;
   padding: 0.2em;
+  background-image: var(--displayBG);
+  background-clip: text;
+  background-size: 500%;
+  background-position-x: left;
+  transition: color 0.8s, background-position-x 0.8s;
+}
+
+#banner:hover {
+  color: rgb(198, 231, 233);
+  background-position-x: right;
 }
 
 #display {
@@ -69,7 +79,8 @@
   justify-content: center;
   align-content: center;
   font-family: "Orbitron", sans-serif;
-  /* box-shadow: 0.01em 0.01em 0.01em 0.2em rgb(123, 201, 204), inset; */
+  box-shadow: 0.1em 0.1em 0.2em rgb(123, 201, 204),
+    -0.1em -0.1em 0.2em rgb(123, 201, 204);
 }
 /* Width of display pushes out sides of container */
 
