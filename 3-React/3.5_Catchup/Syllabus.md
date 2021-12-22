@@ -15,7 +15,7 @@
 
    - Asynchronous JS (promises / async + await)
    - Arrow functions
-   - Ternary operators
+   - Ternary operators and other neat JS tricks
 
 4. Tech I Like and You Should, Too
 
