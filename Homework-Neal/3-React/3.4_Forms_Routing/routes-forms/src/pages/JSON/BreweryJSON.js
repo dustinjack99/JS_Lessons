@@ -9,8 +9,7 @@ const JSON = () => {
   useEffect(() => {
     const getJSON = async () => {
       const jsonData = await axios.get(
-        // "https://api.openbrewerydb.org/breweries"
-        "https://jsonplaceholder.typicode.com/users"
+        "https://api.openbrewerydb.org/breweries"
       );
       console.log(jsonData.data);
       setApiJson(jsonData.data);
@@ -20,13 +19,10 @@ const JSON = () => {
     // }
   }, []);
 
-  // console.log(apiJson.data);
-
   return (
     <div>
       <h1>Good day. This is our fun JSON page.</h1>
-      <Users allUsers={apiJson} />
-      {/* <Breweries allBreweries={apiJson} /> */}
+      <Breweries allBreweries={apiJson} />
     </div>
   );
 };

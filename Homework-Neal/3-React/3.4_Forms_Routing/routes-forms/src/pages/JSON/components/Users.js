@@ -1,3 +1,4 @@
+import UserAddress from "../UserAddress";
 const Users = ({ allUsers }) => {
   return (
     <div>
@@ -8,7 +9,8 @@ const Users = ({ allUsers }) => {
         return (
           <div>
             <h2>{username}</h2>
-            <p>{address}</p>
+            {/* <p>{address}</p> */}
+            <UserAddress {...address} />
             <p>{email}</p>
             <p>{name}</p>
           </div>
