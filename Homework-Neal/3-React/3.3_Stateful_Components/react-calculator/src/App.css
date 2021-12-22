@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron");
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600");
+@font-face {
+  font-family: "digital-7";
+  src: url("./assets/fonts/digital-7.regular-webfont.woff2");
+}
 
 #root {
   display: flex;
@@ -12,8 +16,8 @@
     rgb(224, 233, 214)
   );
   --gradientBG: radial-gradient(rgb(212, 240, 241), rgb(53, 99, 99));
-  --bannerFont: font-family "Chakra Petch", sans-serif;
-  --displayFont: font-family "Orbitron", sans-serif;
+  /* --bannerFont: font-family "Chakra Petch", sans-serif; */
+  /* --displayFont: font-family "Orbitron", sans-serif; */
   /* font variables stopped working after I added gradient animations to func buttions - still not sure why */
 }
 
@@ -72,13 +76,15 @@
   border: solid rgb(36, 36, 36) 0.2em;
   background-image: var(--displayBG);
   /* height: auto; */
-  /* width: auto; */
+  width: inherit;
   flex-flow: row wrap;
-  min-height: 4em;
+  min-height: 5.2em;
   text-align: center;
   justify-content: center;
   align-content: center;
-  font-family: "Orbitron", sans-serif;
+  /* font-family: "Orbitron", sans-serif; */
+  font-family: "digital-7";
+  font-size: xx-large;
   box-shadow: 0.1em 0.1em 0.2em rgb(123, 201, 204),
     -0.1em -0.1em 0.2em rgb(123, 201, 204);
 }
@@ -131,6 +137,10 @@
 
 #num0:hover {
   background-color: rgba(78, 78, 78, 0.5);
+}
+
+#decimalKey {
+  background-color: rgb(22, 22, 22);
 }
 
 .funKey {

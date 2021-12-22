@@ -30,6 +30,7 @@ function App() {
   // getRandomSexy(max);{
   //   return Math.floor(Math.random() * max);
   //   }
+  // value ? doSomethingIfTrue : doSomethingIfFalse
   // }
   return (
     <div className="App">
@@ -45,8 +46,16 @@ function App() {
             {numerals.map((button) => (
               <button
                 class="numKey"
-                id={"num" + button}
-                onClick={() => setDisplay(display + button)}
+                id={button === "." ? "decimalKey" : "num" + button}
+                onClick={
+                  () =>
+                    display == { numerals } ||
+                    display === "*" ||
+                    display === "/"
+                      ? setDisplay(button)
+                      : setDisplay(display + button)
+                  // sets display to button value if current display value is not a number, "-" or "+"
+                }
               >
                 {button}
               </button>
@@ -68,13 +77,21 @@ function App() {
           <div className="Functions2">
             <button
               id="sexyKey"
-              onClick={() =>
-                setDisplay(
-                  "OwO What's this? (notices ur " +
-                    eval(display.toString()) +
-                    ")"
-                )
-              }
+              onClick={() => {
+                if (
+                  display === "" ||
+                  display[0] + display[1] + display[2] == "OwO"
+                ) {
+                  setDisplay("UwU");
+                } else if (display === "UwU") {
+                } else {
+                  setDisplay(
+                    "OwO What's this? (notices ur " +
+                      eval(display.toString()) +
+                      ")"
+                  );
+                }
+              }}
             >
               Sexy
             </button>
@@ -91,6 +108,8 @@ function App() {
                   setDisplay("");
                 } else if (display === "80085" || display === "58008") {
                   setDisplay("Oh, grow up.");
+                } else if (display === "69") {
+                  setDisplay("Nice.");
                 } else {
                   setDisplay(result.toString());
                 }
