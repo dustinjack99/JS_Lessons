@@ -11,7 +11,7 @@ const JSON = () => {
   useEffect(() => {
     const getJSON = async () => {
       const jsonData = await axios.get(
-        `https://pokeapi.co/api/v2/pokemon/${dexEntry}`
+        `https://pokeapi.co/api/v2/pokemon/${dexEntry.toLowerCase()}`
       );
       // console.log(jsonData.data);
       setApiJson(jsonData.data);
