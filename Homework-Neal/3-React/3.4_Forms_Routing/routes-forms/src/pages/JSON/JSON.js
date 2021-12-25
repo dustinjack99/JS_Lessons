@@ -26,6 +26,24 @@ const JSON = () => {
   console.log(apiJson);
 
   return (
+    // onClick, useState, YES
+    // useEffect, NO
+    // for useState, 2 separate calls (query text, result from server
+    // VVV at top of component
+    // let [queryText, setQueryText]=useState(''));
+    // let apiJson, setApiJson = useState(null);
+    // async function onSubmit(query) {
+    // let response = await axios.get("http://www.address.com/q=" + query)
+    // setApiJson(response)}
+    // // ^^^ at Top of component
+    // // inside component:
+
+    // <>
+    // <input onChange={(e) => setQueryText(e.target.value)} /><button onClick={() => onSubmit(queryText)}>Submit</button></>
+    // function pokemonList(props){
+    // return <></>;
+    // }
+
     <div>
       <input type="text" onChange={(e) => setDexEntry(e.target.value)}>
         {}

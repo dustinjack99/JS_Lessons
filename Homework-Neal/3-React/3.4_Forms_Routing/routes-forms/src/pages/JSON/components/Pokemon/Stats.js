@@ -1,11 +1,18 @@
-const Stats = (foundStats) => {
+import { capFirst } from "./Pokemon";
+const Stats = ({ foundStats }) => {
   let { order, stats, moves, abilities } = foundStats;
 
   return (
     <div>
       <div>
-        <p>{order}</p>
-        <p>{stats[0].base_stat}</p>
+        <h3>Base Stats</h3>
+        {stats.map((stat, i) => {
+          return (
+            <p key={i} id={"Stat" + i}>
+              {capFirst(stat.stat.name)}: {stat.base_stat}
+            </p>
+          );
+        })}
       </div>
     </div>
   );

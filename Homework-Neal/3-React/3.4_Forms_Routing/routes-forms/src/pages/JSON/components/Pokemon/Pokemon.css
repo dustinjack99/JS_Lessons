@@ -2,6 +2,23 @@ button {
   color: blue;
 }
 
-.Species {
-  border: solid black 1em;
+.screen {
+  display: grid;
+  grid-template-rows: repeat(1, 2fr);
+  background-image: linear-gradient(45deg, rgba(128, 128, 128, 0.5), grey);
+  width: fit-content;
 }
+
+#spriteDisplay {
+  display: grid;
+  border: dotted teal 0.5em;
+  justify-items: center;
+  width: 80%;
+}
+
+#mainArt {
+  width: inherit;
+}
+/* #spriteArt{
+    
+} */
