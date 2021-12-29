@@ -2,11 +2,47 @@ button {
   color: blue;
 }
 
-.screen {
+.mainScreen {
   display: grid;
   grid-template-rows: repeat(1, 2fr);
   background-image: linear-gradient(45deg, rgba(128, 128, 128, 0.5), grey);
-  width: fit-content;
+  width: 90%;
+}
+
+#App {
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  justify-content: center;
+  align-content: center;
+  border: solid black 3px;
+  position: absolute;
+  transform: translate(-50%);
+  top: 50%;
+  left: 50%;
+  flex-flow: column wrap;
+  justify-self: center;
+  justify-content: center;
+  align-content: center;
+  border: solid rgb(123, 201, 204) 5px;
+  /* background-image: var(--gradientBG); */
+  background-image: linear-gradient(45deg, rgb(212, 240, 241), rgb(53, 82, 99));
+  border-radius: 1rem;
+  min-width: inherit;
+  /* overflow-y: scroll; */
+}
+#dexSideBoard {
+  position: relative;
+  /* translate: 50%; */
+  display: flex;
+  justify-self: flex-end;
+  border: solid black 2px;
+  width: 60%;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.checkBtn {
+  grid-template-rows: repeat(2, 2fr);
+  max-height: 2em;
 }
 
 #spriteDisplay {
@@ -16,9 +52,27 @@ button {
   width: 80%;
 }
 
+#dataDisplay {
+  display: flex;
+  max-height: 30%;
+}
+
 #mainArt {
   width: inherit;
 }
 /* #spriteArt{
-    
+  
 } */
+
+#BaseStats {
+  padding-left: 2em;
+  padding-right: 2em;
+  justify-self: flex-start;
+  display: inherit;
+  flex-flow: row;
+}
+#Moves {
+  width: inherit;
+  overflow-x: hidden;
+  overflow-y: auto;
+}

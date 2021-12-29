@@ -50,7 +50,7 @@ const Pokemon = ({ foundPokemon }) => {
   let originalArtworkSource = sprites.other["official-artwork"].front_default;
   // console.log("Original Art Src:" + " " + originalArtworkSource);
   return (
-    <div class="screen">
+    <div class="mainScreen">
       <div id="spriteDisplay">
         <img id="mainArt" src={originalArtworkSource} />
         {/* <img id="mainArt" src={sprites.other.home.front_default} /> */}
