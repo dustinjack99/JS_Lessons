@@ -2,5 +2,10 @@
   /* background-image: url("./assets/characters.jpg"); */
 }
 #characters {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #02020a;
 }
