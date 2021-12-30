@@ -75,7 +75,7 @@ const Pokemon = ({ foundPokemon }) => {
         {/* base values for height/weight are given in decimeters/hectograms... for SOME reason. */}
       </div>
       <div id="dataDisplay">
-        <Stats foundStats={foundPokemon} />
+        {/* <Stats foundStats={foundPokemon} /> */}
         <Moves foundMoves={foundPokemon} />
         {/* {stats.map((stat, i) => {
           return (

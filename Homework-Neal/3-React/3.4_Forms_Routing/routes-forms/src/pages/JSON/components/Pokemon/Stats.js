@@ -3,7 +3,7 @@ const Stats = ({ foundStats }) => {
   let { order, stats, moves, abilities } = foundStats;
 
   return (
-    <div id="BaseStats">
+    <div id="mainScreen">
       <div>
         <h3>Base Stats</h3>
         {stats.map((stat, i) => {
