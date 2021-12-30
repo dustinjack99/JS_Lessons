@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Carousel } from "@trendyol-js/react-carousel";
+import { Carousel } from "react-carousel-minimal";
 import ReturnResults from "./ReturnResults";
 import "../Query.css";
 
@@ -31,7 +31,6 @@ const SearchReturn = ({ apiJson }) => {
 
   return (
     <>
-      {/* <ReturnResults titles={titles} /> */}
       {apiJson.results.map((Preview, i) => {
         return (
           <div key={i}>

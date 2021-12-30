@@ -7,13 +7,13 @@ function App() {
   return (
     <Router>
       <nav id="nav">
-        <Link to="/">
+        <Link class="link" to="/">
           <p>Home</p>
         </Link>
-        <Link to="query">
+        <Link class="link" to="query">
           <p>Anime Search</p>
         </Link>
-        <Link to="form">
+        <Link class="link" to="form">
           <p>Form</p>
         </Link>
       </nav>
