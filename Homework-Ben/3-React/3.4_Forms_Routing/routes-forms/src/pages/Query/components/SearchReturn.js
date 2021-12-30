@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Carousel } from "@trendyol-js/react-carousel";
 import ReturnResults from "./ReturnResults";
+import "../Query.css";
 
 const SearchReturn = ({ apiJson }) => {
   // const [apiJson, setApiJson] = useState(null);
@@ -29,23 +30,18 @@ const SearchReturn = ({ apiJson }) => {
   }
 
   return (
-    <Carousel>
+    <>
       {/* <ReturnResults titles={titles} /> */}
-      <div>
-        <h2>{apiJson.results[0].title}</h2>
-        <img
-          alt={`${apiJson.results[0].title}`}
-          src={`${apiJson.results[0].image_url}`}
-        />
-      </div>
-      <div>
-        <h2>{apiJson.results[1].title}</h2>
-        <img
-          alt={`${apiJson.results[1].title}`}
-          src={`${apiJson.results[1].image_url}`}
-        />
-      </div>
-    </Carousel>
+      {apiJson.results.map((Preview, i) => {
+        return (
+          <div key={i}>
+            <h2>{Preview.title}</h2>
+            <img alt={Preview.title} src={Preview.image_url} />
+            <p>{Preview.synopsis}</p>
+          </div>
+        );
+      })}
+    </>
   );
 };
 

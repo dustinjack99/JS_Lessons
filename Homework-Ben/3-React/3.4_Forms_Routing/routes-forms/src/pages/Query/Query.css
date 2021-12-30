@@ -1,0 +1,15 @@
+@font-face {
+  font-family: Northstar;
+  src: url(../../styles/northstar-font/NorthstarItalic-MoYw.otf);
+}
+
+#searchTitle {
+  font-family: Northstar;
+  display: flex;
+  justify-content: center;
+}
+#searchInterface {
+  font-family: Northstar;
+  display: flex;
+  justify-content: center;
+}
