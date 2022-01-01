@@ -3,6 +3,7 @@ import { Carousel } from "react-carousel-minimal";
 import ReturnResults from "./ReturnResults";
 import searchGirl from "../assets/searchGirl.png";
 import "../Query.css";
+import Spinner from "./Spinner";
 
 const SearchReturn = ({ apiJson }) => {
   // const [apiJson, setApiJson] = useState(null);
@@ -30,19 +31,32 @@ const SearchReturn = ({ apiJson }) => {
     );
   }
 
+  const data = [];
+  apiJson.results.forEach((Preview) => {
+    data.push({ image: Preview.image_url, caption: Preview.title });
+  });
+
+  console.log(data);
   return (
+    // For grid return
+
+    // <>
+    //   <div id="returns">
+    //     {apiJson.results.map((Preview, i) => {
+    //       return (
+    //         <div key={i}>
+    //           <h2 className="title">{Preview.title}</h2>
+    //           <img className="image" alt={Preview.title} src={Preview.image_url} />
+    //           {/* <p>{Preview.synopsis}</p> */}
+    //         </div>
+    //       );
+    //     })}
+    //   </div>
+    // </>
+
+    // For Spinner return
     <>
-      <div id="returns">
-        {apiJson.results.map((Preview, i) => {
-          return (
-            <div key={i}>
-              <h2 className="title">{Preview.title}</h2>
-              <img className="image" alt={Preview.title} src={Preview.image_url} />
-              {/* <p>{Preview.synopsis}</p> */}
-            </div>
-          );
-        })}
-      </div>
+      <Spinner data={data} />
     </>
   );
 };
