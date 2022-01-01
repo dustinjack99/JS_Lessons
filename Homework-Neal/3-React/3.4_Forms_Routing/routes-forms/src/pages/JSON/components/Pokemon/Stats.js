@@ -8,7 +8,7 @@ const Stats = ({ foundStats }) => {
         <h3>Base Stats</h3>
         {stats.map((stat, i) => {
           return (
-            <p key={i} id={"Stat" + i}>
+            <p key={i} class="baseStats" id={"Stat" + i}>
               {capFirst(stat.stat.name)}: {stat.base_stat}
             </p>
           );

@@ -50,32 +50,39 @@ const Pokemon = ({ foundPokemon }) => {
   let originalArtworkSource = sprites.other["official-artwork"].front_default;
   // console.log("Original Art Src:" + " " + originalArtworkSource);
   return (
-    <div class="mainScreen">
+    <div id="dataContainer">
       <div id="spriteDisplay">
         <img id="mainArt" src={originalArtworkSource} />
         {/* <img id="mainArt" src={sprites.other.home.front_default} /> */}
         <hr />
         <div id="spriteArt">
-          <img id="Default" src={sprites.front_default} />{" "}
+          <img id="Default" src={sprites.front_default} />
+
           <img id="Shiny" src={sprites.front_shiny} />
         </div>
       </div>
 
       <div>
         <h1 className="Species">{capFirst(species.name)}</h1>
+      </div>
+      <div id="dexNumDisplay">
         <h2 className="DexNumber">
           Kanto: # {id} National: #{order}
         </h2>
+      </div>
+      <div id="typeDisplay">
         <h2 className="Type">
           {capFirst(types[0].type.name)}
           {types[1] ? "/" + capFirst(types[1].type.name) : null}
         </h2>
+      </div>
+      <div id="heightWeight">
         {height >= 10 ? <p>H: {height / 10}m</p> : <p>H: {height * 10}cm</p>}
         <p>W: {weight / 10}kg</p>
         {/* base values for height/weight are given in decimeters/hectograms... for SOME reason. */}
       </div>
       <div id="dataDisplay">
-        {/* <Stats foundStats={foundPokemon} /> */}
+        <Stats foundStats={foundPokemon} />
         <Moves foundMoves={foundPokemon} />
         {/* {stats.map((stat, i) => {
           return (
