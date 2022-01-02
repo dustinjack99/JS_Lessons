@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Eviolite;
+  src: url(../../../../assets/EvioliteBRegular-Oj0P.ttf);
+}
 #App {
   display: grid;
   /* grid-template-columns: repeat(3, 1fr); */
@@ -16,7 +20,7 @@
   background-image: linear-gradient(33deg, rgb(212, 240, 241), rgb(53, 82, 99));
   border-radius: 1rem;
   max-width: 40em;
-  height: 50em;
+  height: 60em;
   /* box-shadow: 0em, 0em, 5em, black; */
 }
 
@@ -42,6 +46,7 @@
 }
 
 #dexBody {
+  transform: translateY(-6em);
   display: grid;
   background-image: linear-gradient(45deg, rgba(128, 128, 128, 0.5), grey);
   /* height: fit-content(100%); */
@@ -62,17 +67,37 @@
 button {
   color: blue;
 }
-
+input {
+  text-align: center;
+  /* max-height: 1.5em; */
+  margin: 0.75em;
+  background-color: rgba(133, 192, 189, 0.788);
+}
 #mainHeader {
+  font-family: Eviolite;
   display: flex;
   justify-self: center;
+  align-items: center;
   text-align: center;
+  margin: 0;
   color: rgb(123, 201, 204);
+  /* height: 0.5em; */
 }
 
+#mainScreenEmpty {
+  width: 30em;
+  height: 30em;
+  background-image: linear-gradient(
+    50deg,
+    rgba(224, 255, 252, 0.5),
+    rgba(188, 242, 255, 0.5),
+    rgba(92, 250, 255, 0.5)
+  );
+  transition: background-image 1s;
+}
 #mainScreen {
   max-width: 30em;
-  max-height: 30em;
+  height: 30em;
   background-image: linear-gradient(
     50deg,
     rgb(224, 255, 252),
@@ -81,32 +106,18 @@ button {
   );
 }
 
-#dataContainer {
-  /* position: relative; */
+#heightWeight {
+  color: maroon;
   display: flex;
-  flex-flow: column;
-  /* grid-template-rows: repeat(1, 1fr); */
-  /* grid-row-start: 1; */
-  /* grid-row-end: 2; */
-  /* grid-column-start: 1; */
-  /* grid-column-end: 3; */
-  justify-self: center;
-  align-items: center;
-  /* width: 30em 90%; */
-  /* height: 30em 60%; */
-  /* padding: 2em; */
-  /* flex-grow: 1; */
-  /* border: solid 3px black; */
-  /* overflow-y: scroll; */
+  justify-content: space-evenly;
 }
 
-/* .pkmnBody {
-  display: grid;
-  grid-template-rows: repeat(1, 2fr);
-  background-image: linear-gradient(45deg, rgba(128, 128, 128, 0.5), grey);
-  width: 90%;
-  border: solid 3px teal;
-} */
+#height {
+  padding: 1em;
+}
+#weight {
+  padding: 1em;
+}
 
 #searchLabel {
   text-align: center;
@@ -115,6 +126,8 @@ button {
 }
 
 #searchBtn {
+  font-family: Eviolite;
+  color: rgb(253, 183, 183);
   background-color: rgb(139, 0, 0);
   border-radius: 3em;
   width: 6em;
@@ -156,39 +169,88 @@ button {
 }
 
 #spriteDisplay {
+  /* position: absolute; */
   display: grid;
   border: dotted teal 0.5em;
   justify-items: center;
-  width: auto;
+  margin: 1rem;
+  /* width: inherit; */
+  max-height: 23rem;
 }
 
-#dataDisplay {
+.Species {
+  font-family: Eviolite;
+  font-size: 4em;
+}
+
+#dataContainer {
+  /* position: relative; */
   display: flex;
-  flex-flow: column;
-  height: 15rem;
-  max-height: 30%;
+  /* flex-flow: column; */
+  justify-self: center;
+  justify-items: center;
+  align-items: center;
+  width: 30em;
+  height: 100%;
+  flex: 1;
+  /* display: none; */
+  flex-direction: column;
+  /* padding: 2em; */
+  /* flex-grow: 1; */
+  /* border: solid 3px black; */
   overflow-y: scroll;
 }
 
+#dataDisplay {
+  /* position: relative; */
+  /* display: inline; */
+  flex-flow: column;
+  /* float: inline-start; */
+  /* height: 15rem; */
+  /* max-height: 30%; */
+  /* overflow-y: scroll; */
+}
+
 #mainArt {
-  width: 40%;
+  max-width: 60%;
 }
 /* #spriteArt{
-  
+  max-width: 30%;
 } */
 
+#statsScreen {
+  margin: 1em;
+}
+
+#statsHeader {
+  display: flex;
+  justify-content: center;
+}
+#statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .baseStats {
+  display: inline-table;
   /* padding-left: 2em; */
   /* padding-right: 2em; */
   margin: 0.5em;
-  /* justify-self: auto;
-  justify-items: center; */
-  display: inline;
-  white-space: pre;
+
+  /* justify-self: auto; */
+  justify-items: center;
+  white-space: nowrap;
   /* vertical-align: middle; */
 }
-#Moves {
+#moveScreen {
+  display: flex;
+  justify-content: center;
   width: inherit;
-  overflow-x: hidden;
-  overflow-y: auto;
+  /* overflow-x: hidden; */
+  /* overflow-y: scroll; */
+}
+
+.Moves {
+  display: flex;
+  justify-content: center;
 }

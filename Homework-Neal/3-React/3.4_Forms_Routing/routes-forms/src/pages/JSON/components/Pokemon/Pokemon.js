@@ -77,8 +77,18 @@ const Pokemon = ({ foundPokemon }) => {
         </h2>
       </div>
       <div id="heightWeight">
-        {height >= 10 ? <p>H: {height / 10}m</p> : <p>H: {height * 10}cm</p>}
-        <p>W: {weight / 10}kg</p>
+        {height >= 10 ? (
+          <div id="height">
+            <p>H: {height / 10}m</p>
+          </div>
+        ) : (
+          <div id="height">
+            <p>H: {height * 10}cm</p>
+          </div>
+        )}
+        <div id="weight">
+          <p>W: {weight / 10}kg</p>
+        </div>
         {/* base values for height/weight are given in decimeters/hectograms... for SOME reason. */}
       </div>
       <div id="dataDisplay">

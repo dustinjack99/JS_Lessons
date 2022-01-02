@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Pokemon from "./components/Pokemon/Pokemon";
-// import Users from "./examples-practice/Users";
-// import Breweries from "./Breweries";
 
 const JSON = () => {
   const [apiJson, setApiJson] = useState({});
@@ -33,7 +31,7 @@ const JSON = () => {
     // let [queryText, setQueryText]=useState(''));
     // let apiJson, setApiJson = useState(null);
     // async function onSubmit(query) {
-    // let response = await axios.get("http://www.address.com/q=" + query)
+    // let response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${dexEntry.toLowerCase()}`)
     // setApiJson(response)}
     // // ^^^ at Top of component
     // // inside component:
@@ -62,16 +60,6 @@ const JSON = () => {
         <input type="checkbox" class="checkBtn" id="check04" />
       </div>
       {/* <hr /> */}
-      <label id="searchLabel" for="search">
-        Enter Pokemon Name.
-      </label>
-      <input
-        type="text"
-        name="search"
-        onChange={(e) => setDexEntry(e.target.value)}
-      >
-        {}
-      </input>
       <div id="dexBody">
         {Object.keys(apiJson).length && Object.keys(apiJson).length !== 0 ? (
           <h2 id="mainHeader"> Pokemon Found!</h2>
@@ -80,6 +68,16 @@ const JSON = () => {
             Hello World. <br /> This is the API Pokedex Page.
           </h1>
         )}
+        {/* <label id="searchLabel" for="search">
+          Enter Pokemon Name.
+        </label> */}
+        <input
+          type="text"
+          name="search"
+          onChange={(e) => setDexEntry(e.target.value)}
+        >
+          {}
+        </input>
         {/* <label for="search">Enter Pokemon Name.</label>
         <input
           type="text"
@@ -89,13 +87,19 @@ const JSON = () => {
           {}
         </input> */}
 
-        {Object.keys(apiJson).length !== 0 ? null : <div id="mainScreen" />}
+        {Object.keys(apiJson).length !== 0 ? null : (
+          <div id="mainScreenEmpty" />
+        )}
         {Object.keys(apiJson).length === 0 ? null : (
           <div id="mainScreen">
             <Pokemon foundPokemon={apiJson} />
           </div>
         )}
       </div>
+      {/* <div class="bottomButtons" id="bottomBtn01"></div>
+      <div class="bottomButtons" id="bottomBtn02"></div>
+      <div class="bottomButtons" id="bottomBtn03"></div>
+      <div class="bottomButtons" id="bottomBtn04"></div> */}
     </div>
   );
 };

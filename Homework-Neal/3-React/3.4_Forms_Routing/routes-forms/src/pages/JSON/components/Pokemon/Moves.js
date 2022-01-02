@@ -2,9 +2,9 @@ import { capFirst } from "./Pokemon";
 const Moves = ({ foundMoves }) => {
   let { order, moves, abilities } = foundMoves;
   return (
-    <div id="mainScreen">
-      <h3>Moves</h3>
+    <div id="moveScreen">
       <div>
+        <h3 class="Moves">Moves</h3>
         {moves.map((moves, i) => {
           return (
             <p key={i} class="Moves" id={"Move" + i}>
