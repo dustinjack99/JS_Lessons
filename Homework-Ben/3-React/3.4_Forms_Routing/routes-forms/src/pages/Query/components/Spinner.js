@@ -1,18 +1,6 @@
 import { Carousel } from "react-carousel-minimal";
 
-const Spinner = ({ apiJson }) => {
-  const data = [
-    {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg",
-      caption: "Text",
-    },
-    {
-      image: `${apiJson.results[0].image_url}`,
-      caption: `${apiJson.results[0].title}`,
-    },
-  ];
-
+const Spinner = ({ data }) => {
   return (
     <div className="App">
       <div style={{ textAlign: "center" }}>
@@ -24,17 +12,17 @@ const Spinner = ({ apiJson }) => {
           <Carousel
             data={data}
             time={2000}
-            width="850px"
-            height="500px"
+            width="570px"
+            height="800px"
             radius="10px"
             slideNumber={true}
-            captionPosition="bottom"
-            automatic={true}
+            captionPosition="top"
+            automatic={false}
             dots={true}
             pauseIconColor="white"
             pauseIconSize="40px"
-            slideBackgroundColor="darkgrey"
-            slideImageFit="cover"
+            slideBackgroundColor="#c6c6c6"
+            slideImageFit="contain"
             thumbnails={true}
             thumbnailWidth="100px"
             style={{

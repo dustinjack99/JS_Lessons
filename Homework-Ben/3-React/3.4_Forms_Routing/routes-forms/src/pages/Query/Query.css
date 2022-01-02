@@ -12,7 +12,7 @@
   font-family: Northstar;
   display: flex;
   justify-content: center;
-  margin-bottom: 22px;
+  margin-bottom: 52px;
 }
 #searchGirl {
   display: block;
@@ -34,4 +34,12 @@
 .image {
   display: block;
   margin: auto;
+}
+#spinnerReturn {
+  display: flex;
+  justify-content: center;
+}
+.carousel-caption-top {
+  color: #c9df0a;
+  background: #8f1313;
 }
