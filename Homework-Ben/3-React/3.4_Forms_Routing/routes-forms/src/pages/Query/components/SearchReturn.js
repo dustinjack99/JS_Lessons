@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { Carousel } from "react-carousel-minimal";
-import ReturnResults from "./ReturnResults";
 import searchGirl from "../assets/searchGirl.png";
 import "../Query.css";
 import Spinner from "./Spinner";
@@ -56,7 +53,9 @@ const SearchReturn = ({ apiJson }) => {
 
     // For Spinner return
     <>
-      <Spinner data={data} />
+      <div id="spinnerReturn">
+        <Spinner id="spinner" data={data} />
+      </div>
     </>
   );
 };

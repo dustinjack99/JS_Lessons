@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import SearchReturn from "./components/SearchReturn";
-import Spinner from "./components/Spinner.js";
 import axios from "axios";
 import "./Query.css";
 
@@ -30,7 +29,6 @@ const Query = () => {
         ></input>
         <button onClick={() => getJSON(query)}>GO!</button>
       </div>
-      {/* <Spinner /> */}
       <SearchReturn apiJson={apiJson} />
     </div>
   );

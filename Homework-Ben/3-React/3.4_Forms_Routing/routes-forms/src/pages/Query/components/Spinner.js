@@ -12,17 +12,17 @@ const Spinner = ({ data }) => {
           <Carousel
             data={data}
             time={2000}
-            width="850px"
-            height="500px"
+            width="570px"
+            height="800px"
             radius="10px"
             slideNumber={true}
-            captionPosition="bottom"
+            captionPosition="top"
             automatic={false}
             dots={true}
             pauseIconColor="white"
             pauseIconSize="40px"
             slideBackgroundColor="#c6c6c6"
-            slideImageFit="cover"
+            slideImageFit="contain"
             thumbnails={true}
             thumbnailWidth="100px"
             style={{
