@@ -2,6 +2,10 @@
   font-family: Eviolite;
   src: url(../../../../assets/EvioliteBRegular-Oj0P.ttf);
 }
+@font-face {
+  font-family: PokemonGB;
+  src: url(../../../../assets/PokemonGb-RAeo.ttf);
+}
 #App {
   display: grid;
   /* grid-template-columns: repeat(3, 1fr); */
@@ -22,6 +26,7 @@
   max-width: 40em;
   height: 60em;
   /* box-shadow: 0em, 0em, 5em, black; */
+  font-family: Eviolite;
 }
 
 /* Works on Firefox */
@@ -46,7 +51,7 @@
 }
 
 #dexBody {
-  transform: translateY(-6em);
+  /* transform: translateY(-2em); */
   display: grid;
   background-image: linear-gradient(45deg, rgba(128, 128, 128, 0.5), grey);
   /* height: fit-content(100%); */
@@ -64,10 +69,30 @@
   padding-bottom: 0.2em;
 }
 
+#speaker {
+  height: fit-content;
+  width: 6em;
+  border: solid black 2px;
+  border-radius: 0.5em;
+  margin: 0.5em;
+  background-image: linear-gradient(
+    45deg,
+    rgb(89, 113, 128),
+    rgb(46, 70, 83),
+    rgb(74, 109, 129)
+  );
+}
+
+hr {
+  border: solid black 1px;
+}
+
 button {
   color: blue;
+  cursor: pointer;
 }
 input {
+  font-family: PokemonGB;
   text-align: center;
   /* max-height: 1.5em; */
   margin: 0.75em;
@@ -89,9 +114,9 @@ input {
   height: 30em;
   background-image: linear-gradient(
     50deg,
-    rgba(224, 255, 252, 0.5),
-    rgba(188, 242, 255, 0.5),
-    rgba(92, 250, 255, 0.5)
+    rgba(178, 202, 200, 0.5),
+    rgba(151, 196, 207, 0.5),
+    rgba(68, 195, 199, 0.5)
   );
   transition: background-image 1s;
 }
@@ -168,6 +193,54 @@ input {
   box-shadow: 2em, 2em, rgb(255, 255, 207);
 }
 
+#dPad {
+  justify-self: right;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: fit-content;
+  height: fit-content;
+  margin: 0.3em;
+  border: solid 2px black;
+  border-radius: 1em;
+  background-color: rgb(111, 136, 151);
+}
+
+.dPadBtn {
+  width: 3em;
+  height: 3em;
+  background-image: linear-gradient(
+    45deg,
+    rgb(89, 113, 128),
+    rgb(46, 70, 83),
+    rgb(74, 109, 129)
+  );
+  border: solid 3px rgb(8, 34, 34);
+  border-radius: 1em;
+  cursor: initial;
+}
+
+#dPad01 {
+  grid-column: 2;
+  grid-row: 1;
+  /* grid-area: "up"; */
+}
+#dPad02 {
+  grid-column: 2;
+  grid-row: 3;
+  /* grid-area: "down"; */
+}
+#dPad03 {
+  grid-column: 1;
+  grid-row: 2;
+  /* grid-area: "left"; */
+}
+#dPad04 {
+  grid-column: 3;
+  grid-row: 2;
+  /* grid-area: "right"; */
+}
+
 #spriteDisplay {
   /* position: absolute; */
   display: grid;
@@ -181,6 +254,13 @@ input {
 .Species {
   font-family: Eviolite;
   font-size: 4em;
+}
+
+#dexNumDisplay {
+  display: inline;
+  font-size: 1em;
+  justify-self: center;
+  gap: 0.5em;
 }
 
 #dataContainer {
@@ -199,6 +279,7 @@ input {
   /* flex-grow: 1; */
   /* border: solid 3px black; */
   overflow-y: scroll;
+  font-family: PokemonGB;
 }
 
 #dataDisplay {
@@ -229,6 +310,7 @@ input {
 #statsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  font-size: 0.75em;
 }
 
 .baseStats {

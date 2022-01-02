@@ -58,6 +58,15 @@ const JSON = () => {
         <input type="checkbox" class="checkBtn" id="check02" />
         <input type="checkbox" class="checkBtn" id="check03" />
         <input type="checkbox" class="checkBtn" id="check04" />
+        <div id="speaker">
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+        </div>
       </div>
       {/* <hr /> */}
       <div id="dexBody">
@@ -96,10 +105,21 @@ const JSON = () => {
           </div>
         )}
       </div>
-      {/* <div class="bottomButtons" id="bottomBtn01"></div>
-      <div class="bottomButtons" id="bottomBtn02"></div>
-      <div class="bottomButtons" id="bottomBtn03"></div>
-      <div class="bottomButtons" id="bottomBtn04"></div> */}
+      <h2>Pine Labs</h2>
+      <div id="dPad">
+        <button class="dPadBtn" id="dPad01">
+          ^
+        </button>
+        <button class="dPadBtn" id="dPad02">
+          v
+        </button>
+        <button class="dPadBtn" id="dPad03">
+          {"<"}
+        </button>
+        <button class="dPadBtn" id="dPad04">
+          {">"}
+        </button>
+      </div>
     </div>
   );
 };

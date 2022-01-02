@@ -67,7 +67,8 @@ const Pokemon = ({ foundPokemon }) => {
       </div>
       <div id="dexNumDisplay">
         <h2 className="DexNumber">
-          Kanto: # {id} National: #{order}
+          <div>Kanto: # {id}</div>
+          <div>National: #{order}</div>
         </h2>
       </div>
       <div id="typeDisplay">
