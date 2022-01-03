@@ -40,6 +40,6 @@
   justify-content: center;
 }
 .carousel-caption-top {
-  color: #c9df0a;
+  color: #c9df0a !important;
   background: #8f1313;
 }
