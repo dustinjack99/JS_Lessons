@@ -14,7 +14,7 @@ function App() {
           <p>Anime Search</p>
         </Link>
         <Link class="link" to="form">
-          <p>Form</p>
+          <p>Take our quiz</p>
         </Link>
       </nav>
       <div>
