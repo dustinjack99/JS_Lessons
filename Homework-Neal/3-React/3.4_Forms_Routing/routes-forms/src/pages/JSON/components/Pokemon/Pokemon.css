@@ -88,8 +88,9 @@ hr {
 }
 
 button {
-  color: blue;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 input {
   font-family: PokemonGB;
@@ -98,6 +99,29 @@ input {
   margin: 0.75em;
   background-color: rgba(133, 192, 189, 0.788);
 }
+
+#inputBtns {
+  display: flex;
+  justify-self: center;
+  padding-bottom: 0.5em;
+}
+
+#inputRandom {
+  color: teal;
+  border: solid 1px teal;
+  border-radius: 1em;
+  box-shadow: 0em 0em 1em teal;
+  box-shadow: 0em 0em 1em rgb(0, 179, 179, 0.5);
+}
+
+#inputReset {
+  color: teal;
+  border: solid 1px teal;
+  border-radius: 1em;
+  box-shadow: 0em 0em 1em teal;
+  box-shadow: 0em 0em 1em rgb(0, 179, 179, 0.5);
+}
+
 #mainHeader {
   font-family: Eviolite;
   display: flex;
@@ -254,6 +278,7 @@ input {
 .Species {
   font-family: Eviolite;
   font-size: 4em;
+  border-bottom: dotted teal 0.1em;
 }
 
 #dexNumDisplay {
@@ -264,16 +289,13 @@ input {
 }
 
 #dataContainer {
-  /* position: relative; */
   display: flex;
-  /* flex-flow: column; */
   justify-self: center;
   justify-items: center;
   align-items: center;
   width: 30em;
   height: 100%;
   flex: 1;
-  /* display: none; */
   flex-direction: column;
   /* padding: 2em; */
   /* flex-grow: 1; */
@@ -284,12 +306,9 @@ input {
 
 #dataDisplay {
   /* position: relative; */
-  /* display: inline; */
+  display: flex;
   flex-flow: column;
-  /* float: inline-start; */
-  /* height: 15rem; */
-  /* max-height: 30%; */
-  /* overflow-y: scroll; */
+  justify-content: center;
 }
 
 #mainArt {
@@ -301,6 +320,9 @@ input {
 
 #statsScreen {
   margin: 1em;
+  padding-bottom: 0.6em;
+  border-top: dotted teal 0.6em;
+  border-bottom: dotted teal 0.6em;
 }
 
 #statsHeader {
@@ -327,9 +349,9 @@ input {
 #moveScreen {
   display: flex;
   justify-content: center;
-  width: inherit;
-  /* overflow-x: hidden; */
-  /* overflow-y: scroll; */
+  width: 100%;
+  margin: 0;
+  /* border-right: dotted teal 0.6em; */
 }
 
 .Moves {

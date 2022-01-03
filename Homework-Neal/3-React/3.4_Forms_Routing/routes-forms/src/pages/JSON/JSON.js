@@ -23,6 +23,12 @@ const JSON = () => {
 
   console.log(apiJson);
 
+  function getRandomEntry(min, max) {
+    min = Math.ceil(1);
+    max = Math.floor(1118);
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+
   return (
     // onClick, useState, YES
     // useEffect, NO
@@ -54,10 +60,10 @@ const JSON = () => {
         >
           SEARCH
         </button>
-        <input type="checkbox" class="checkBtn" id="check01" />
-        <input type="checkbox" class="checkBtn" id="check02" />
-        <input type="checkbox" class="checkBtn" id="check03" />
-        <input type="checkbox" class="checkBtn" id="check04" />
+        <input type="button" class="checkBtn" id="check01" />
+        <input type="button" class="checkBtn" id="check02" />
+        <input type="button" class="checkBtn" id="check03" />
+        <input type="button" class="checkBtn" id="check04" />
         <div id="speaker">
           <hr />
           <hr />
@@ -81,12 +87,26 @@ const JSON = () => {
           Enter Pokemon Name.
         </label> */}
         <input
+          id="inputBar"
           type="text"
           name="search"
           onChange={(e) => setDexEntry(e.target.value)}
         >
           {}
         </input>
+        <div id="inputBtns">
+          <button
+            id="inputRandom"
+            onClick={(e) => setApiJson(getRandomEntry(1, 1118))}
+            //sets dex Entry to empty obj like reset button
+            // Random Number Generator is working! Now to hook it up to the "setDexEntry" function somehow
+          >
+            Random
+          </button>
+          <button id="inputReset" onClick={(e) => setApiJson({})}>
+            Reset
+          </button>
+        </div>
         {/* <label for="search">Enter Pokemon Name.</label>
         <input
           type="text"
