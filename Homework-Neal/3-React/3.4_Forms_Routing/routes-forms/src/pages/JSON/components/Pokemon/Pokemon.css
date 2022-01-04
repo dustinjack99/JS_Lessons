@@ -239,31 +239,25 @@ input {
 #dPad01 {
   grid-column: 2;
   grid-row: 1;
-  /* grid-area: "up"; */
 }
 #dPad02 {
   grid-column: 2;
   grid-row: 3;
-  /* grid-area: "down"; */
 }
 #dPad03 {
   grid-column: 1;
   grid-row: 2;
-  /* grid-area: "left"; */
 }
 #dPad04 {
   grid-column: 3;
   grid-row: 2;
-  /* grid-area: "right"; */
 }
 
 #spriteDisplay {
-  /* position: absolute; */
   display: grid;
   border: dotted teal 0.5em;
   justify-items: center;
   margin: 1rem;
-  /* width: inherit; */
   max-height: 23rem;
 }
 
@@ -290,14 +284,11 @@ input {
   flex: 1;
   flex-direction: column;
   /* padding: 2em; */
-  /* flex-grow: 1; */
-  /* border: solid 3px black; */
   overflow-y: scroll;
   font-family: PokemonGB;
 }
 
 #dataDisplay {
-  /* position: relative; */
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -329,21 +320,15 @@ input {
 
 .baseStats {
   display: inline-table;
-  /* padding-left: 2em; */
-  /* padding-right: 2em; */
   margin: 0.5em;
-
-  /* justify-self: auto; */
   justify-items: center;
   white-space: nowrap;
-  /* vertical-align: middle; */
 }
 #moveScreen {
   display: flex;
   justify-content: center;
   width: 100%;
   margin: 0;
-  /* border-right: dotted teal 0.6em; */
 }
 
 .Moves {
