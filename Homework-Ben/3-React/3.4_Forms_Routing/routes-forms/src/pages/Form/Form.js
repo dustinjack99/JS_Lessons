@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import QuizInterface from "./components/QuizInterface";
 const Form = () => {
-  const [answer, setAnswer] = useState("Kamehameha");
   const quizData = [
     {
       question: "question 1",
@@ -20,44 +19,49 @@ const Form = () => {
       choice4: "Stone Cold Stunner",
       answer: "Kamehameha",
     },
+    {
+      question: "question 3",
+      questionText: "Bungee Gum has the properties of ____________?",
+      choice1: "A Bungee cord and steel",
+      choice2: "Anything it touches",
+      choice3: "Toothpaste and Orange Juice",
+      choice4: "Rubber and Gum",
+      answer: "Rubber and Gum",
+    },
+    {
+      // Write this question
+      question: "question 4",
+      questionText: "What is Goku's signature move called?",
+      choice1: "Kamehameha",
+      choice2: "Rasengan",
+      choice3: "Bankai",
+      choice4: "Stone Cold Stunner",
+      answer: "Kamehameha",
+    },
+    {
+      // Write this question
+      question: "question 5",
+      questionText: "What is Goku's signature move called?",
+      choice1: "Kamehameha",
+      choice2: "Rasengan",
+      choice3: "Bankai",
+      choice4: "Stone Cold Stunner",
+      answer: "Kamehameha",
+    },
+    {
+      question: "question 6",
+      questionText: "What is the ship the Outlaw Star's design name?",
+      choice1: "VS-DO2-C",
+      choice2: "Gilliam II",
+      choice3: "XGP-15A-II",
+      choice4: "Heifong V",
+      answer: "XGP-15A-II",
+    },
   ];
   return (
     <div>
       {quizData.map((quiz, i) => {
-        return (
-          <div key={i}>
-            <div>
-              <h2>{i + 1}.</h2>
-              <h2>{quiz.questionText}</h2>
-            </div>
-            <p>{quiz.choice1}</p>
-            <p>{quiz.choice2}</p>
-            <p>{quiz.choice3}</p>
-            <p>{quiz.choice4}</p>
-            <select
-              id={i}
-              onChange={(e) => {
-                setAnswer(e.target.value);
-              }}
-            >
-              <option value={quiz.choice1}>{quiz.choice1}</option>
-              <option value={quiz.choice2}>{quiz.choice2}</option>
-              <option value={quiz.choice3}>{quiz.choice3}</option>
-              <option value={quiz.choice4}>{quiz.choice4}</option>
-            </select>
-            <button
-              onClick={(e) => {
-                if (answer === quiz.answer) {
-                  return console.log("answer correct", answer);
-                } else {
-                  return console.log("answer incorrect", answer, i);
-                }
-              }}
-            >
-              Final Answer
-            </button>
-          </div>
-        );
+        return <QuizInterface quiz={quiz} i={i} />;
       })}
     </div>
   );
