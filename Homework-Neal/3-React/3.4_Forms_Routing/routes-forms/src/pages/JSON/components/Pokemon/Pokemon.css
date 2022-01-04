@@ -8,24 +8,19 @@
 }
 #App {
   display: grid;
-  /* grid-template-columns: repeat(3, 1fr); */
   position: absolute;
   padding: 1em;
   transform: translate(50%);
   top: 10%;
-  /* bottom: auto; */
-  /* left: 50%; */
   right: 50%;
   flex-flow: column wrap;
-  /* justify-self: center; */
+  justify-self: center;
   justify-content: center;
-  /* align-content: center; */
-  border: solid rgb(123, 201, 204) 8px;
+  border: solid rgb(123, 201, 204) 1em;
   background-image: linear-gradient(33deg, rgb(212, 240, 241), rgb(53, 82, 99));
   border-radius: 1rem;
   max-width: 40em;
   height: 60em;
-  /* box-shadow: 0em, 0em, 5em, black; */
   font-family: Eviolite;
 }
 
@@ -54,9 +49,7 @@
   /* transform: translateY(-2em); */
   display: grid;
   background-image: linear-gradient(45deg, rgba(128, 128, 128, 0.5), grey);
-  /* height: fit-content(100%); */
   border: solid rgb(8, 34, 34) 4px;
-  /* max-height: fit-content; */
   /* box-shadow: 0.5em, 0.5em, 1em black; */
 }
 
@@ -95,7 +88,6 @@ button {
 input {
   font-family: PokemonGB;
   text-align: center;
-  /* max-height: 1.5em; */
   margin: 0.75em;
   background-color: rgba(133, 192, 189, 0.788);
 }
@@ -130,7 +122,6 @@ input {
   text-align: center;
   margin: 0;
   color: rgb(123, 201, 204);
-  /* height: 0.5em; */
 }
 
 #mainScreenEmpty {
@@ -183,12 +174,13 @@ input {
   height: 6em;
   box-shadow: 0em 0em 1em red;
   opacity: 100%;
-  transition: box-shadow 0.5s, background-color 0.5s, opacity 0.5s;
-  /* background-image: radial-gradient(
-    rgb(255, 224, 224),
-    rgb(255, 188, 188),
-    rgb(255, 92, 92)
-  ); */
+  transition: box-shadow 0.5s, background-color 0.5s, opacity 0.5s,
+    background-image 0.5s;
+  background-image: radial-gradient(
+    rgb(255, 224, 224, 0.65),
+    rgb(255, 188, 188, 0.5),
+    rgb(255, 92, 92, 0.35)
+  );
 }
 
 #searchBtn:hover {
@@ -197,8 +189,8 @@ input {
   opacity: 90%;
   background-image: radial-gradient(
     rgb(255, 224, 224),
-    rgb(255, 188, 188),
-    rgb(255, 92, 92)
+    rgb(255, 188, 188, 0.5),
+    rgb(255, 92, 92, 0.35)
   );
 }
 

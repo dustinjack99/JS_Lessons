@@ -6,12 +6,14 @@ const JSON = () => {
   const [apiJson, setApiJson] = useState({});
   const [dexEntry, setDexEntry] = useState("");
   const [submit, setSubmit] = useState(false);
+
+  // VVV API CALL "SEARCH" BAR
   useEffect(() => {
     const getJSON = async () => {
       const jsonData = await axios.get(
         `https://pokeapi.co/api/v2/pokemon/${dexEntry.toLowerCase()}`
       );
-      // console.log(jsonData.data);
+      console.log(jsonData.data);
       setApiJson(jsonData.data);
     };
     if (dexEntry === "") {
@@ -20,14 +22,23 @@ const JSON = () => {
       getJSON();
     }
   }, [submit]);
+  // console.log(apiJson.data);
 
-  console.log(apiJson);
-
-  function getRandomEntry(min, max) {
-    min = Math.ceil(1);
-    max = Math.floor(1118);
-    return Math.floor(Math.random() * (max - min) + min);
-  }
+  // VVV RANDOM BUTTON CODE
+  // useEffect(() => {
+  //   const getJSON = async () => {
+  //     const jsonData = await axios.get(
+  //       `https://pokeapi.co/api/v2/pokemon/${dexEntry.getRandom(1, 1118)}`
+  //     );
+  //     // console.log(randomJSON.data);
+  //     setApiJson(jsonData.data);
+  //   };
+  // }, [submit]);
+  // function getRandom(min, max) {
+  //   min = Math.ceil(min);
+  //   max = Math.floor(max);
+  //   return Math.floor(Math.random() * (max - min) + min);
+  // }
 
   return (
     // onClick, useState, YES
@@ -60,8 +71,8 @@ const JSON = () => {
         >
           SEARCH
         </button>
-        <input type="button" class="checkBtn" id="check01" />
-        <input type="button" class="checkBtn" id="check02" />
+        <input type="button" class="checkBtn" id="FormeBtn" />
+        <input type="button" class="checkBtn" id="ArtBtn" />
         <input type="button" class="checkBtn" id="check03" />
         <input type="button" class="checkBtn" id="check04" />
         <div id="speaker">
@@ -97,7 +108,7 @@ const JSON = () => {
         <div id="inputBtns">
           <button
             id="inputRandom"
-            onClick={(e) => setApiJson(getRandomEntry(1, 1118))}
+            onClick={(e) => setDexEntry(e.target.value)}
             //sets dex Entry to empty obj like reset button
             // Random Number Generator is working! Now to hook it up to the "setDexEntry" function somehow
           >
@@ -125,7 +136,11 @@ const JSON = () => {
           </div>
         )}
       </div>
-      <h2>Pine Labs</h2>
+      <div>
+        <h2>Pine Labs</h2>
+        {/* <input type="button" class="checkBtn" id="check01" />
+        <input type="button" class="checkBtn" id="check02" /> */}
+      </div>
       <div id="dPad">
         <button class="dPadBtn" id="dPad01">
           ^

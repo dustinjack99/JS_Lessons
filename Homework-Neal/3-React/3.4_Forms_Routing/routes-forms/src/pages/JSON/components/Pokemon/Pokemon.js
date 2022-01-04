@@ -28,20 +28,7 @@ function hpCaps(entry) {
 //^^^ Capitalizes "HP" when rendering stat names with loop
 const Pokemon = ({ foundPokemon }) => {
   // console.log(foundPokemon);
-  let {
-    sprites,
-    // name,
-    id,
-    order,
-    types,
-    species,
-    height,
-    weight,
-    // stats,
-    // moves,
-    // abilities,
-  } = foundPokemon;
-  // console.log(stats);
+  let { sprites, id, order, types, species, height, weight } = foundPokemon;
   // NOTE: moves, stats, types, abilities are arrays of objects;
   // generate html tags with the selected data
 
@@ -54,7 +41,8 @@ const Pokemon = ({ foundPokemon }) => {
       <div id="spriteDisplay">
         <img id="mainArt" src={originalArtworkSource} />
         {/* <img id="mainArt" src={sprites.other.home.front_default} /> */}
-        <hr />
+        {/* <hr /> */}
+        {/* <input type="radio" onChange={}>Gender</input> */}
         <div id="spriteArt">
           <img id="Default" src={sprites.front_default} />
 
