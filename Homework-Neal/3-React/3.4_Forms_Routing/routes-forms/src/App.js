@@ -13,13 +13,13 @@ function App() {
         <Link to="/form">
           <p>Form</p>
         </Link>
-        <Link to="/json">
+        {/* <Link to="/json">
           <p>JSON</p>
-        </Link>
+        </Link> */}
       </nav>
       <div>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<JSON />} />
           <Route path="form" element={<Form />} />
           <Route path="json" element={<JSON />} />
         </Routes>

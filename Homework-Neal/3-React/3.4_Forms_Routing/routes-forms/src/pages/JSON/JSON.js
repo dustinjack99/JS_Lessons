@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Pokemon from "./components/Pokemon/Pokemon";
+// import Sounds from "Sounds.js";
+// import { Howl, Howler } from "howler";
+
+// const dexLoad = new Howl({
+//   src: ["../assets/sounds"],
+//   volume: 1,
+// });
 
 const JSON = () => {
   const [apiJson, setApiJson] = useState({});
@@ -71,7 +78,14 @@ const JSON = () => {
         >
           SEARCH
         </button>
-        <input type="button" class="checkBtn" id="FormeBtn" />
+        <input
+          type="button"
+          class="checkBtn"
+          id="FormeBtn"
+          onClick={() => {
+            dexLoad.play(Howl);
+          }}
+        />
         <input type="button" class="checkBtn" id="ArtBtn" />
         <input type="button" class="checkBtn" id="check03" />
         <input type="button" class="checkBtn" id="check04" />
