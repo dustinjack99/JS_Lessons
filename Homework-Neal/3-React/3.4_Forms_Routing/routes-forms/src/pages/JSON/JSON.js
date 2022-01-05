@@ -1,13 +1,17 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Pokemon from "./components/Pokemon/Pokemon";
-// import Sounds from "Sounds.js";
-// import { Howl, Howler } from "howler";
+import { Howl, Howler } from "howler";
 
-// const dexLoad = new Howl({
-//   src: ["../assets/sounds"],
-//   volume: 1,
-// });
+const dexLoad = new Howl({
+  src: ["/SFX_DEX_PAGE_ADDED.wav"],
+  volume: 0.8,
+});
+
+const typeSound = new Howl({
+  srs: ["SFX_PRESS_AB.wav"],
+  volume: 0.8,
+});
 
 const JSON = () => {
   const [apiJson, setApiJson] = useState({});
@@ -27,25 +31,33 @@ const JSON = () => {
       return null;
     } else {
       getJSON();
+      dexLoad.play();
     }
   }, [submit]);
   // console.log(apiJson.data);
 
   // VVV RANDOM BUTTON CODE
+  function getRandom(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
+  }
   // useEffect(() => {
   //   const getJSON = async () => {
   //     const jsonData = await axios.get(
-  //       `https://pokeapi.co/api/v2/pokemon/${dexEntry.getRandom(1, 1118)}`
+  //       `https://pokeapi.co/api/v2/pokemon/${getRandom(1, 1118)}`
   //     );
-  //     // console.log(randomJSON.data);
+  //     console.log(jsonData.data);
   //     setApiJson(jsonData.data);
   //   };
+  //   if (dexEntry === "") {
+  //     return null;
+  //   } else {
+  //     getJSON();
+  //   }
   // }, [submit]);
-  // function getRandom(min, max) {
-  //   min = Math.ceil(min);
-  //   max = Math.floor(max);
-  //   return Math.floor(Math.random() * (max - min) + min);
-  // }
+
+  // ^^^ If I uncomment this code placed here, the search button returns requested search, followed by a random entry. What the fuck.
 
   return (
     // onClick, useState, YES
@@ -82,9 +94,9 @@ const JSON = () => {
           type="button"
           class="checkBtn"
           id="FormeBtn"
-          onClick={() => {
-            dexLoad.play(Howl);
-          }}
+          // onClick={(e) => {
+          //   dexLoad.play(e);
+          // }}
         />
         <input type="button" class="checkBtn" id="ArtBtn" />
         <input type="button" class="checkBtn" id="check03" />
