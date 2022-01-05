@@ -1,0 +1,45 @@
+@font-face {
+  font-family: Northstar;
+  src: url(../../styles/northstar-font/NorthstarItalic-MoYw.otf);
+}
+
+#searchTitle {
+  font-family: Northstar;
+  display: flex;
+  justify-content: center;
+}
+#searchInterface {
+  font-family: Northstar;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 52px;
+}
+#searchGirl {
+  display: block;
+  margin: auto;
+  width: 65%;
+}
+#returns {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto auto;
+  background-color: #ebebeb;
+  padding: 10px;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+.image {
+  display: block;
+  margin: auto;
+}
+#spinnerReturn {
+  display: flex;
+  justify-content: center;
+}
+.carousel-caption-top {
+  color: #c9df0a !important;
+  background: #8f1313;
+}

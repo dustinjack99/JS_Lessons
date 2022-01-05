@@ -2,18 +2,19 @@ import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import Home from "../src/pages/Home/Home.js";
 import Form from "./pages/Form/Form.js";
 import Query from "./pages/Query/Query.js";
+import "./App.css";
 function App() {
   return (
     <Router>
-      <nav>
-        <Link to="/">
+      <nav id="nav">
+        <Link class="link" to="/">
           <p>Home</p>
         </Link>
-        <Link to="form">
-          <p>Form</p>
+        <Link class="link" to="query">
+          <p>Anime Search</p>
         </Link>
-        <Link to="query">
-          <p>Query</p>
+        <Link class="link" to="form">
+          <p>Take our quiz</p>
         </Link>
       </nav>
       <div>
