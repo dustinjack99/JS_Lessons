@@ -17,17 +17,18 @@ const JSON = () => {
   const [apiJson, setApiJson] = useState({});
   const [dexEntry, setDexEntry] = useState("");
   const [submit, setSubmit] = useState(false);
+  const [randomSubmit, setRandomSubmit] = useState(false);
 
   // VVV API CALL "SEARCH" BAR
   useEffect(() => {
     const getJSON = async () => {
       const jsonData = await axios.get(
-        `https://pokeapi.co/api/v2/pokemon/${dexEntry.toLowerCase()}`
+        `https://pokeapi.co/api/v2/pokemon/${dexEntry.trim().toLowerCase()}`
       );
       console.log(jsonData.data);
       setApiJson(jsonData.data);
     };
-    if (dexEntry === "") {
+    if (dexEntry.trim() === "") {
       return null;
     } else {
       getJSON();
@@ -37,23 +38,22 @@ const JSON = () => {
   // console.log(apiJson.data);
 
   // VVV RANDOM BUTTON CODE
-  function getRandom(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min);
+  function getRandom() {
+    return Math.floor(Math.random() * 898);
+    // JSON contains 1118 entries - 898 are unique pokemon - the rest are for regionals/formes/megas/gigamax, etc.
+    // no ID numbers between 898 and 10001, list continues on to 10220
   }
   useEffect(() => {
-    // const getRandom = async () => {
     const getJSON = async () => {
       const jsonData = await axios.get(
-        `https://pokeapi.co/api/v2/pokemon/${getRandom(1, 1118)}`
+        `https://pokeapi.co/api/v2/pokemon/${getRandom()}`
       );
       console.log(jsonData.data);
       setApiJson(jsonData.data);
     };
-  }, [submit]);
-
-  // ^^^ If I uncomment this code placed here as a UseEffect function, the search button returns requested search, followed by a random entry. What the fuck.
+    getJSON();
+  }, [randomSubmit]);
+  // brings up random entry on hard-refresh - might also be slowing my internet down. Not sure yet.
 
   return (
     // onClick, useState, YES
@@ -130,7 +130,7 @@ const JSON = () => {
           <div id="inputBtns">
             <button
               id="inputRandom"
-              onClick={(e) => getRandom()}
+              onClick={(e) => setRandomSubmit(!randomSubmit)}
               //sets dex Entry to empty obj like reset button
               // Random Number Generator is working! Now to hook it up to the "setDexEntry" function somehow
             >
@@ -159,24 +159,27 @@ const JSON = () => {
           )}
         </div>
         <div id="labLogo">
-          <h2>Pine Labs</h2>
-          <hr />
-          {/* <input type="button" class="checkBtn" id="check01" />
+          <div>
+            <h2>Pine Labs</h2>
+            <hr />
+            {/* <input type="button" class="checkBtn" id="check01" />
         <input type="button" class="checkBtn" id="check02" /> */}
-        </div>
-        <div id="dPad">
-          <button class="dPadBtn" id="dPad01">
-            ^
-          </button>
-          <button class="dPadBtn" id="dPad02">
-            v
-          </button>
-          <button class="dPadBtn" id="dPad03">
-            {"<"}
-          </button>
-          <button class="dPadBtn" id="dPad04">
-            {">"}
-          </button>
+          </div>
+          <div id="dPad">
+            <button class="dPadBtn" id="dPad01">
+              ^
+            </button>
+            <button class="dPadBtn" id="dPad02">
+              v
+            </button>
+            <button class="dPadBtn" id="dPad03">
+              {"<"}
+            </button>
+            <button class="dPadBtn" id="dPad04">
+              {">"}
+            </button>
+            <button class="dPadBtn" id="dPad05"></button>
+          </div>
         </div>
       </div>
     </div>
