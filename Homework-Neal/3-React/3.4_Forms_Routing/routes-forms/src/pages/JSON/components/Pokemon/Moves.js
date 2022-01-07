@@ -7,6 +7,7 @@ const Moves = ({ foundMoves }) => {
         <h3 class="Moves">Moves</h3>
         {moves.map((moves, i) => {
           return (
+            //dropdown menu to subdivide/organize moves by type (damaging/status, etc)
             <p key={i} class="Moves" id={"Move" + i}>
               {capFirst(moves.move.name)}
             </p>

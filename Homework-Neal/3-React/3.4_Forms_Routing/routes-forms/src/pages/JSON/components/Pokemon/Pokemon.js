@@ -16,6 +16,18 @@ export function capFirst(foundPokemon) {
 
   // several iterator functions that can solve this problem - map() is not one of them
 }
+
+// export function joinWords() {
+//   let input = Document.getElementbyId("inputBar").split(" ");
+//   let inputs = [];
+//   for (let input of inputs) {
+//     let joinedWord = input;
+//     inputs.push(joinedWord);
+//   }
+//   return inputs.join("-");
+//   console.log(inputs);
+// }
+
 function hpCaps(entry) {
   let cappedEntry;
   if (entry === "hp") {
@@ -51,12 +63,29 @@ const Pokemon = ({ foundPokemon }) => {
       </div>
 
       <div>
-        <h1 className="Species">{capFirst(species.name)}</h1>
+        <h1 className="Species">
+          {species.name === "farfetchd"
+            ? "Farfetch'd"
+            : species.name === "mr-mime"
+            ? "Mr. Mime"
+            : species.name === "mime-jr"
+            ? "Mime Jr."
+            : species.name === "nidoran-m"
+            ? "Nidoran ♂"
+            : species.name == "nidoran-f"
+            ? "Nidoran ♀"
+            : species.name === "ho-oh"
+            ? "Ho-Oh"
+            : species.name === "porygon-z"
+            ? "Porygon-Z"
+            : capFirst(species.name)}
+        </h1>
       </div>
       <div id="dexNumDisplay">
         <h2 className="DexNumber">
           <div>Kanto: # {id}</div>
-          <div>National: #{order}</div>
+
+          {order === -1 ? null : <div>National: #{order}</div>}
         </h2>
       </div>
       <div id="typeDisplay">
