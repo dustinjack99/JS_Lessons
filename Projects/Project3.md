@@ -8,7 +8,7 @@ Project 3 is here! The requirements are a lot of the same for Project 2, but a s
 
 - All four CRUD operations using a PostgreSQL database (who remembers what these are?)
 
-  - Like last project, you are more than welcome to have more than four operations. Remember that relating data (JOINS) is what SQL was built for. It's a powerful thing to have on your resume.
+- Like last project, you are more than welcome to have more than four operations. Remember that relating data (JOINS) is what SQL was built for. It's a powerful thing to have on your resume.
 
 - Three third-party NPM libraries we haven't used or covered.
 
