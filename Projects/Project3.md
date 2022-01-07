@@ -3,13 +3,21 @@
 Project 3 is here! The requirements are a lot of the same for Project 2, but a slight bit more freedom, and using React. You must build:
 
 - A fully-styled, responsive user interface, built with React.
+
 - Backend routing using Express.
+
 - All four CRUD operations using a PostgreSQL database (who remembers what these are?)
+
   - Like last project, you are more than welcome to have more than four operations. Remember that relating data (JOINS) is what SQL was built for. It's a powerful thing to have on your resume.
+
 - Three third-party NPM libraries we haven't used or covered.
+
   - These libraries can be used for anything - for making your CSS better, animations, adding types to your JS code, other database libraries aside from Sequelize, etc... (these are all good hints, but by all means shop around when discussing).
+
 - Your app must be hosted, deployed, and running on Heroku.com.
+
 - The GitHub repository must belong to someone on the team who didn't host your first OR second project.
+
 - Demo Day Presentation:
   - Make a 10 minute presentation showcasing your app. I want the presentation to cover:
   - A User Story: Why users need your app, and what it solves for them.
