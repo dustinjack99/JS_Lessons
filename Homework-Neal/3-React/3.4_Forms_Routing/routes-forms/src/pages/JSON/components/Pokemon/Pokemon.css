@@ -6,27 +6,48 @@
   font-family: PokemonGB;
   src: url(../../../../assets/PokemonGb-RAeo.ttf);
 }
-#App {
-  display: grid;
-  /* grid-template-columns: repeat(3, 1fr); */
+
+#Border {
+  display: flex;
   position: absolute;
-  padding: 1em;
   transform: translate(50%);
   top: 10%;
-  /* bottom: auto; */
-  /* left: 50%; */
   right: 50%;
-  flex-flow: column wrap;
-  /* justify-self: center; */
+  height: fit-content;
+  width: fit-content;
   justify-content: center;
-  /* align-content: center; */
-  border: solid rgb(123, 201, 204) 8px;
-  background-image: linear-gradient(33deg, rgb(212, 240, 241), rgb(53, 82, 99));
-  border-radius: 1rem;
+  padding: 1.5em;
+  background-image: radial-gradient(
+    rgb(51, 69, 70),
+    rgb(72, 139, 141),
+    rgb(123, 201, 204)
+  );
+  border: solid 3px black;
+  border-radius: 2em;
+  box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.5);
+}
+#App {
+  display: grid;
+  position: relative;
+  padding: 1em;
+  /* transform: translate(50%);
+  top: 10%;
+  right: 50%; */
+  flex-flow: column wrap;
+  justify-self: center;
+  justify-content: center;
+  border: solid rgb(44, 75, 77) 1em;
+  background-image: linear-gradient(
+    33deg,
+    rgb(212, 240, 241),
+    rgb(131, 151, 151),
+    rgb(53, 82, 99)
+  );
+  border-radius: 1.5rem;
   max-width: 40em;
   height: 60em;
-  /* box-shadow: 0em, 0em, 5em, black; */
   font-family: Eviolite;
+  box-shadow: 0em 0em 2em rgba(0, 0, 0, 0.5) inset;
 }
 
 /* Works on Firefox */
@@ -53,11 +74,16 @@
 #dexBody {
   /* transform: translateY(-2em); */
   display: grid;
-  background-image: linear-gradient(45deg, rgba(128, 128, 128, 0.5), grey);
-  /* height: fit-content(100%); */
+  background-color: transparent;
+  background-image: linear-gradient(
+    45deg,
+    rgba(40, 48, 51, 0.5),
+    rgb(53, 90, 107)
+  );
   border: solid rgb(8, 34, 34) 4px;
-  /* max-height: fit-content; */
-  /* box-shadow: 0.5em, 0.5em, 1em black; */
+  justify-content: center;
+  box-shadow: 0em 0em 2em rgb(174, 243, 255) inset;
+  text-shadow: 0.4em 0.1em 0.2em rgba(0, 32, 100, 0.295);
 }
 
 #dexSideBoard {
@@ -72,7 +98,7 @@
 #speaker {
   height: fit-content;
   width: 6em;
-  border: solid black 2px;
+  border: solid rgb(44, 75, 77) 0.3em;
   border-radius: 0.5em;
   margin: 0.5em;
   background-image: linear-gradient(
@@ -81,23 +107,57 @@
     rgb(46, 70, 83),
     rgb(74, 109, 129)
   );
+  box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.5);
 }
 
 hr {
-  border: solid black 1px;
+  border: solid rgba(0, 0, 0, 0.712) 1px;
 }
 
 button {
-  color: blue;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 input {
   font-family: PokemonGB;
   text-align: center;
-  /* max-height: 1.5em; */
   margin: 0.75em;
   background-color: rgba(133, 192, 189, 0.788);
+  text-shadow: 0.4em 0.1em 0.2em rgba(0, 32, 100, 0.295);
 }
+
+#inputBtns {
+  display: flex;
+  justify-self: center;
+  padding-bottom: 0.5em;
+}
+#inputBtns :hover {
+  display: flex;
+  justify-self: center;
+  box-shadow: 0em 0em 2em rgb(158, 252, 255);
+}
+
+#inputRandom {
+  font-family: PokemonGB;
+  color: rgb(103, 255, 255);
+  background-color: cornflowerblue;
+  border: solid 1px teal;
+  border-radius: 1em;
+  box-shadow: 0em 0em 1em rgb(0, 190, 190);
+  box-shadow: 0em 0em 2em rgb(0, 190, 190, 0.5);
+}
+
+#inputReset {
+  font-family: PokemonGB;
+  color: rgb(103, 255, 255);
+  background-color: cornflowerblue;
+  border: solid 1px teal;
+  border-radius: 1em;
+  box-shadow: 0em 0em 1em rgb(0, 190, 190);
+  box-shadow: 0em 0em 2em rgb(0, 190, 190, 0.5);
+}
+
 #mainHeader {
   font-family: Eviolite;
   display: flex;
@@ -105,8 +165,8 @@ input {
   align-items: center;
   text-align: center;
   margin: 0;
-  color: rgb(123, 201, 204);
-  /* height: 0.5em; */
+  color: rgb(153, 252, 255);
+  text-shadow: 0em 0em 1em rgb(188, 253, 255);
 }
 
 #mainScreenEmpty {
@@ -118,7 +178,7 @@ input {
     rgba(151, 196, 207, 0.5),
     rgba(68, 195, 199, 0.5)
   );
-  transition: background-image 1s;
+  transition: background-image 2s;
 }
 #mainScreen {
   max-width: 30em;
@@ -152,19 +212,21 @@ input {
 
 #searchBtn {
   font-family: Eviolite;
+  font-size: large;
   color: rgb(253, 183, 183);
   background-color: rgb(139, 0, 0);
   border-radius: 3em;
-  width: 6em;
-  height: 6em;
-  box-shadow: 0em 0em 1em red;
+  width: 5em;
+  height: 5em;
+  box-shadow: 0em 0em 2em red;
   opacity: 100%;
-  transition: box-shadow 0.5s, background-color 0.5s, opacity 0.5s;
-  /* background-image: radial-gradient(
-    rgb(255, 224, 224),
-    rgb(255, 188, 188),
-    rgb(255, 92, 92)
-  ); */
+  transition: box-shadow 0.5s, background-color 0.5s, opacity 0.5s,
+    background-image 0.5s;
+  background-image: radial-gradient(
+    rgb(255, 224, 224, 0.65),
+    rgb(255, 188, 188, 0.5),
+    rgb(255, 92, 92, 0.35)
+  );
 }
 
 #searchBtn:hover {
@@ -173,9 +235,93 @@ input {
   opacity: 90%;
   background-image: radial-gradient(
     rgb(255, 224, 224),
-    rgb(255, 188, 188),
-    rgb(255, 92, 92)
+    rgb(255, 188, 188, 0.5),
+    rgb(255, 92, 92, 0.35)
   );
+}
+
+#spriteDisplay {
+  display: grid;
+  border: dotted teal 0.5em;
+  justify-items: center;
+  margin: 1rem;
+  max-height: 23rem;
+}
+
+.Species {
+  font-family: Eviolite;
+  font-size: 4em;
+  border-bottom: dotted teal 0.1em;
+}
+
+#dexNumDisplay {
+  display: inline;
+  font-size: 1em;
+  text-align: center;
+  gap: 0.5em;
+}
+
+#dataContainer {
+  display: flex;
+  justify-self: center;
+  justify-items: center;
+  align-items: center;
+  width: 30em;
+  height: 100%;
+  flex: 1;
+  flex-direction: column;
+  /* padding: 2em; */
+  overflow-y: scroll;
+  font-family: PokemonGB;
+}
+
+#dataDisplay {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 100%;
+}
+
+#mainArt {
+  max-width: 60%;
+}
+/* #spriteArt {
+} */
+
+#statsScreen {
+  margin: 1em;
+  padding-bottom: 0.6em;
+  border-top: dotted teal 0.6em;
+  border-bottom: dotted teal 0.6em;
+}
+
+#statsHeader {
+  display: flex;
+  justify-content: center;
+}
+#statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 0.75em;
+}
+
+.baseStats {
+  display: inline-table;
+  margin: 0.3em;
+  justify-items: center;
+  white-space: nowrap;
+  text-align: left;
+}
+#moveScreen {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+}
+
+.Moves {
+  display: flex;
+  justify-content: center;
 }
 
 .checkBtn {
@@ -183,27 +329,50 @@ input {
   width: 4em;
   border-radius: 2em;
   background-color: rgb(201, 201, 0);
-  box-shadow: 2em, 2em, rgb(255, 255, 207);
+  box-shadow: 0em 0em 2em rgb(44, 75, 77);
+  transition: box-shadow 0.5s, background-color 0.5s, opacity 0.5s,
+    background-image 0.5s;
+  background-image: radial-gradient(
+    rgb(255, 224, 224, 0.65),
+    rgb(255, 188, 188, 0.5),
+    rgb(255, 92, 92, 0.35)
+  );
 }
-.checkBtn:checked {
+.checkBtn:hover {
   height: 4em;
   width: 4em;
   border-radius: 2em;
   background-color: rgb(201, 201, 0);
   box-shadow: 2em, 2em, rgb(255, 255, 207);
+  background-image: radial-gradient(
+    rgb(255, 224, 224),
+    rgb(255, 188, 188, 0.7),
+    rgb(255, 92, 92, 0.5)
+  );
+}
+
+#labLogo {
+  width: 70%;
+  margin: 0;
+  font-size: larger;
+  color: rgba(0, 43, 136, 0.377);
+  text-shadow: 0px -1px 0px rgba(255, 255, 255, 0.5);
 }
 
 #dPad {
+  position: relative;
+  bottom: 1em;
   justify-self: right;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   width: fit-content;
   height: fit-content;
-  margin: 0.3em;
-  border: solid 2px black;
+  /* margin: 0.3em; */
+  border: solid 0.3em rgb(89, 113, 128);
   border-radius: 1em;
   background-color: rgb(111, 136, 151);
+  box-shadow: 0em 0em 2em rgba(0, 0, 0, 0.5) inset;
 }
 
 .dPadBtn {
@@ -223,116 +392,16 @@ input {
 #dPad01 {
   grid-column: 2;
   grid-row: 1;
-  /* grid-area: "up"; */
 }
 #dPad02 {
   grid-column: 2;
   grid-row: 3;
-  /* grid-area: "down"; */
 }
 #dPad03 {
   grid-column: 1;
   grid-row: 2;
-  /* grid-area: "left"; */
 }
 #dPad04 {
   grid-column: 3;
   grid-row: 2;
-  /* grid-area: "right"; */
-}
-
-#spriteDisplay {
-  /* position: absolute; */
-  display: grid;
-  border: dotted teal 0.5em;
-  justify-items: center;
-  margin: 1rem;
-  /* width: inherit; */
-  max-height: 23rem;
-}
-
-.Species {
-  font-family: Eviolite;
-  font-size: 4em;
-}
-
-#dexNumDisplay {
-  display: inline;
-  font-size: 1em;
-  justify-self: center;
-  gap: 0.5em;
-}
-
-#dataContainer {
-  /* position: relative; */
-  display: flex;
-  /* flex-flow: column; */
-  justify-self: center;
-  justify-items: center;
-  align-items: center;
-  width: 30em;
-  height: 100%;
-  flex: 1;
-  /* display: none; */
-  flex-direction: column;
-  /* padding: 2em; */
-  /* flex-grow: 1; */
-  /* border: solid 3px black; */
-  overflow-y: scroll;
-  font-family: PokemonGB;
-}
-
-#dataDisplay {
-  /* position: relative; */
-  /* display: inline; */
-  flex-flow: column;
-  /* float: inline-start; */
-  /* height: 15rem; */
-  /* max-height: 30%; */
-  /* overflow-y: scroll; */
-}
-
-#mainArt {
-  max-width: 60%;
-}
-/* #spriteArt{
-  max-width: 30%;
-} */
-
-#statsScreen {
-  margin: 1em;
-}
-
-#statsHeader {
-  display: flex;
-  justify-content: center;
-}
-#statsGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  font-size: 0.75em;
-}
-
-.baseStats {
-  display: inline-table;
-  /* padding-left: 2em; */
-  /* padding-right: 2em; */
-  margin: 0.5em;
-
-  /* justify-self: auto; */
-  justify-items: center;
-  white-space: nowrap;
-  /* vertical-align: middle; */
-}
-#moveScreen {
-  display: flex;
-  justify-content: center;
-  width: inherit;
-  /* overflow-x: hidden; */
-  /* overflow-y: scroll; */
-}
-
-.Moves {
-  display: flex;
-  justify-content: center;
 }
