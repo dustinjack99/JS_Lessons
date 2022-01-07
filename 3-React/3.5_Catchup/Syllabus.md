@@ -22,6 +22,7 @@
    - TypeScript
    - Sass
    - React Native (this might have to be it's own lesson...)
+   - ES Lint (Bother Dan into doing a lesson)
 
 5. Post-Bootcamp Next Steps
 
@@ -32,7 +33,14 @@
    - Projects to work on while on the job hunt
 
 6. Data Structures / Alogrithms
+
    - Why do we need these?
    - Where do I practice them?
    - What are some common concepts?
    - What resources do you use?
+
+7. Mock Interviews!
+   - Types of interviews
+   - Common interview questions
+   - Best practices when interviewing
+   - Interviewing Resources
