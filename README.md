@@ -1,3 +1,3 @@
 # JS_Lessons
 
-Repo for collected JS Lessons and All Frontend Goodness
+Repo for collected HTML/CSS/JS Lessons and All Frontend Goodness
