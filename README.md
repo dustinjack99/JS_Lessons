@@ -1,7 +1,3 @@
 # JS_Lessons
 
-JS Lessons
-Hello there
-Fart.
-
-It all begins again...
+Repo for collected JS Lessons and All Frontend Goodness
