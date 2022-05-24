@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#user-list {
+  align-items: center;
+  border: 5px solid rebeccapurple;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  list-style: none;
+  overflow: scroll;
+  padding-right: 30px;
+  width: 75%;
+}
+
+.user-list-item {
+  border: 2px solid cornflowerblue;
+  border-radius: 3px;
+  margin: 10px;
+  text-align: center;
+  width: 80%;
+}
