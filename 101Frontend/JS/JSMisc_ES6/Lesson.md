@@ -1,4 +1,6 @@
-**_**1. let / const Keywords**_**
+# 1. let / const Keywords
+
+---
 
 **old JS:**
 
@@ -29,7 +31,13 @@ constString = 23;
 console.log(constString, "second assignment");
 ```
 
-**_**2. Arrow Functions**_**
+---
+
+# 2. Arrow Functions
+
+---
+
+## _function declarations_
 
 **old JS:**
 
@@ -49,7 +57,9 @@ const sum = (a, b) => a + b;
 const returnOne = (a) => a;
 ```
 
-_old example anonymous function .then_
+## _old example anonymous function .then_
+
+**old JS:**
 
 ```
 fetch(url)
@@ -64,7 +74,9 @@ fetch(url)
     });
 ```
 
-_ES6 example anonymous function .then_
+## _ES6 example anonymous function .then_
+
+**ES6+:**
 
 ```
 fetch(url)
@@ -73,9 +85,14 @@ fetch(url)
 .catch((error) => error);
 ```
 
-**_**3. New String Features**_**
+---
 
-**_Multiline Strings_**
+# 3. New String Features
+
+---
+
+## _Multiline Strings_
+
 **old JS:**
 
 ```
@@ -88,7 +105,7 @@ let oldMultiLine = "First line,\nSecond Line,\nThird Line";
 let newMultiLine = `First Line, Second Line, Third Line`;
 ```
 
-**_String Interpolation / Template Literals_**
+## _String Interpolation / Template Literals_
 
 ```
 const username = "Dustin",
@@ -98,7 +115,11 @@ const stringLiteral = `${username} loves ${hobby}`;
 console.log(stringLiteral);
 ```
 
-**_**4. Object Literal Syntax**_**
+---
+
+# 4. Object Literal Syntax
+
+---
 
 **old JS**
 
@@ -123,9 +144,13 @@ return { manufacturer, model, year };
 consol.log(getMobile("Samsung", "Galaxy", "2020"));
 ```
 
-**_**5. Spreading and Destructuring**_**
+---
 
-**_Array / Object Spreading_**
+# 5. Spreading and Destructuring
+
+---
+
+## _Array / Object Spreading_
 
 **array shallow copy**
 
@@ -150,7 +175,7 @@ let newObj = { ...object };
 console.log(newObj, "spread object");
 ```
 
-**_Destructuring_**
+## _Destructuring_
 
 ```
 let nestedData = {
@@ -177,7 +202,11 @@ let { data } = nestedData.layer1.layer2.layer3;
 console.log(data, "yay destructuring!");
 ```
 
-**_**6. Optional Chaining**_**
+---
+
+# 6. Optional Chaining
+
+---
 
 **old JS**
 
@@ -195,7 +224,11 @@ if (response?.data?.length > 0) {
 }
 ```
 
-**_**7. Async / Await**_**
+---
+
+# 7. Async / Await
+
+---
 
 **old JS**
 
@@ -222,7 +255,11 @@ apiCall(myApi).then(
 );
 ```
 
+---
+
 **ES6+**
+
+---
 
 ```
 const newApiCall = async (url) => {
@@ -237,3 +274,5 @@ const newApiCall = async (url) => {
 const apiData = await newApiCall(myApiUrl);
 console.log(apiData);
 ```
+
+---
