@@ -1,4 +1,4 @@
-1. let / const Keywords
+**_**1. let / const Keywords**_**
 
 **old JS:**
 
@@ -29,7 +29,7 @@ constString = 23;
 console.log(constString, "second assignment");
 ```
 
-2. Arrow Functions
+**_**2. Arrow Functions**_**
 
 **old JS:**
 
@@ -73,7 +73,7 @@ fetch(url)
 .catch((error) => error);
 ```
 
-3. New String Features
+**_**3. New String Features**_**
 
 **_Multiline Strings_**
 **old JS:**
@@ -98,7 +98,7 @@ const stringLiteral = `${username} loves ${hobby}`;
 console.log(stringLiteral);
 ```
 
-4. Object Literal Syntax
+**_**4. Object Literal Syntax**_**
 
 **old JS**
 
@@ -123,7 +123,7 @@ return { manufacturer, model, year };
 consol.log(getMobile("Samsung", "Galaxy", "2020"));
 ```
 
-5. Spreading and Destructuring
+**_**5. Spreading and Destructuring**_**
 
 **_Array / Object Spreading_**
 
@@ -177,7 +177,7 @@ let { data } = nestedData.layer1.layer2.layer3;
 console.log(data, "yay destructuring!");
 ```
 
-6. Optional Chaining
+**_**6. Optional Chaining**_**
 
 **old JS**
 
@@ -195,7 +195,7 @@ if (response?.data?.length > 0) {
 }
 ```
 
-7. Async / Await
+**_**7. Async / Await**_**
 
 **old JS**
 
