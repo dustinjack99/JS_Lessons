@@ -39,19 +39,20 @@ function oldJsFetch(url) {
 }
 
 //ES6+ JS Fetch
+// make ES6Fetch funcrtion
 const ES6Fetch = async (url) => {
   try {
     const resp = await fetch(url);
     const data = await resp.json();
     data.forEach((user) => {
-      const { name, email, website } = user;
+      const { name, website, email } = user;
       makeListItem(name, website, email);
     });
-  } catch (e) {
-    console.log(e);
+  } catch (err) {
+    return err;
   }
 };
 
 // run the functions
 // oldJsFetch(api);
-// ES6Fetch(api);
+ES6Fetch(api);

@@ -1,3 +1,15 @@
+**_ Today's Lesson _**
+START YOUR TIMER!
+
+We listened to your feedback!
+
+We will be covering ES6 features that I believe are most relevant for
+working on a React codebase.
+
+So we're covering a lot today, but we aren't covering regex functions,
+some object and array functions that were added, and we're not covering
+classes.
+
 # 1. let / const Keywords
 
 ---
@@ -9,7 +21,7 @@ var varString = "string";
 console.log(varString, "first assignment");
 
 //can be reassigned, even with other data types
-string = 23;
+varString = 23;
 console.log(varString, "second assignment");
 ```
 
@@ -23,10 +35,12 @@ console.log(letString, "first assignment");
 letString = 23;
 console.log(letString, "second assignment");
 
-//cannot reassign
+
+
 const constString = "string";
 console.log(constString, "first assignment");
 
+//cannot reassign
 constString = 23;
 console.log(constString, "second assignment");
 ```
@@ -37,14 +51,15 @@ console.log(constString, "second assignment");
 
 ---
 
+We are going over the sugar today. Arrow functions also have a
+functional use - they redefine the context of keyword 'this';
+
 ## _function declarations_
 
 **old JS:**
 
 ```
-function sum(a, b) {
-    return a + b;
-}
+
 ```
 
 **ES6+:**
@@ -87,146 +102,7 @@ fetch(url)
 
 ---
 
-# 3. New String Features
-
----
-
-## _Multiline Strings_
-
-**old JS:**
-
-```
-let oldMultiLine = "First line,\nSecond Line,\nThird Line";
-```
-
-**ES6+**
-
-```
-let newMultiLine = `First Line, Second Line, Third Line`;
-```
-
-## _String Interpolation / Template Literals_
-
-```
-const username = "Dustin",
-hobby = "spoiling his cats";
-
-const stringLiteral = `${username} loves ${hobby}`;
-console.log(stringLiteral);
-```
-
----
-
-# 4. Object Literal Syntax
-
----
-
-**old JS**
-
-```
-function getMobile(manufacturer, model, year) {
-    return {
-        manufacturer: manufacturer,
-        model: model,
-        year: year,
-    };
-}
-console.log(getMobile("Samsung", "Galaxy", "2020"));
-```
-
-**ES6+**
-
-```
-const getMobile = (manufacturer, model, year) => {
-return { manufacturer, model, year };
-};
-
-consol.log(getMobile("Samsung", "Galaxy", "2020"));
-```
-
----
-
-# 5. Spreading and Destructuring
-
----
-
-## _Array / Object Spreading_
-
-**array shallow copy**
-
-```
-let array = [1, 2, 3];
-let newArray = [...array];
-console.log(newArray, "spread array");
-```
-
-**object shallow copy**
-
-```
-let object = {
-name: "Dustin",
-cats: [
-{ name: "Toots", hobbies: ["napping", "being sassy"] },
-{ name: "Waffles", hobbies: ["napping", "destroying all furniture"] },
-],
-};
-
-let newObj = { ...object };
-console.log(newObj, "spread object");
-```
-
-## _Destructuring_
-
-```
-let nestedData = {
-    layer1: {
-        layer2: {
-            layer3: {
-                data: "Yay Data!",
-            },
-        },
-    },
-};
-```
-
-**old JS**
-
-```
-console.log(nestedData.layer1.layer2.layer3.data, "dot notation is terrible");
-```
-
-**ES6+**
-
-```
-let { data } = nestedData.layer1.layer2.layer3;
-console.log(data, "yay destructuring!");
-```
-
----
-
-# 6. Optional Chaining
-
----
-
-**old JS**
-
-```
-if (response && response.data && response.data.length > 0) {
-    console.log("That if statement is way too bloated");
-}
-```
-
-**ES6+**
-
-```
-if (response?.data?.length > 0) {
-    console.log("Ahhh, much better");
-}
-```
-
----
-
-# 7. Async / Await
+# 3. Async / Await
 
 ---
 
@@ -265,7 +141,7 @@ apiCall(myApi).then(
 const newApiCall = async (url) => {
     try {
         const resp = await fetch(url);
-        const data = resp.json();
+        const data = await resp.json();
         return data;
     } catch (e) {
         return e;
@@ -273,6 +149,176 @@ const newApiCall = async (url) => {
 };
 const apiData = await newApiCall(myApiUrl);
 console.log(apiData);
+```
+
+---
+
+# 4. Optional Chaining
+
+---
+
+**old JS**
+
+```
+if (response && response.data && response.data.length > 0) {
+    console.log("That if statement is way too bloated");
+}
+```
+
+**ES6+**
+
+```
+if (response?.data?.length > 0) {
+    console.log("Ahhh, much better");
+}
+```
+
+---
+
+# 5. New String Features
+
+---
+
+<!-- ## _Multiline Strings_
+
+**old JS:**
+
+```
+let oldMultiLine = "First line,\nSecond Line,\nThird Line";
+```
+
+**ES6+**
+
+```
+let newMultiLine = `First Line, Second Line, Third Line`;
+``` -->
+
+## _String Interpolation / Template Literals_
+
+**old JS**
+
+```
+var username = "Dustin",
+var hobby = "spoiling his cats";
+
+var stringConcat = username + ' loves ' + hobby;
+```
+
+**ES6+**
+
+```
+const username = "Dustin",
+const hobby = "spoiling his cats";
+
+const tempLiteral = `${username} loves ${hobby}`;
+console.log(tempLiteral);
+```
+
+---
+
+# 6. Object Literal Syntax
+
+---
+
+**old JS**
+
+```
+function getCar(manufacturer, model, year) {
+    return {
+        manufacturer: manufacturer,
+        model: model,
+        year: year,
+    };
+}
+console.log(getCar("Toyota", "Camry", "2020"));
+```
+
+**ES6+**
+
+```
+const getCar = (manufacturer, model, year) => {
+return { manufacturer, model, year };
+};
+
+console.log(getCar("Mercury", "Linx", "1986"));
+```
+
+---
+
+# 7. Spreading and Destructuring
+
+---
+
+## _Array / Object Spreading_
+
+<!-- **array shallow copy**
+
+```
+let array = [1, 2, 3];
+let newArray = [...array];
+console.log(newArray, "spread array");
+```
+
+**object shallow copy**
+
+```
+let object = {
+  name: "Dustin",
+  layer1: {
+    layer2: {
+      string: "what's this?",
+      layer3: { layer4: "whew" },
+    },
+  },
+  cats: [
+    {
+      name: "Toots",
+      hobbies: [
+        "napping",
+        "being sassy",
+        ["napping", "being sassy", ["napping", "being sassy"]],
+      ],
+    },
+    {
+      name: "Waffles",
+      hobbies: [
+        "napping",
+        "destroying all furniture",
+        ["napping", "destroying all furniture", ["napping", "being sassy"]],
+      ],
+    },
+  ],
+};
+
+let newObj = { ...object };
+console.log(newObj, "spread object");
+``` -->
+
+## _Destructuring_
+
+```
+let nestedData = {
+    layer1: {
+        layer2: {
+            layer3: {
+                data: "Yay Data!",
+            },
+        },
+    },
+};
+```
+
+**old JS**
+
+```
+console.log(nestedData.layer1.layer2.layer3.data, "dot notation is terrible");
+```
+
+**ES6+**
+
+```
+let { data } = nestedData.layer1.layer2.layer3;
+console.log(data, "yay destructuring!");
 ```
 
 ---
