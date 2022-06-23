@@ -1,13 +1,12 @@
-import Header from "./components/Header";
-import List from "./components/List";
+import FirstComponent from "./components/FirstComponent";
+import interests from "./assets/interests.json";
 
 function App() {
   return (
     <>
-      <div>Hello there</div>
-      <h1>GENERAL KENOBI</h1>
-      <Header />
-      <List />
+      {/* {interests.data.map(({ food, hobby }) => {
+        return <FirstComponent food={food} hobby={hobby} />;
+      })} */}
     </>
   );
 }

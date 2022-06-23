@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "food": "tacos",
+      "hobby": "petting cats"
+    },
+    {
+      "food": "tikka masala",
+      "hobby": "rocket science"
+    },
+    {
+      "food": "pizza",
+      "hobby": "star wars cosplay"
+    },
+    {
+      "food": "salad",
+      "hobby": "sumo wrestling"
+    },
+    {
+      "food": "corn on the cob",
+      "hobby": "insect taxidermy"
+    }
+  ]
+}

@@ -1,12 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import App from "./App";
 
-ReactDOM.render(
-  //ignore this for right now, this is JSX! JavaScript XML. Does it look a little bit like HTML? More on that later...
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  //This is where our root div gets pulled into, and rendered in the Vitrual DOM
-  document.getElementById("root")
+  </React.StrictMode>
 );
