@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Counter = () => {
   const [boolean, setBoolean] = useState(false);
-  let [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(0);
 
   return (
     <div>

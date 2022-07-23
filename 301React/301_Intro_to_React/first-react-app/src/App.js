@@ -1,10 +1,12 @@
 import FirstComponent from "./components/FirstComponent";
 import interests from "./assets/interests.json";
+import Counter from "./components/Counter";
 
 function App() {
   return (
     <>
-      {/* {interests.data.map(({ food, hobby }) => {
+      {/* <Counter />
+      {interests.data.map(({ food, hobby }) => {
         return <FirstComponent food={food} hobby={hobby} />;
       })} */}
     </>
