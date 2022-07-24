@@ -1,12 +1,5 @@
 import Battler from "./components/Battler";
 
-function App() {
-  return (
-    <>
-      <div>Bare bones app!</div>
-      <Battler />
-    </>
-  );
-}
+const App = () => <Battler />;
 
 export default App;
