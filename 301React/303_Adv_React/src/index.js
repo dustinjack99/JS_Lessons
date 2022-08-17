@@ -6,7 +6,7 @@ import Memo from "./Memo";
 import Callback from "./Callback";
 import ParentComponent from "./memo/ParentComponent";
 
-// import "./styles.css";
+import "./styles.css";
 
 function App() {
   return (
