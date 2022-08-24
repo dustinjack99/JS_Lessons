@@ -2,10 +2,10 @@ import { useState, useContext, createContext } from "react";
 
 const UserContext = createContext([
   {
-    firstName: "Bob",
-    lastName: "Bobberson",
-    suffix: 1,
-    email: "bobbobberson@example.com",
+    firstName: "",
+    lastName: "",
+    suffix: 0,
+    email: "",
   },
   (obj) => obj,
 ]);
@@ -15,8 +15,9 @@ const LevelFive = () => {
 
   return (
     <div>
-      <h5>{`${user.firstName} ${user.lastName} the ${user.suffix} born`}</h5>
+      <h5 className="text-sm">{`${user.firstName} ${user.lastName} the ${user.suffix} born`}</h5>
       <button
+        className="rounded-full bg-cyan-400 shadow-lg px-3 py-1 m-1 text-lg text-white hover:bg-cyan-300"
         onClick={() => {
           setUser(Object.assign({}, user, { suffix: user.suffix + 1 }));
         }}
@@ -29,21 +30,21 @@ const LevelFive = () => {
 
 const LevelFour = () => (
   <div>
-    <h4>fourth level</h4>
+    <h4 className="text-base">fourth level</h4>
     <LevelFive />
   </div>
 );
 
 const LevelThree = () => (
   <div>
-    <h3>third level</h3>
+    <h3 className="text-lg">third level</h3>
     <LevelFour />
   </div>
 );
 
 const LevelTwo = () => (
   <div>
-    <h2>second level</h2>
+    <h2 className="text-xl">second level</h2>
     <LevelThree />
   </div>
 );
@@ -58,8 +59,11 @@ const ContextComponent = () => {
 
   return (
     <UserContext.Provider value={userState}>
-      <h1>first level</h1>
-      <LevelTwo />
+      <h1 className="bold text-3xl mt-2">useContext Example</h1>
+      <div className="m5 p3 mb-2">
+        <h1 className="text-2xl">first level</h1>
+        <LevelTwo />
+      </div>
     </UserContext.Provider>
   );
 };

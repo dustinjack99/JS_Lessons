@@ -11,7 +11,7 @@ const ExpensiveComputationComponent = memo(({ compute, count }) => {
 
 const CallbackComponent = () => {
   const [time, setTime] = useState(new Date());
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(30);
   useEffect(() => {
     const timer = setTimeout(() => setTime(new Date()), 1000);
     return () => clearTimeout(timer);
@@ -26,9 +26,14 @@ const CallbackComponent = () => {
   };
 
   return (
-    <div>
-      <h1>useCallback Example {time.toLocaleTimeString()}</h1>
-      <button onClick={() => setCount(count + 1)}>
+    <div className="mt-2 mb-2">
+      <h1 className="bold text-3xl">
+        useCallback Example {time.toLocaleTimeString()}
+      </h1>
+      <button
+        className="rounded-full bg-blue-400 shadow-lg px-3 py-1 m-1 text-lg text-white hover:bg-blue-300"
+        onClick={() => setCount(count + 1)}
+      >
         current count: {count}
       </button>
       <ExpensiveComputationComponent

@@ -1,4 +1,4 @@
-import { render } from "react-dom";
+import * as ReactDOM from "react-dom/client";
 import Context from "./Context";
 import Ref from "./Ref";
 import Reducer from "./Reducer";
@@ -13,9 +13,9 @@ function App() {
     <div className="App">
       <Context />
       <hr />
-      <Ref />
-      <hr />
       <Reducer />
+      <hr />
+      <Ref />
       <hr />
       <Memo />
       <hr />
@@ -27,4 +27,5 @@ function App() {
   );
 }
 
-render(<App />, document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);

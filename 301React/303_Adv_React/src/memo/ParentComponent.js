@@ -26,10 +26,8 @@ export default function ParentComponent() {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <h3 className="text-center dark:text-gray-400 mt-10">
-        Without React.memo() or useMemo()
-      </h3>
-      <h1 className="font-semibold text-2xl dark:text-white max-w-md text-center">
+      <h3 className="text-3xl text-center mt-2 mb-2">React.memo()</h3>
+      <h1 className="font-semibold text-2xl dark:text-gray max-w-md text-center">
         Select a cheese and we will tell you which wine goes best!
       </h1>
       <div className="flex flex-col gap-4 mt-10">

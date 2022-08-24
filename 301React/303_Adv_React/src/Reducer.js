@@ -33,22 +33,54 @@ const ReducerComponent = () => {
   const [{ r, g, b }, dispatch] = useReducer(reducer, { r: 0, g: 0, b: 0 });
 
   return (
-    <div>
-      <h1 style={{ color: `rgb(${r}, ${g}, ${b})` }}>useReducer Example</h1>
+    <div className="mt-2 mb-2">
+      <h1 className="bold text-3xl" style={{ color: `rgb(${r}, ${g}, ${b})` }}>
+        useReducer Example
+      </h1>
       <div>
-        <span>r</span>
-        <button onClick={() => dispatch({ type: "INCREMENT_R" })}>➕</button>
-        <button onClick={() => dispatch({ type: "DECREMENT_R" })}>➖</button>
+        <span className="text-xl bold mx-5">R</span>
+        <button
+          className="align-middle rounded-full bg-lime-600 shadow-lg px-3 py-1 m-1 text-xl text-white hover:bg-lime-500"
+          onClick={() => dispatch({ type: "INCREMENT_R" })}
+        >
+          +
+        </button>
+        <button
+          className="align-middle rounded-full bg-red-600 shadow-lg px-3 py-1 m-1 text-xl text-white hover:bg-red-500"
+          onClick={() => dispatch({ type: "DECREMENT_R" })}
+        >
+          -
+        </button>
       </div>
       <div>
-        <span>g</span>
-        <button onClick={() => dispatch({ type: "INCREMENT_G" })}>➕</button>
-        <button onClick={() => dispatch({ type: "DECREMENT_G" })}>➖</button>
+        <span className="text-xl bold mx-5">G</span>
+        <button
+          className="align-middle rounded-full bg-lime-600 shadow-lg px-3 py-1 m-1 text-xl text-white hover:bg-lime-500"
+          onClick={() => dispatch({ type: "INCREMENT_G" })}
+        >
+          +
+        </button>
+        <button
+          className="align-middle rounded-full bg-red-600 shadow-lg px-3 py-1 m-1 text-xl text-white hover:bg-red-500"
+          onClick={() => dispatch({ type: "DECREMENT_G" })}
+        >
+          -
+        </button>
       </div>
       <div>
-        <span>b</span>
-        <button onClick={() => dispatch({ type: "INCREMENT_B" })}>➕</button>
-        <button onClick={() => dispatch({ type: "DECREMENT_B" })}>➖</button>
+        <span className="text-xl bold mx-5">B</span>
+        <button
+          className="align-middle rounded-full bg-lime-600 shadow-lg px-3 py-1 m-1 text-xl text-white hover:bg-lime-500"
+          onClick={() => dispatch({ type: "INCREMENT_B" })}
+        >
+          +
+        </button>
+        <button
+          className="align-middle rounded-full bg-red-600 shadow-lg px-3 py-1 m-1 text-xl text-white hover:bg-red-500"
+          onClick={() => dispatch({ type: "DECREMENT_B" })}
+        >
+          -
+        </button>
       </div>
     </div>
   );
