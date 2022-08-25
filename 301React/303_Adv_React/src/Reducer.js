@@ -3,11 +3,11 @@ import { useReducer } from "react";
 // fancy logic to make sure the number is between 0 and 255
 const limitRGB = (num) => (num < 0 ? 0 : num > 255 ? 255 : num);
 
-const step = 50;
+const step = 25;
 
 // before state: { r: 0, g: 0, b: 0}
-// action: { type: "" }
-// after state: { r: 0, g: 0, b: 0}
+// action: { type: "INCREMENT_R" }
+// after state: { r: 25, g: 0, b: 0}
 
 const reducer = (state, action) => {
   // Remember that you are returning a new object, and not affecting the old state.

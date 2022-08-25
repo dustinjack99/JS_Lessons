@@ -37,7 +37,10 @@ const CallbackComponent = () => {
         current count: {count}
       </button>
       <ExpensiveComputationComponent
-        compute={useCallback(fibonacci, [])}
+        // TODO: Uncomment this next line to test our useCallback()
+        // Remember! useCallback() is for functions only :)
+        // compute={useCallback(fibonacci, [])}
+        compute={fibonacci}
         count={count}
       />
     </div>

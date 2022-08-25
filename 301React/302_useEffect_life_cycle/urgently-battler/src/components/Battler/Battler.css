@@ -4,7 +4,7 @@
   flex-direction: row;
   height: 100%;
   justify-content: space-evenly;
-  margin-top: 20px;
+  margin-top: 60px;
   text-align: center;
 }
 
@@ -19,9 +19,10 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  height: 210px;
+  height: 300px;
   justify-content: space-between;
   margin: auto;
+  margin-top: 20px;
   padding: 10px;
   text-align: center;
   width: 33%;

@@ -13,39 +13,43 @@ const Viewers = () => {
   useEffect(() => {
     //We need to call our Viewers API!
     //Take advantage of the "Mounting" phase of the lifecycle
-  });
+  }, []);
 
   return (
     <div className="user-container">
       <h2 className="user-title">Viewers</h2>
       <div className="viewers-list">
-        {viewers.map(({ id, username, email }, i) => {
-          return (
-            <Card
-              key={i + id}
-              className="viewers-list-item"
-              sx={{ margin: 4, borderColor: "#1976d2" }}
-            >
-              <Typography
-                className="username"
-                sx={{
-                  backgroundColor: "#1976d2",
-                  color: "white",
-                  display: "block",
-                  fontSize: 20,
-                  paddingLeft: 2,
-                  fontWeight: "bold",
-                }}
+        {viewers.length > 0 ? (
+          viewers.map(({ id, username, email }, i) => {
+            return (
+              <Card
+                key={i + id}
+                className="viewers-list-item"
+                sx={{ margin: 4, borderColor: "#1976d2" }}
               >
-                {username}
-              </Typography>
-              <Divider />
-              <Typography sx={{ fontsize: 8, textAlign: "center" }}>
-                {email}
-              </Typography>
-            </Card>
-          );
-        })}
+                <Typography
+                  className="username"
+                  sx={{
+                    backgroundColor: "#1976d2",
+                    color: "white",
+                    display: "block",
+                    fontSize: 20,
+                    paddingLeft: 2,
+                    fontWeight: "bold",
+                  }}
+                >
+                  {username}
+                </Typography>
+                <Divider />
+                <Typography sx={{ fontsize: 8, textAlign: "center" }}>
+                  {email}
+                </Typography>
+              </Card>
+            );
+          })
+        ) : (
+          <h3>Uh oh! Where are our viewers?</h3>
+        )}
       </div>
     </div>
   );

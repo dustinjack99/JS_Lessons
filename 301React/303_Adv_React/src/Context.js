@@ -58,13 +58,17 @@ const ContextComponent = () => {
   });
 
   return (
-    <UserContext.Provider value={userState}>
+    // TODO: Uncomment UserContext.Provider to pass values
+    // to the lowest child component
+    // <UserContext.Provider value={userState}>
+    <div>
       <h1 className="bold text-3xl mt-2">useContext Example</h1>
       <div className="m5 p3 mb-2">
         <h1 className="text-2xl">first level</h1>
         <LevelTwo />
       </div>
-    </UserContext.Provider>
+    </div>
+    // </UserContext.Provider>
   );
 };
 

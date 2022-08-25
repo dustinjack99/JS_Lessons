@@ -26,7 +26,7 @@ const Battler = () => {
               setShowTimer(!showTimer);
             }}
             variant="contained"
-            sx={{ marginLeft: 2, marginRight: 2 }}
+            sx={{ margin: 1 }}
           >
             Show Timer
           </Button>
@@ -37,7 +37,7 @@ const Battler = () => {
               setShowViewers(!showViewers);
             }}
             variant="contained"
-            sx={{ marginLeft: 2, marginRight: 2 }}
+            sx={{ margin: 1 }}
           >
             Show Viewers
           </Button>

@@ -2,6 +2,8 @@ import { useState, useRef } from "react";
 
 const RefComponent = () => {
   const [stateNumber, setStateNumber] = useState(0);
+  // Remember that useRef will give you the most current value
+  // across all rerenders.
   const numRef = useRef(0);
 
   function incrementAndDelayLogging() {

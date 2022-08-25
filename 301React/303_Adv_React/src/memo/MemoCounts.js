@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 function MemoCounts() {
+  const [user, setUser] = useState(0);
   const renderCount = useRef(0);
   return (
     <div className="mt-3">
@@ -9,8 +10,13 @@ function MemoCounts() {
           {renderCount.current++} time(s)
         </span>
       </p>
+      <button onClick={() => setUser(user)}>Increment</button>
+      <p>{user}</p>
     </div>
   );
 }
+
+// TODO: Uncomment React.memo() to memoize the child component.
+// Remember! React.memo() is for components only :)
 // export default React.memo(MemoCounts);
 export default MemoCounts;

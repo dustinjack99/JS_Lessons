@@ -13,7 +13,7 @@ const BattleTimer = () => {
   useEffect(() => {
     //Uh oh! Our timer is broken!
     //Perhaps we need to clean up the logic in the 'Unmounting' phase.
-    setInterval(() => {
+    const timer = setInterval(() => {
       if (time > 0) {
         setTime(time - 1);
       }

@@ -12,7 +12,7 @@ const Fighter = ({ name, canRage, fighters, setFighters, opponent }) => {
   useEffect(() => {
     //Somehow make our Barbarian RAGE!!!
     //Do this during this 'Update' part of lifecycle.
-  });
+  }, []);
 
   return (
     <>

@@ -11,8 +11,10 @@ const fibonacci = (n) => {
 const MemoComponent = () => {
   const [num, setNum] = useState(30);
   const [isGreen, setIsGreen] = useState(true);
-  const fib = useMemo(() => fibonacci(num), [num]);
-  // const fib = fibonacci(num);
+  // TODO: Uncomment useMemo() to memoize the expensive fib value.
+  // Remember! useMemo() is for values only :)
+  // const fib = useMemo(() => fibonacci(num), [num]);
+  const fib = fibonacci(num);
 
   return (
     <div className="mt-2 mb-2">
