@@ -105,3 +105,33 @@ As I've been talking about TS, I've tried to say that TS checks the shape of the
 type, instead of the name of the type. This is for a good reason - TS, unlike a
 lot of other languages, checks the shape of the type's data instead of the type's
 given name.
+
+Below we have two examples of how a language can type check, one is Java, which
+uses a nominal type system, compared to TS, which uses a structural type system.
+
+## Nominal Type
+
+Nominal type systems are all about names. What name did you give the type.
+
+In the code above, when considering the question of type equivalence on the last
+line, all that matters is whether myCar is an instance of the class named Car
+
+## Structural Type
+
+Structural types are all about the shape of the data. If you take a look at the
+TS example:
+
+The function printCar doesn’t care about which constructor its argument came from,
+it only cares about whether it has:
+
+A make property that’s of type string
+A model property that’s of type string
+A year property that’s of type number
+If the argument passed to it meets these requirements, printCar is happy.
+
+I personally prefer strucural typing, because it doesn't allow you to get lazy
+with the data, which is the important thing we're trying to worry about here.
+
+At the end of the day, even if the compiler yells at you, your JS code is going
+to run. So you may as well enforce the strictest standards you can before
+releasing your code out into the wild.

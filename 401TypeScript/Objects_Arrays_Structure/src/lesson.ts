@@ -93,3 +93,58 @@ myCarArr.push(1);
 
 // throws err
 myCarArr[2] = 8;
+
+
+// Structural vs Nominal Typing
+
+// Nominal Java Example
+
+public class Car {
+  String make;
+  String model;
+  int make;
+}
+public class CarChecker {
+  // takes a `Car` argument, returns a `String`
+  public static String printCar(Car car) {  }
+}
+Car myCar = new Car();
+  // TYPE CHECKING
+  // -------------
+  // Is `myCar` type-equivalent to
+  //     what `checkCar` wants as an argument?
+CarChecker.checkCar(myCar);
+
+// Structural TS
+
+class MyCar {
+    make: string
+    model: string
+    year: number
+    isElectric: boolean
+  }
+   
+  class MyTruck {
+    make: string
+    model: string
+    year: number
+    towingCapacity: number
+  }
+   
+  const vehicle = {
+    make: "Honda",
+    model: "Accord",
+    year: 2017,
+  }
+   
+  function printCars(car: {
+    make: string
+    model: string
+    year: number
+  }) {
+    console.log(`${car.make} ${car.model} (${car.year})`)
+  }
+   
+  printCars(new MyCar()) // Fine
+  printCars(new MyTruck()) // Fine
+  printCars(vehicle) // Fine
