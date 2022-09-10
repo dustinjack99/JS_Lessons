@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "dist", // where to put the TS files
+    "target": "ES2015" // which level of JS support to target
+  },
+  "include": ["src"] // which files to compile,
+}
