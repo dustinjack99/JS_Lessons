@@ -26,8 +26,6 @@ What is it? Hypertext Markup Language
 
 - We are on HTML5.1, which has been the case for the last 10 years. HTML itself is 30 years old.
 
-  - Not going to be much here that a webdev doesn't already know, but there's some stuff that we should point out for our migration to React.
-
 - According to MDN there are 142 live HTML tags in use today, we are going to cover maybe 4 of them.
 
 **_ LETS CODE! _**
