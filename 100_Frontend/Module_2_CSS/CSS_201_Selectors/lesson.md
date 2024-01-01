@@ -1,68 +1,66 @@
-Invite to Write Code with Me!
-(Also start your timer, Dustin)
-
 ### Tech Check:
 
-- Have VS Code installed
-- Live Server Extension
+### CSS Selectors
 
-### Overview
-
-- Welcome to Urgently Tech Learning Series!
-  - Starting with basic front end tech
-  - Thread the needle between beginner knowledge and new innovations for experts
-- Intro to HTML & Building on knowdledge we'll need for React.
-- Stick around for CSS and JS!
-- Q / A Afterwards
-
-### HTML
-
-What is it? Hypertext Markup Language
-(Pillar 1 of 3 of the frontend)
-
-- HTML does not run, it's a descriptive static language that the web browser understands.
-
-- The browser loads the document and behaves based on what tags you use.
-
-- We are on HTML5.1, which has been the case for the last 10 years. HTML itself is 30 years old.
-
-- According to MDN there are 142 live HTML tags in use today, we are going to cover maybe 4 of them.
+- CSS Selectors are the way we target HTML elements to style them.
+- There are many different types of CSS Selectors, but we're going to focus on the most common ones.
+- We are already familiar with the element selector, which is just the name of the HTML element.
+- We can also target elements by their class or id, which is an attribute we can set.
 
 **_ LETS CODE! _**
 
-1. Basic block - Tag or Element
+1. Selection by ID
 
-- We are going to assume you know how to write tags, you know that tags are nested templates.
+   - First what we need to do is add an id to one of our elements.
+   - Add the following code to your `index.html` file:
 
-2. Symantic Example
+   ```html
+   <li id="first-element">First Element</li>
+   ```
 
-   - Use H tags to change font size.
-   - We can use CSS to change our font size, why bother using the symantic values of the H tags? Three big reasons:
-     - These values are used by accessibility tools like screen readers. We want our apps to be for everyone. These symantic tag names help make our apps avaiable to everyone.
-     - Your app is competing with others for dominance in the search engine, web crawlers like Bing and Google use these tags to prioritize and bump your app to the top.
-     - It leaves the developers intent on the page, which makes it easier to collaborate and fix your own code later.
+   - We can select an element by its id by using the `#` symbol.
+   - Add the following code to your `style.css` file:
 
-3. HTML Tag Types
+   ```css
+   #first-element {
+     background-color: blue;
+   }
+   ```
 
-   - P tags
-   - Anchor tags
-     - Used to navgate to other sites with href.
-     - taget="\_blank"
-     - mailto:dustin.guy.jackson@gmail.com
-     - relative file path: ./lesson.md
-     - name attribute, which can be navigated to by other A tags: name="#my-name"
-   - Divs (division / divider)
-     - has no symantic meaning, its a no-name container that you put other stuff in, this will make a lot more sense when we get to CSS
-   - ol / li
-   - imgs
-     - https://www.petcarestores.com/wp-content/uploads/2021/06/Ragamuffin-Kitten.jpg
-   - Alt attribute is used for screen readers, also is a fallback if your image fails!
-   - uses src attribute to find image
+2. Selection by Class
 
-4. Self closing tags / React Catchas.
+   - We need to do is add a class to one of our elements.
+   - Add the following code to your `index.html` file:
 
-   - You can make self closing tags without the trailing slash.
-     - input tag as example
-   - However! When we go into React land, React JSX requires that slash, so even though we can do this, get out of the habit :)
+   ```html
+   <li class="list-element">First Element</li>
+   <li class="list-element">Second Element</li>
+   <li class="list-element">Third Element</li>
+   ```
 
-5. Homework and Resources!
+   - We can select an element by its class by using the `.` symbol.
+   - Add the following code to your `style.css` file:
+
+   ```css
+   .list-element {
+     background-color: green;
+   }
+   ```
+
+3. What are the differences between ID and Class selectors?
+
+   - ID's are unique, there should only be one element with a given ID.
+   - Classes are not unique, there can be multiple elements with the same class.
+
+   - ID's are used to target a specific element.
+   - Classes are used to target multiple elements.
+
+4. What is "specificity" and why is it important?
+
+   - Specificity is the way the browser decides which CSS rule to apply to an element.
+   - The more specific a selector is, the higher the specificity.
+   - The higher the specificity, the more likely it is that the browser will apply that rule to the element.
+   - The browser will always apply the most specific rule to an element.
+   - ID's have more specifity than classes, so the browser will always apply the ID rule over the class rule.
+   - Classes have more specificity than elements, so the browser will always apply the class rule over the element rule.
+   - So the order of specificity is ID > Class > Element.
