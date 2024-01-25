@@ -17,8 +17,13 @@ To recap your learning of HTML, here's some exercises that you can do:
    - A Hobbies Page
 
 2. Use these tags that we covered somewhere on your three pages:
+
    - `<a>` tags to navigate between your web pages. Along with linking to another website entirely.
    - `<h1>` tags to lay our important headers.
    - `<p>` tags to display text information.
    - `<img>` tags to find images around the internet.
    - `<ol> / <li>` tags to make a list of data.
+
+3. Do some fun research, on MDN, and find 3 HTML tags we have not covered!
+   - Don't worry if these break and don't work, I just want you to research and play around.
+   - Link to MDN HTML Reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element
