@@ -22,7 +22,6 @@ To recap your learning of HTML, here's some exercises that you can do:
    - `<h1>` tags to lay our important headers.
    - `<p>` tags to display text information.
    - `<img>` tags to find images around the internet.
-   - `<ol> / <li>` tags to make a list of data.
 
 3. Do some fun research, on MDN, and find 3 HTML tags we have not covered!
    - Don't worry if these break and don't work, I just want you to research and play around.
