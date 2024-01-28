@@ -1,29 +1,29 @@
 **- Resources -**
 
-LINK TO SLIDES: https://docs.google.com/presentation/d/141Od7B-rp0fa-KtHRHcX5i0PsogBFKHeR-5veYEamjc/edit#slide=id.p1
+LINK TO SLIDES + LESSON: https://drive.google.com/drive/folders/13HOZT3Bbea3Mysdwz-5on3jEAmc6CSQ4?usp=drive_link
 
-Traversy Video: https://www.youtube.com/watch?v=UB1O30fR-EE&t=419s
+Traversy Video: https://www.youtube.com/watch?v=yfoY53QXEnI
 
 **- Assignment -**
 
-You've taken your first steps into WebDev! Hooray!
+The Box Model is the most foundational CSS concept to learn when it comes to layout and positioning.
 
-To recap your learning of HTML, here's some exercises that you can do:
+Building on our understanding of margin, padding, borders, and a content's height and width, we can now start positioning our 3-page website. So it's time to build the rest of it!
 
-1. Create a three-page website that uses these HTML tags to structure your webpage. Your webpage should have three pages:
+This week's homework includes:
 
-   - An About Me Page
-   - A Home Page
-   - A Hobbies Page
+1. Building out the rest of your website.
 
-2. Use these tags that we covered somewhere on your three pages:
+- Fill out the `aboutme.html` page with content about yourself! It can include your hobbies, goals, and ramblings you have in your head.
+- In your `contact.html` page, include ways for people (employers) to get ahold of you! There should be links to your social media profiles, an email address.
+- Your home page (`index.html`) should include an image (or three!) of yourself doing something fun. Your name should display loud and proud, along with some splash text introducing yourself to the world.
+- Remember links that navigate between all three pages!
 
-   - `<a>` tags to navigate between your web pages. Along with linking to another website entirely.
-   - `<h1>` tags to lay our important headers.
-   - `<p>` tags to display text information.
-   - `<img>` tags to find images around the internet.
-   - `<ol> / <li>` tags to make a list of data.
+2. Applying all of our CSS knowledge!
 
-3. Do some fun research, on MDN, and find 3 HTML tags we have not covered!
-   - Don't worry if these break and don't work, I just want you to research and play around.
-   - Link to MDN HTML Reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+- In all three of your web pages, I want you to lean heavily into colors, fonts, and layout (margin, padding, borders)
+- A good exercise is to throw borders around everything to see how adjusting `border`, `padding` and `margin` affects elements in your HTML.
+- Specifics!
+  - `index.html`: I want the image(s) of yourself centered! Perfectly centered! Hint: `margin` can take more than a `px` value!
+  - `about.html`: If you have lists of your hobbies and goals, I want the padding between the list element to be even across all elements.
+  - `contact.html`: I want your social media links to be side-by-side horizontally. Don't worry if this is very tricky to accomplish with just `margin`, `padding`, etc! I want you to find another solution... Google is your friend!
