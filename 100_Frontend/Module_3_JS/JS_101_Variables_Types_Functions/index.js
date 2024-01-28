@@ -6,9 +6,9 @@
 //VARIABLES
 var pTag = document.getElementById("replaceThisZero");
 console.log(pTag);
-// var addButton = document.getElementById("add");
-// var subtractButton = document.getElementById("subtract");
-var insecureButton = document.getElementById("insecure");
+// const addButton = document.getElementById("add");
+// const subtractButton = document.getElementById("subtract");
+const insecureButton = document.getElementById("insecure");
 
 // console.log(addButton);
 // addButton.addEventListener("click", () => {
@@ -30,8 +30,8 @@ function add(a, b) {
 // -
 // *
 // /
-var string1 = "hello";
-var string2 = "world";
+const string1 = "hello";
+const string2 = "world";
 insecureButton.addEventListener("click", () => add(string1, string2));
 //FUNCTIONS
 //declare, arguments, calling

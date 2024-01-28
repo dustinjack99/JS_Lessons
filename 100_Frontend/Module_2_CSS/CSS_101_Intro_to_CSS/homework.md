@@ -1,6 +1,6 @@
 **- Resources -**
 
-LINK TO SLIDES: https://docs.google.com/presentation/d/11eQmlHnX1PGj6IHFbctDAyjRjk86tezxdyoWCT0DdRE/edit#slide=id.g2646f86c582_0_351
+LINK TO SLIDES + LESSON: https://drive.google.com/drive/folders/1GxmmekQeQ7QTy8FB4JKA6OABw8oKQeHk?usp=drive_link
 
 Traversy Video: https://www.youtube.com/watch?v=yfoY53QXEnI
 

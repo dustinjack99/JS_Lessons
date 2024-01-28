@@ -1,5 +1,3 @@
-### Tech Check:
-
 ### Subject
 
 What is it? Hypertext Markup Language
