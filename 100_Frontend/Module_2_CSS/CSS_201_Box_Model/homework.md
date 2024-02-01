@@ -19,11 +19,12 @@ This week's homework includes:
 - Your home page (`index.html`) should include an image (or three!) of yourself doing something fun. Your name should display loud and proud, along with some splash text introducing yourself to the world.
 - Remember links that navigate between all three pages!
 
-2. Applying all of our CSS knowledge!
+2. Applying all of our layout CSS knowledge!
 
 - In all three of your web pages, I want you to lean heavily into colors, fonts, and layout (margin, padding, borders)
 - A good exercise is to throw borders around everything to see how adjusting `border`, `padding` and `margin` affects elements in your HTML.
 - Specifics!
   - `index.html`: I want the image(s) of yourself centered! Perfectly centered! Hint: `margin` can take more than a `px` value!
+    - you definitely need to throw on `display: block;` for any items that can't auto-center!
   - `about.html`: If you have lists of your hobbies and goals, I want the padding between the list element to be even across all elements.
   - `contact.html`: I want your social media links to be side-by-side horizontally. Don't worry if this is very tricky to accomplish with just `margin`, `padding`, etc! I want you to find another solution... Google is your friend!
