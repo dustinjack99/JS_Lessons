@@ -1,5 +1,7 @@
 //link this file you idiot
 
+// variable types
+
 //DEBUGGING
 // console.log("anything we want");
 

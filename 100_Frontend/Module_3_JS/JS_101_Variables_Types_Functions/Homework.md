@@ -10,7 +10,7 @@ We’ve worked with declaring variables, learning data types, and writing functi
 In your three-page website, I want you to add a JavaScript file for each page.
 In one of your pages, I want a button that fires a function that works with numbers. This can be either displayed on the page itself or in an alert() function.
 
-In another page, I want a button that figures a function that works with strings. This can be either displayed on the page itself or in an alert() function.
+In another page, I want a button that fires a function that works with strings. This can be either displayed on the page itself or in an alert() function.
 
 In your last page, I want a button that fires a function that works with numbers AND strings. This can be either displayed on the page itself or in an alert() function.
 
