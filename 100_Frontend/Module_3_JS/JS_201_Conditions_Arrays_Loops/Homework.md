@@ -23,3 +23,9 @@ Math.floor(Math.random()) is the best way for getting a random value (like a cha
 - Most importantly: THERE IS NO ONE WAY TO SOLVE THIS! There is literally hundreds of solutions for this problem. Whatever way you initally try solving this, GO FOR IT! :)
 
 EXAMPLE: https://www.lastpass.com/password-generator
+
+**- Resources and Links -**
+
+Frontend Masters (Web Dev Intro): https://frontendmasters.com/courses/web-development-v2/
+
+Traversy Media (Modern JavaScript): https://www.youtube.com/watch?v=BI1o2H9z9fo&t=2624s

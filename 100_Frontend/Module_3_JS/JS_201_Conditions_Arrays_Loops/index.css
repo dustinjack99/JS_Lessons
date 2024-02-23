@@ -3,9 +3,12 @@
   flex-direction: column;
 }
 #output {
+  align-self: center;
   border: 3px solid slateblue;
+  border-radius: 5px;
   padding: 10px;
   text-align: center;
+  width: 80%;
 }
 .chx-container {
   align-self: center;
