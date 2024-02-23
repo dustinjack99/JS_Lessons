@@ -7,3 +7,13 @@
   padding: 10px;
   text-align: center;
 }
+.chx-container {
+  align-self: center;
+  border: 3px solid burlywood;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding: 10px;
+  width: 50%;
+}
