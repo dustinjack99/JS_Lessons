@@ -113,3 +113,9 @@ function addLikeNumbers(number1, number2) {
 }
 
 addLikeNumbers(0, []);
+var bla = [1, 2, 3, 45, 35, 23, 4, 345, 345];
+console.log("array one", bla);
+console.log("array two", bla);
+console.log({ bla });
+console.log(bla);
+console.log(bla);

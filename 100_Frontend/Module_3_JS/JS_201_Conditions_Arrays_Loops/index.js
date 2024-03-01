@@ -64,3 +64,5 @@ for (var i = 0; i < firstArray.length; i++) {
 var randomDigit = Math.floor(Math.random() * firstArray.length);
 
 console.log(firstArray[randomDigit]);
+
+cl;

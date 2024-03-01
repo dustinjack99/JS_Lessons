@@ -5,13 +5,13 @@ console.log("hello");
 DOM - Document Object Model.
 
 
-             [body] <-- Nodes
-        /               \
-       /                 \
-      /                   \ 
-     [ul]<- Sibling Nodes ->[ol]
-    /    \     \
-   [li]  [li]   [li] 
+                          [body] <-- Nodes
+                          /    \
+                         /      \
+                        /        \ 
+    Sibling Nodes --> [ul]      [ol]  <-- Sibling Nodes
+                      /  \      /  \
+                    [li][li]  [li][li] <-- Child Nodes
 
    *Nodes can have children, NESTED inside of them.
  */
