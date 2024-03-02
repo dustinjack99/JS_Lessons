@@ -1,5 +1,9 @@
 /* THIS FILE IS DOESN'T EXIST! MUAHAHAHA! 
 Now do your CSS in JavaScript like the homework says! >:D */
 #title {
-    color: darkblue;
+  color: darkblue;
+}
+
+.added-class {
+  color: red;
 }
