@@ -4,7 +4,7 @@ Your superhero fighting game needs to be a knock-out brawler with six fighters o
 
 Each fighter must have two dropdown menus: one for their attacks, and one for whoever they target with the attack. When a fighter attacks another, I want their HP values to adjust in real time.
 
-Each fighter needs to have three attacks they inhereit from their class, along with two attacks special to each hero.
+Each fighter needs to have three attacks they inhereit from their base class, along with two special attacks from their extended class.
 
 When a fighter reaches 0 hit points, they die.
 
